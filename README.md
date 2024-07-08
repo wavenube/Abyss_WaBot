@@ -86,7 +86,7 @@
 
 ### `▢ INSTALACION VPS 🖥️`
  
- [📲TERMUX](src/RecursosMarcoRota/Guias/Termux.md)   	[🐧LINUX](src/RecursosMarcoRota/Guias/Linux.md)		[🪟WINDOWS](src/RecursosMarcoRota/Guias/Windows.md)
+ [📲TERMUX](src/RecursosMarcoRota/Guias/Termux.md)    [🐧LINUX](src/RecursosMarcoRota/Guias/Linux.md)    [🪟WINDOWS](src/RecursosMarcoRota/Guias/Windows.md)
 
 ### `▢ NOTAS`
 - SE AGREGÓ LA FUNCION DE MULTIIDIOMAS, USA EL COMANDO #lang PARA CONOCER MAS INFO Y LOS IDIOMAS DISPOSIBLES
