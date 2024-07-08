@@ -1,0 +1,3 @@
+rm -rf whisper.cpp
+apt-get install git curl wget make build-essential cmake ffmpeg -y 2>&1 >/dev/null && git clone https://github.com/ggerganov/whisper.cpp.git 2>&1 >/dev/null && cd whisper.cpp && ./models/download-ggml-model.sh small 2>&1 >/dev/null && make 2>&1 >/dev/null && cd ../ && chmod +x src/RecursosMarcoRota/ScriptActivo/whispercpp.sh && cp src/RecursosMarcoRota/PluginsMovibles/txt.js plugins/txt.js
+echo Si todo salio bien, deberias poder usar .txt por un audio para empezar la transcripcion. La precisin y velocidad pueden ser mayores haciendo unos cambios en el script whispercpp.sh. La documentacion en https://github.com/ggerganov/whisper.cpp
