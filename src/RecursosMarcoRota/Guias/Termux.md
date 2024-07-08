@@ -74,6 +74,6 @@ Android 12 y Superior tienen limitaciones de ejecucion, unicamente se puede Reso
     cd mystic
 	npm start 
     ```
-## Servidor Eco-Friend
+## Eco-Friendly
 Puedes utilizar un telefono antiguo y Automatizarlo con Tasker.
 ![NG20Termux](https://github.com/weskerty/TheMysticMOD/assets/82781997/15ff590d-b828-44cc-9427-c5bd3e6e00b9)
