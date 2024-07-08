@@ -44,6 +44,7 @@ Windows tiene una limitacion en que detiene la ejecucion cuando se pierde el foc
 
 Descarga [este archivo](src/RecursosMarcoRota/Guias/RecursosWindows/mystic.xml)
 Luego Busca Programador de Tareas en el Menu Inicio y Abrelo 
+![ProgramadorTareasWindows](https://github.com/weskerty/TheMysticMOD/assets/82781997/bc4965e6-c35f-4fc9-982b-379ac7371cf5)
 
 Seleccionas Importar Tarea y Aceptar. Puede que pregunte la contraseña del Administrador ya que se debe iniciar antes de que inicie un Usuario.
 Ahora si reiniciar la PC el bot se ejecutara automaticamente al iniciar Windows. Para detener el comportamiento ir a Programador de Tareas, Buscar Mystic y Deshabilitarlo para que no vuelva a Iniciar o Finalizarlo para detener la ejecucion actual.
