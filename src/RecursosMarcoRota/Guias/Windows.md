@@ -9,9 +9,6 @@ Descargar e Iniciar. Marcar las casillas para instalar Complementos Adicionales 
 [Python](https://www.python.org/downloads/)
 Descargar e Iniciar. Marcar las casillas para Agregar a PATH
 Luego de la Instalacion mover [este archivo](src/RecursosMarcoRota/Guias/RecursosWindows/python3.bat) a la Carpeta de Instalacion de Python "Disco local > Python3.xx"
-```sh
-apt install git wget ffmpeg imagemagick -y
-```
 
 [Git](https://git-scm.com/downloads)
 Descargar e Iniciar. Marcar las casillas para Agregar a PATH
