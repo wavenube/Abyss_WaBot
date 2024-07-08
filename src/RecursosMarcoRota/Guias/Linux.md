@@ -40,6 +40,8 @@ El bot funcionara mientras este abierto el shell y con Conexion a Internet.
 Puedes ajustar para que se inicie automaticamente al encender Linux (varia por distro)
 KDE Plasma ir a AutoInicio y agregar el Script cd mystic && npm start 
 LXDE ir a Menu > System > AutoRun y agregar el Script cd mystic && npm start 
+![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/66b13915-9857-4053-b43e-0c9c1f1a818a)
+
 
 ## Volver a iniciar en caso de Cierre
 	
