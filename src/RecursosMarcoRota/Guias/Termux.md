@@ -76,4 +76,5 @@ Android 12 y Superior tienen limitaciones de ejecucion, unicamente se puede Reso
     ```
 ## Eco-Friendly
 Puedes utilizar un telefono antiguo y Automatizarlo con Tasker.
+Este Telefono/Servidor se utiliza para [Toda esta Comunidad](https://chat.whatsapp.com/JtrXf1pGoewLlX5Ww2VXDs)
 ![NG20Termux](https://github.com/weskerty/TheMysticMOD/assets/82781997/15ff590d-b828-44cc-9427-c5bd3e6e00b9)
