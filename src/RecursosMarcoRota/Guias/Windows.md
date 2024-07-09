@@ -42,7 +42,8 @@ El bot Iniciara y te Pedira Login.
 
 ## 🔌 Mantener Abierto CMD
 El bot funcionara mientras la consola este abierta y con Conexion a Internet.
-Windows tiene una limitacion en que detiene la ejecucion cuando se pierde el foco de la ventana, podemos resolverlo agregando una tarea de inicio automatico.
+> [!IMPORTANT]
+> Windows tiene una limitacion en que detiene la ejecucion cuando se pierde el foco de la ventana, podemos resolverlo agregando una tarea de inicio automatico.
 
 ## 🔁 Agregar a Tarea de inicio Automatico.
 
