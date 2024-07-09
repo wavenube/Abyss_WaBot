@@ -18,7 +18,7 @@ sudo apt-get install -y nodejs
 sudo pacman -Syu git wget ffmpeg imagemagick -y
 ```
 
-## Instalar el Bot
+## ⬇️ Instalar el Bot
 
 ```sh
 git clone https://github.com/BrunoSobrino/TheMystic-Bot-MD.git mystic
@@ -26,22 +26,22 @@ cd mystic
 npm install
 ```
 
-## Preferencias del Bot
+## ⚙️ Preferencias del Bot
 Debes ajustar el `config.js` para agregar el numero del bot, tus administradores del bot, el pais de la fecha y clima y el nombre del paquete de stickers etc.
 
-## Iniciar Bot
+## 🟢 Iniciar Bot
 Una vez que hayas ajustado todo, inicia el bot con:
 ```sh
 npm start .
 ```
 
-## Mantener Abierto la Terminal.
+## 🔌 Mantener Abierto la Terminal.
 El bot funcionara mientras este abierto el shell y con Conexion a Internet.
 Puedes ajustar para que se inicie automaticamente al encender Linux (varia por distro)
 KDE Plasma ir a AutoInicio y agregar el Script cd mystic && npm start 
 LXDE ir a Menu > System > AutoRun y agregar el Script cd mystic && npm start 
 
-## Volver a iniciar en caso de Cierre
+## ↪️ Volver a iniciar en caso de Cierre
 	
     ```sh
     cd mystic
