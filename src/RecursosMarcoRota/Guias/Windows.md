@@ -43,7 +43,7 @@ Windows tiene una limitacion en que detiene la ejecucion cuando se pierde el foc
 
 ## Agregar a Tarea de inicio Automatico.
 
-Descarga [este archivo](src/RecursosMarcoRota/Guias/RecursosWindows/mystic.xml) 
+Descarga [este archivo](src/RecursosMarcoRota/Guias/RecursosWindows/mystic.xml)
 Luego Busca Programador de Tareas en el Menu Inicio y Abrelo 
 ![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/19b105f5-7d00-444b-9e03-ba6bbd52fe93)
 
