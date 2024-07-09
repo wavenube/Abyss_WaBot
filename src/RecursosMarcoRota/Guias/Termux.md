@@ -104,10 +104,15 @@ su -c setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs f
     ```sh
     proot-distro login debian
     ```
-	
+
+     
     ```sh
     cd mystic
 	npm start 
     ```
-## Servidor Eco-Friend
-Puedes utilizar un telefono antiguo y Automatizarlo con Tasker.
+## Servidor Eco-Friendly
+Puedes utilizar un telefono antiguo y Automatizarlo con Tasker como es mi caso.
+Utilizo un Telefono Roto con un Panel Solar para Mantener el bot para Toda esta Comunidad.
+![2024-05-08-11-52-37-953](https://github.com/weskerty/TheMysticMOD/assets/82781997/497b42f7-7317-42b4-bf10-9ab107be313a)
+
+<a href="https://www.hmd.com/en_int/nokia-g-20/environmental-profile"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/497b42f7-7317-42b4-bf10-9ab107be313a" width="300" height="300" alt="NokiaG20"/> </a>
