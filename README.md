@@ -2,7 +2,6 @@
 
 ------------------
 > **AVISO**: Yo "Bruno Sobrino", me he retirado de todo lo relacionado con el bot o temas similares, por lo que en algún momento quedará obsoleto y/o algunos comandos dejarán de funcionar. Agradezco su preferencia durante el recorrido por este mundo de los bots.
-
 > TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
 ------------------
 
@@ -72,21 +71,13 @@
 
 - Discord: [`Aqui`](https://discord.com/invite/vgfpe4Nwd8)
 
-### `▢ ACTIVAR EN KOYEB`
+### `▢ Otras Plataformas: `
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot)
-  
-### `▢ ACTIVAR EN REPLIT`
-
-[![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/TheMystic-Bot-MD)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD) 
-  
-### `▢ ACTIVAR EN RENDER`
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD) 
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot) [![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/TheMystic-Bot-MD)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD) [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD) 
 
 ### `▢ INSTALACION VPS 🖥️`
- 
- [📲TERMUX](src/RecursosMarcoRota/Guias/Termux.md)    [🐧LINUX](src/RecursosMarcoRota/Guias/Linux.md)    [🪟WINDOWS](src/RecursosMarcoRota/Guias/Windows.md)
+<a href="src/RecursosMarcoRota/Guias/Termux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/4ddefda6-ce04-46d2-bed9-d31614d0b4d8" width="150" height="30" alt="Android"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Linux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/7160fd2b-1bdf-4e4a-b907-9b1868a0b440" width="150" height="30" alt="Linux"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Windows.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/31d8455c-9c0f-49bc-b638-322bd68e2bce" width="150" height="30" alt="Windows"/> </a>
+
 
 ### `▢ NOTAS`
 - SE AGREGÓ LA FUNCION DE MULTIIDIOMAS, USA EL COMANDO #lang PARA CONOCER MAS INFO Y LOS IDIOMAS DISPOSIBLES
