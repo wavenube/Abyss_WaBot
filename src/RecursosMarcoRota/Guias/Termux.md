@@ -112,6 +112,6 @@ su -c setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs f
     ```
 ## Servidor Eco-Friendly
 Puedes utilizar un telefono antiguo y Automatizarlo con Tasker como es mi caso.
-Utilizo un Telefono Roto con un Panel Solar para Mantener el bot para Toda esta Comunidad.
+Utilizo un Telefono Roto con un Panel Solar para Mantener el bot para [Toda esta Comunidad](https://chat.whatsapp.com/JtrXf1pGoewLlX5Ww2VXDs).
 
 <a href="https://www.hmd.com/en_int/nokia-g-20/environmental-profile"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/497b42f7-7317-42b4-bf10-9ab107be313a" width="400" height="300" alt="NokiaG20"/> </a>
