@@ -1,6 +1,6 @@
 ![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/7160fd2b-1bdf-4e4a-b907-9b1868a0b440)
 
-## Linux Debian y Derivados (APT)
+## <a href="https://www.debian.org/index.es.html"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/17826d71-3d7f-4416-b27e-43ea48b27cdf" width="30" height="30" alt="Debian"/> </a> Linux Debian y Derivados (APT)
 Abre la Terminal y pega cada linea.
 
 ```sh
@@ -13,10 +13,7 @@ sudo -E bash nodesource_setup.sh
 sudo apt-get install -y nodejs
 ```
 
-## Arch ![image]()
-<a href="https://github.com/weskerty"><img src="[https://avatars.githubusercontent.com/u/82781997?v=4](https://github.com/weskerty/TheMysticMOD/assets/82781997/3802b31d-230b-41df-b60c-450f12d4d7f7)" width="100" height="100" alt="Wiska"/> </a>
-
-
+## <a href="https://archlinux.org/"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3802b31d-230b-41df-b60c-450f12d4d7f7" width="30" height="30" alt="Debian"/> </a> Arch 
 ```sh
 sudo pacman -Syu git wget ffmpeg imagemagick -y
 ```
