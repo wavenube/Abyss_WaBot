@@ -1,6 +1,8 @@
 ### `▢ Linux` 
+![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/7160fd2b-1bdf-4e4a-b907-9b1868a0b440)
 
 ## Linux Debian y Derivados (APT)
+Abre la Terminal y pega cada linea.
 
 ```sh
 sudo apt install git wget ffmpeg imagemagick -y
