@@ -13,7 +13,9 @@ sudo -E bash nodesource_setup.sh
 sudo apt-get install -y nodejs
 ```
 
-## Arch 
+## Arch ![image]()
+<a href="https://github.com/weskerty"><img src="[https://avatars.githubusercontent.com/u/82781997?v=4](https://github.com/weskerty/TheMysticMOD/assets/82781997/3802b31d-230b-41df-b60c-450f12d4d7f7)" width="100" height="100" alt="Wiska"/> </a>
+
 
 ```sh
 sudo pacman -Syu git wget ffmpeg imagemagick -y
