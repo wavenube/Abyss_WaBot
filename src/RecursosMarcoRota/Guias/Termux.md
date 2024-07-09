@@ -88,17 +88,16 @@ su -c setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs f
 [Fuente Termux Monect](https://github.com/KitsunedFox/termux-monet/blob/master/README.md)
 
 ## ↪️ Volver a iniciar en caso de Cierre
-
-
-    ```sh
+ Abris termux y Pega esto:
+ 
+ ```
     proot-distro login debian
-    ```
+  ```
 
-     
-    ```sh
+```
     cd mystic
 	npm start 
-    ```
+ ```
 ## Servidor Eco-Friendly
 Puedes utilizar un telefono antiguo y Automatizarlo con Tasker como es mi caso.
 Utilizo un Telefono Roto con un Panel Solar para Mantener el bot para [Toda esta Comunidad](https://chat.whatsapp.com/JtrXf1pGoewLlX5Ww2VXDs).
