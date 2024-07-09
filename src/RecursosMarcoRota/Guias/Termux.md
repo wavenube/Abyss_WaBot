@@ -62,6 +62,9 @@ Permite a Termux ejecutarse sin Restricciones ni Optimizaciones de bateria.
 Activa el WakeLock desde la Notificacion de Termux.
 Android 12 y Superior tienen limitaciones de ejecucion, unicamente se puede Resolver con ADB, Root o Custom ROM.
 
+## 💡 Evitar cerrado Forzoso (Opcional)
+En caso de que termux se te cierre a cada rato, puedes seguir estos pasos OPCIONALES.
+
 - ADB desde Terminal en PC:
 ```
 adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
