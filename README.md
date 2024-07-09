@@ -9,15 +9,17 @@ TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal repre
 
 [ 🔗 ] https://www.atom.bio/theshadowbrokers-team
 
-### `▢ GRUPOS DE SOPORTE`
+### `🤔 GRUPOS DE SOPORTE`
 <a href="https://chat.whatsapp.com/BqRFSoZ6p5AJmgyQdmzGdB"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3a4077f8-2bab-41ce-8bec-567d9fe624eb" width="100" height="100" alt="En Español"/> </a>       <a href="https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3233af48-cb67-49db-a0cb-e50e8ec498f3" width="100" height="100" alt="En Portugues"/> </a>
 > [ ℹ️ ] En los grupos de soporte no se permiten bots.
 
 
-### `▢ DONAR`
+### `🫂 DONAR`
 - Agradece con una donación voluntaria haciendo [clic aquí](https://www.paypal.me/TheShadowBrokers133)
 
-### `▢ PLUGINS`
+### `Wiki y Demas Ajustes`
+
+### `🧩 PLUGINS`
 - Tienes ideas de plugins o ¿quieres obtener mas plugins? Puedes usar .install y ver una lista de posibles funciones o encontrar mas [aquí](https://github.com/theh2so4/Mystic-Plugins)
 
 ### `▢ ACTIVAR EN FLAREXCLOUD`
@@ -64,7 +66,7 @@ TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal repre
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot) [![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/TheMystic-Bot-MD)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD) [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD) 
 
-### `▢ INSTALACION VPS 🖥️`
+### ` 🖥️ INSTALACION VPS`
 <a href="src/RecursosMarcoRota/Guias/Termux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/4ddefda6-ce04-46d2-bed9-d31614d0b4d8" width="150" height="30" alt="Android"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Linux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/7160fd2b-1bdf-4e4a-b907-9b1868a0b440" width="150" height="30" alt="Linux"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Windows.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/31d8455c-9c0f-49bc-b638-322bd68e2bce" width="150" height="30" alt="Windows"/> </a>
 
 
