@@ -1,6 +1,6 @@
-### `▢ Windows` 
+![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/31d8455c-9c0f-49bc-b638-322bd68e2bce)
 
-## Descargargas Necesarias
+## ⬇️ Descargargas Necesarias
 Se requiere estos programas para poder ejecutar.
 
 [NodeJS](https://nodejs.org/en/)
@@ -14,7 +14,7 @@ Esto debido a que la mayoria de Plugins estan adaptados para Linux, sin esto los
 [Git](https://git-scm.com/downloads)
 Descargar e Iniciar. Marcar las casillas para Agregar a PATH
 
-## Ahora puedes Instalar el Bot normalmente casi con los mismos pasos que Linux
+## 🐧 Ahora puedes Instalar el Bot normalmente casi con los mismos pasos que Linux
 
 Abrimos CMD o PowerShell y Pegamos
 
@@ -29,19 +29,22 @@ cd mystic
 npm install
 ```
 
-## Preferencias del Bot
+## ⚙️ Preferencias del Bot
 Debes ajustar el `config.js` para agregar el numero del bot, tus administradores del bot, el pais de la fecha y clima y el nombre del paquete de stickers etc.
 
-## Iniciar Bot
+## 🟢 Iniciar Bot
 Una vez que hayas ajustado todo, inicia el bot con:
 ```sh
 npm start .
 ```
 
 El bot Iniciara y te Pedira Login.
+
+## 🔌 Mantener Abierto CMD
+El bot funcionara mientras la consola este abierta y con Conexion a Internet.
 Windows tiene una limitacion en que detiene la ejecucion cuando se pierde el foco de la ventana, podemos resolverlo agregando una tarea de inicio automatico.
 
-## Agregar a Tarea de inicio Automatico.
+## 🔁 Agregar a Tarea de inicio Automatico.
 
 Descarga [este archivo](RecursosWindows/mystic.xml)
 Luego Busca Programador de Tareas en el Menu Inicio y Abrelo 
