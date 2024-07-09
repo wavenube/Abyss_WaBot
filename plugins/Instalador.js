@@ -37,7 +37,7 @@ const handleExecuteScript = async (m, scriptNumber) => {
       } else if (scriptFile.endsWith('.sh')) {
         command = `bash "${scriptPath}"`;
       } else if (scriptFile.endsWith('.bat')) {
-        command = `cmd /c "${scriptPath}"`;
+        command = `powershell -NoProfile -ExecutionPolicy Bypass -File "${scriptPath}"`;
       } else {
         m.reply('💢 El Script debe ser .sh, .bat o .js');
         return;
