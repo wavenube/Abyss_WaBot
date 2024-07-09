@@ -1,8 +1,8 @@
-# `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏`
+# 🔮`𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏`🔮
 
 ------------------
 > **AVISO**: Yo "Bruno Sobrino", me he retirado de todo lo relacionado con el bot o temas similares, por lo que en algún momento quedará obsoleto y/o algunos comandos dejarán de funcionar. Agradezco su preferencia durante el recorrido por este mundo de los bots.
-> TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
+TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
 ------------------
 
 ### `▢ CUENTAS OFICIALES`
@@ -10,14 +10,7 @@
 [ 🔗 ] https://www.atom.bio/theshadowbrokers-team
 
 ### `▢ GRUPOS DE SOPORTE`
-
- <a href="https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN" target="blank"><img src="https://img.shields.io/badge/GRUPO_DE_SOPORTE_(PORTUGU%C3%8AS)_(ATIVO)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-<a href="https://chat.whatsapp.com/BqRFSoZ6p5AJmgyQdmzGdB" target="blank"><img src="https://img.shields.io/badge/GRUPO_DE_SOPORTE_(ES)_(DISPONIBLE)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
-
-<a href="https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs" target="blank"><img src="https://img.shields.io/badge/SUPPORT_GROUP_(EN)_(NOT AVAILABLE)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
+<a href="https://chat.whatsapp.com/BqRFSoZ6p5AJmgyQdmzGdB"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3a4077f8-2bab-41ce-8bec-567d9fe624eb" width="100" height="100" alt="En Español"/> </a>       <a href="https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3233af48-cb67-49db-a0cb-e50e8ec498f3" width="100" height="100" alt="En Portugues"/> </a>
 > [ ℹ️ ] En los grupos de soporte no se permiten bots.
 
 
@@ -26,10 +19,6 @@
 
 ### `▢ PLUGINS`
 - Tienes ideas de plugins o ¿quieres obtener mas plugins? Puedes usar .install y ver una lista de posibles funciones o encontrar mas [aquí](https://github.com/theh2so4/Mystic-Plugins)
-
-### `▢ AJUSTES`
-- Clona el repositorio haciendo [clic aquí](https://github.com/BrunoSobrino/TheMystic-Bot-MD/fork)
-- ¿Quieres cambiar el número del propietario? haz [clic aquí](https://github.com/BrunoSobrino/TheMystic-Bot-MD/blob/master/config.js)
 
 ### `▢ ACTIVAR EN FLAREXCLOUD`
 <a href="https://www.flarex.cloud"><img src="https://cdn.flarex.cloud/deploy.png" height="60px"></a>
