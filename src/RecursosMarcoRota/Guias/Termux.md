@@ -4,7 +4,9 @@
 Descaga la version compatible con tu Telefono de Aqui: [Termux Github](https://github.com/termux/termux-app/releases)
 
 Suele decir ""termux-app_vxxx-+apt-android-7-github-debug_universal.apk"" 
-Android 7 se refiere a que funciona con Android 7 y Superior, hay otra version para Android 7 e Inferior llamado Android5. Tambien puedes usar [Termux Monect](https://github.com/KitsunedFox/termux-monet) *PERO JAMAS TERMUX DE GOOGLE PLAY*
+Android 7 se refiere a que funciona con Android 7 y Superior, hay otra version para Android 7 e Inferior llamado Android5. Tambien puedes usar [Termux Monect](https://github.com/KitsunedFox/termux-monet) 
+> [!CAUTION]
+> PERO JAMAS TERMUX DE GOOGLE PLAY
 
 ## ⬇️ Instalar Requerimientos
 Lamentablemente Termux no es compatible con algunos modulos de nodejs que requiere el bot, asi que Instalaremos una Instancia Linux Debian con Estos comandos:
