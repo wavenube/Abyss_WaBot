@@ -68,11 +68,7 @@ En caso de que termux se te cierre a cada rato, puedes seguir estos pasos OPCION
 - ADB desde Terminal en PC:
 ```
 adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
-```
-```
 adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
-```
-```
 adb shell settings put global settings_enable_monitor_phantom_procs false
 ```
 
@@ -80,21 +76,14 @@ adb shell settings put global settings_enable_monitor_phantom_procs false
 - On Termux (or any Terminal Emulator), paste the following commands on the following order:
 ```
 su -c /system/bin/device_config set_sync_disabled_for_tests persistent
-```
-```
 su -c /system/bin/device_config put activity_manager max_phantom_processes 2147483647
-```
-```
 su -c setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs false
 ```
 
 #### O Instalando un Modulo de Magisk
 
-- On a Rooted phone with Magisk installed, flash the following module:
-
     > [![](https://img.shields.io/static/v1?message=LetTheGhostsOut.zip&logo=magisk&labelColor=5c5c5c&color=00af9c&logoColor=white&label=%20&style=for-the-badge)](https://raw.githubusercontent.com/HardcodedCat/termux-monet/master/ppr/PhantomProcessRetainer-main.zip)
 
-- After that, `PhantomProcessKiller might be deactivated on every device boot.` Please make an [issue](https://github.com/HardcodedCat/termux-monet/issues) on this repo if the module didn't work for you.
 
 [Fuente Termux Monect](https://github.com/KitsunedFox/termux-monet/blob/master/README.md)
 
