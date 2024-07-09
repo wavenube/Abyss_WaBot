@@ -8,7 +8,7 @@ Descargar e Iniciar. Marcar las casillas para instalar Complementos Adicionales 
 
 [Python](https://www.python.org/downloads/)
 Descargar e Iniciar. Marcar las casillas para Agregar a PATH
-Luego de la Instalacion mover [este archivo](src/RecursosMarcoRota/Guias/RecursosWindows/python3.bat) a la Carpeta de Instalacion de Python "Disco local > Python3.xx"
+Luego de la Instalacion mover [este archivo](RecursosWindows/python3.bat) a la Carpeta de Instalacion de Python "Disco local > Python3.xx"
 Esto debido a que la mayoria de Plugins estan adaptados para Linux, sin esto los scripts que usan Python3 fallaran.
 
 [Git](https://git-scm.com/downloads)
