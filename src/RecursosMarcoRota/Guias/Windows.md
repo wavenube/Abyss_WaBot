@@ -14,6 +14,9 @@ Esto debido a que la mayoria de Plugins estan adaptados para Linux, sin esto los
 [Git](https://git-scm.com/downloads)
 Descargar e Iniciar. Marcar las casillas para Agregar a PATH
 
+[Make](https://gnuwin32.sourceforge.net/downlinks/make.php)
+Util para usar Make en algunos Plugins
+
 ## 🐧 Ahora puedes Instalar el Bot normalmente casi con los mismos pasos que Linux
 
 Abrimos CMD o PowerShell y Pegamos
