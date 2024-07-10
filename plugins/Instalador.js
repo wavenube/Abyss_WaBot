@@ -14,7 +14,7 @@ const handleListScripts = async (m) => {
     const fileList = files.map((file, index) => `${index + 1}. ${file}`).join('\n');
 
     // Envía la lista
-    await m.reply(`Ejecutor de Scripts. Puedes agregar mas con .Mover \n\n${fileList}`);
+    await m.reply(`Ejecutor de Scripts. Lea como Usarlo Aqui:  \n\n${fileList}`);
   } catch (error) {
     console.error('Error al listar los scripts:', error);
     await m.reply('❌ Falla');
@@ -30,16 +30,16 @@ const handleExecuteScript = async (m, scriptNumber) => {
       const scriptFile = files[scriptNumber - 1];
       const scriptPath = `${scriptsDirectory}/${scriptFile}`;
 
-      // Dependiendo de la extensión abrirá cmd, bash o en caso de que sea js lo hará en node.
+      // Dependiendo de la extensión abrirá PowerShell, Bash o en caso de que sea js lo hará en node.
       let command;
       if (scriptFile.endsWith('.js')) {
         command = `node "${scriptPath}"`;
       } else if (scriptFile.endsWith('.sh')) {
         command = `bash "${scriptPath}"`;
-      } else if (scriptFile.endsWith('.bat')) {
+      } else if (scriptFile.endsWith('.ps1')) {
         command = `powershell -NoProfile -ExecutionPolicy Bypass -File "${scriptPath}"`;
       } else {
-        m.reply('💢 El Script debe ser .sh, .bat o .js');
+        m.reply('💢 El Script debe ser .sh, .ps1 o .js');
         return;
       }
 
@@ -58,14 +58,14 @@ const handleExecuteScript = async (m, scriptNumber) => {
           m.reply(`❌ ${stderr}`);
           return;
         }
-        m.reply(`✔️ \n\n${stdout}`);
+        m.reply(`✔️ ${stdout}`);
       });
     } else {
       m.reply('💢 Un numero de la Lista Amigo');
     }
   } catch (error) {
     console.error('Error al ejecutar', error);
-    await m.reply('❌ Error Ejecutando:');
+    await m.reply('❌ Error Ejecutando');
   }
 };
 
