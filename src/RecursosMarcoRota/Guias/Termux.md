@@ -18,7 +18,7 @@ pkg install proot-distro -y
 Luego:
 
 ```sh
-proot-distro install debian -y
+proot-distro install debian
 ```
 Esperas un Rato dependiendo de la velocidad de tu internet...
 
