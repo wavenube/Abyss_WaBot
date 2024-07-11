@@ -40,6 +40,7 @@ Una vez que hayas ajustado todo, inicia el bot con:
 ```sh
 npm start .
 ```
+![image](https://github.com/weskerty/TheMysticMOD/assets/82781997/90f6616d-ccf5-46a4-b498-bff5af8b41f4)
 
 El bot Iniciara y te Pedira Login.
 
