@@ -34,6 +34,8 @@ Una vez que hayas ajustado todo, inicia el bot con:
 ```sh
 npm start .
 ```
+![Captura de pantalla_20240710_092057](https://github.com/weskerty/TheMysticMOD/assets/82781997/025b927b-fa26-4a08-8539-051408f8d13c)
+
 
 ## 🔌 Mantener Abierto la Terminal.
 El bot funcionara mientras este abierto el shell y con Conexion a Internet.
