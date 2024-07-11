@@ -32,6 +32,7 @@ proot-distro login debian
 
 
 ```sh
+apt update
 apt install git curl wget ffmpeg imagemagick -y
 ```
 
