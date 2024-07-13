@@ -1,41 +1,26 @@
-# `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏`
+# 🔮`𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏`🔮
 
 ------------------
 > **AVISO**: Yo "Bruno Sobrino", me he retirado de todo lo relacionado con el bot o temas similares, por lo que en algún momento quedará obsoleto y/o algunos comandos dejarán de funcionar. Agradezco su preferencia durante el recorrido por este mundo de los bots.
-
-> TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
+TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
 ------------------
 
 ### `▢ CUENTAS OFICIALES`
 
 [ 🔗 ] https://www.atom.bio/theshadowbrokers-team
 
-### `▢ GRUPOS DE SOPORTE (NO DISPONIBLE)`
-
- <a href="https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN" target="blank"><img src="https://img.shields.io/badge/GRUPO_DE_SOPORTE_(PORTUGU%C3%8AS)_(ATIVO)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-<a href="https://chat.whatsapp.com/IkUzsnEJ7za8J9P49JdTJ9" target="blank"><img src="https://img.shields.io/badge/GRUPO_DE_SOPORTE_(ES)_(DISPONIBLE)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
-<a href="https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs" target="blank"><img src="https://img.shields.io/badge/SUPPORT_GROUP_(EN)_(NOT AVAILABLE)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
+### `🤔 GRUPOS DE SOPORTE`
+<a href="https://chat.whatsapp.com/BqRFSoZ6p5AJmgyQdmzGdB"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3a4077f8-2bab-41ce-8bec-567d9fe624eb" width="100" height="100" alt="En Español"/> </a>       <a href="https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/3233af48-cb67-49db-a0cb-e50e8ec498f3" width="100" height="100" alt="En Portugues"/> </a>
 > [ ℹ️ ] En los grupos de soporte no se permiten bots.
 
- ### `▢ BOTS OFICIALES (INACTIVOS)`
 
-
-<a href="https://api.whatsapp.com/send/?phone=5219991402134&text=/estado&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1_(INACTIVO)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-<a href="https://api.whatsapp.com/send/?phone=5219993404349&text=/estado&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_2_(INACTIVO)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-### `▢ DONAR`
+### `🫂 DONAR`
 - Agradece con una donación voluntaria haciendo [clic aquí](https://www.paypal.me/TheShadowBrokers133)
 
-### `▢ PLUGINS`
-- Tienes ideas de plugins o ¿quieres obtener mas plugins? entonces hace [clic aquí](https://github.com/theh2so4/Mystic-Plugins)
+### `Wiki y Demas Ajustes`
 
-### `▢ AJUSTES`
-- Clona el repositorio haciendo [clic aquí](https://github.com/BrunoSobrino/TheMystic-Bot-MD/fork)
-- ¿Quieres cambiar el número del propietario? haz [clic aquí](https://github.com/BrunoSobrino/TheMystic-Bot-MD/blob/master/config.js)
+### `🧩 PLUGINS`
+- Tienes ideas de plugins o ¿quieres obtener mas plugins? Puedes usar .install y ver una lista de posibles funciones o encontrar mas [aquí](https://github.com/theh2so4/Mystic-Plugins)
 
 ### `▢ ACTIVAR EN FLAREXCLOUD`
 <a href="https://www.flarex.cloud"><img src="https://cdn.flarex.cloud/deploy.png" height="60px"></a>
@@ -77,20 +62,13 @@
 
 - Discord: [`Aqui`](https://discord.com/invite/vgfpe4Nwd8)
 
-### `▢ ACTIVAR EN KOYEB`
+### `▢ Otras Plataformas: `
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot)
-  
-### `▢ ACTIVAR EN REPLIT`
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot) [![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/TheMystic-Bot-MD)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD) [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD) 
 
-[![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/TheMystic-Bot-MD)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD) 
-  
-### `▢ ACTIVAR EN RENDER`
+### ` 🖥️ INSTALACION VPS`
+<a href="src/RecursosMarcoRota/Guias/Termux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/4ddefda6-ce04-46d2-bed9-d31614d0b4d8" width="150" height="30" alt="Android"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Linux.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/7160fd2b-1bdf-4e4a-b907-9b1868a0b440" width="150" height="30" alt="Linux"/> </a>  -  <a href="src/RecursosMarcoRota/Guias/Windows.md"><img src="https://github.com/weskerty/TheMysticMOD/assets/82781997/31d8455c-9c0f-49bc-b638-322bd68e2bce" width="150" height="30" alt="Windows"/> </a>
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD) 
-
-### `▢ ACTIVAR EN TERMUX` 
-- El Bot no es compartible con termux debido a que es un Bot de consumo alto de recursos. 
 
 ### `▢ NOTAS`
 - SE AGREGÓ LA FUNCION DE MULTIIDIOMAS, USA EL COMANDO #lang PARA CONOCER MAS INFO Y LOS IDIOMAS DISPOSIBLES
@@ -103,17 +81,13 @@
 - THE SHADOW BROKERS - TEAM NO SE HACE RESPONSABLE DEL USO, NUMEROS, PRIVACIDAD Y CONTENIDO MANDADO, USADO O GESTIONADO POR USTEDES O EL BOT
  
  ### `▢ ¿DUDAS SOBRE EL BOT?, CONTACTANOS`
-<a href="http://wa.me/5219992095479" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO_CREADOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/595986460945" target="blank"><img src="https://img.shields.io/badge/AIDEN_NOTLOGIC_COLAB.3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/51940617554" target="blank"><img src="https://img.shields.io/badge/GATITO_COLAB.4-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+ 
 <a href="http://wa.me/593991398786" target="blank"><img src="https://img.shields.io/badge/CARLOSTWT_COLAB.5-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/51996089079" target="blank"><img src="https://img.shields.io/badge/GHOST_COLAB.6-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/51995386439" target="blank"><img src="https://img.shields.io/badge/NEKOSMICMATT_COLAB.7-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/593959425714" target="blank"><img src="https://img.shields.io/badge/DIEGO_COLAB.8-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/50246028932" target="blank"><img src="https://img.shields.io/badge/SinNombre_COLAB.9-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/5212411719888" target="blank"><img src="https://img.shields.io/badge/YOVANI_COLAB.10-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/5218442114446" target="blank"><img src="https://img.shields.io/badge/skid_COLAB.11-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/393755775755" target="blank"><img src="https://img.shields.io/badge/Fabri115_COLAB.12-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/212609395104" target="blank"><img src="https://img.shields.io/badge/Saad_COLAB.13-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="https://www.whatsapp.com/channel/0029VadrnO9InlqNslAErY3D" target="blank"><img src="https://img.shields.io/badge/BK9_COLAB.0-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
@@ -141,6 +115,7 @@
 <a href="https://github.com/jeffersonalionco"><img src="https://github.com/jeffersonalionco.png" width="100" height="100" alt="Alba070503"/> </a>
 <a href="https://instagram.com/nm9h"><img src="https://telegra.ph/file/7580886a1d41b35b51e38.jpg" width="100" height="100" alt="Saad"/> </a>
 <a href="https://github.com/BK9dev"><img src="https://i.imgur.com/NAVoDeW.jpeg" width="100" height="100" alt="BK9"/> </a>
+<a href="https://github.com/weskerty"><img src="https://avatars.githubusercontent.com/u/82781997?v=4" width="100" height="100" alt="Wiska"/> </a>
 
 ## `▢ AGRADECIMIENTOS & CREDITOS` 
 <div><button id="boton" type="button">games-wabot-md by BochilGaming </button></div>

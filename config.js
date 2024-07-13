@@ -1,3 +1,4 @@
+// No Modificar. No son ajustes, son imporaciones de funcion.
 import {watchFile, unwatchFile} from 'fs';
 import chalk from 'chalk';
 import {fileURLToPath} from 'url';
@@ -7,9 +8,11 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
 
+// Numero del Bot. Al iniciar por primera vez se solicitara directamente el Codigo de inicio de Sesion al numero Especificado.
 global.botnumber = ""
 global.confirmCode = ""
 
+// Admins del Bot 
 global.owner = [
   ['5219992095479', '👑 Mystic - Creador 👑', true],
   ['51940617554', '💫 Mystic - Collaborator 2 💫', true],
@@ -45,6 +48,7 @@ global.owner = [
 global.suittag = ['5219993404349'];
 global.prems = ['51995386439'];
 
+// Nombre del Paquete de Stickers
 global.packname = 'Sticker';
 global.author = 'The Mystic - Bot';
 global.wm = 'The Mystic - Bot';
@@ -53,6 +57,7 @@ global.titulowm2 = `The Mystic - Bot`
 global.igfg = 'The Mystic - Bot';
 global.wait = '*[ ⏳ ] Cargando...*';
 
+// Imagenes de algunos comandos
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
@@ -75,6 +80,8 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
+
+// Ajustes varios que utilizan otros comandos, se puede cambiar.
 global.wm2 = `${dia} ${fecha}\nThe Mystic - Bot`;
 global.gt = 'The Mystic - Bot';
 global.mysticbot = 'The Mystic - Bot';
@@ -98,6 +105,8 @@ global.htki = '*⭑•̩̩͙⊱•••• ☪*';
 global.htka = '*☪ ••••̩̩͙⊰•⭑*';
 global.comienzo = '• • ◕◕════';
 global.fin = '════◕◕ • •';
+
+// Aqui puedes ajustar la Ubicacion de tu Pais para Ajuste de Hora y Plugin Clima
 global.botdate = `*[ 📅 ] Fecha:*  ${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
 global.bottime = `*[ ⏳ ] Hora:* ${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
 global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}};
