@@ -15,7 +15,7 @@ const handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, i
     // const pp = imagen7;
 
     // let vn = './media/menu.mp3'
-    const img = './Menu2.jpg';
+    const img = './src/abyss.png';
     const d = new Date(new Date + 3600000);
     const locale = 'es-ES';
     const week = d.toLocaleDateString(locale, { weekday: 'long' });
@@ -541,7 +541,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
     if (m.isGroup) {
       // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD }}, "participant": "0@s.whatsapp.net" }
-conn.sendMessage(m.chat, {image: pp, mimetype: "image/jpeg", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
+conn.sendMessage(m.chat, {image: pp, mimetype: "./src/abyss2.png", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
 contextInfo: {
     	isForwarded: true,    forwardedNewsletterMessageInfo: {
       newsletterJid: "120363318622514917@newsletter",
@@ -563,7 +563,7 @@ contextInfo: {
     } else {
       //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD }}, "participant": "0@s.whatsapp.net" }
-   conn.sendMessage(m.chat, {image: pp, mimetype: "image/jpeg", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
+   conn.sendMessage(m.chat, {image: pp, mimetype: "./src/abyss2.png", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
 contextInfo: {
     	isForwarded: true,    forwardedNewsletterMessageInfo: {
       newsletterJid: "120363318622514917@newsletter",
