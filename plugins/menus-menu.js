@@ -51,7 +51,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
  ${tradutor.texto1[10]}
  
-  ,╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌,
+  ,╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌,
 > ${tradutor.texto1[11]}
 
 ╭─────•ೋ•─────╮
