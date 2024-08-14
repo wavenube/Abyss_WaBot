@@ -541,18 +541,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
     if (m.isGroup) {
       // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD }}, "participant": "0@s.whatsapp.net" }
-     conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net') }, { quoted: fkontak });
-    } else {
-      //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD }}, "participant": "0@s.whatsapp.net" }
-   conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net') }, { quoted: fkontak });
-    }
-  } catch {
-    const datas = global
-    const idioma = datas.db.data.users[m.sender].language
-    const _translate = JSON.parse(fs.readFileSync(./language/${idioma}.json))
-    const tradutor = _translate.plugins.menu_menu
-conn.sendMessage(m.chat, {image: pp, mimetype: "image/jpeg", caption: tradutor.texto1[29],
+conn.sendMessage(m.chat, {image: pp, mimetype: "image/jpeg", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
 contextInfo: {
     	isForwarded: true,    forwardedNewsletterMessageInfo: {
       newsletterJid: "120363318622514917@newsletter",
@@ -570,7 +559,37 @@ contextInfo: {
       }
     }
 },
-     {quoted: m})
+     {quoted: fkontak})
+    } else {
+      //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
+const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD }}, "participant": "0@s.whatsapp.net" }
+   conn.sendMessage(m.chat, {image: pp, mimetype: "image/jpeg", caption: str, mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'),
+contextInfo: {
+    	isForwarded: true,    forwardedNewsletterMessageInfo: {
+      newsletterJid: "120363318622514917@newsletter",
+      serverMessageId: 1,
+      newsletterName: "no sé",
+    }, 
+      externalAdReply: {
+        mediaUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v",
+        mediaType: 'VIDEO',
+        description: 'canal del grupo',
+        title: wm,
+        body: "testing bot",
+        thumbnailUrl: await conn.profilePictureUrl(m.sender, "image"),
+        sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
+      }
+    }
+},
+     {quoted: fkontak})
+    }
+  } catch {
+    const datas = global
+    const idioma = datas.db.data.users[m.sender].language
+    const _translate = JSON.parse(fs.readFileSync(./language/${idioma}.json))
+    const tradutor = _translate.plugins.menu_menu
+
+    conn.reply(m.chat, tradutor.texto1[29], m);
   }
 };
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
