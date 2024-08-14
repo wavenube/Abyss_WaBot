@@ -583,7 +583,8 @@ contextInfo: {
 },
      {quoted: fkontak})
     }
-  } catch {
+  } catch (e) {
+  throw e
     const datas = global
     const idioma = datas.db.data.users[m.sender].language
     const _translate = JSON.parse(fs.readFileSync(./language/${idioma}.json))
