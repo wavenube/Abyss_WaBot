@@ -553,7 +553,7 @@ const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@b
         mediaType: 'VIDEO',
         description: 'canal del grupo',
         title: wm,
-        body: "testing bot",
+        body: "By: ZephyrByte",
         thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png",
         sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
       }
@@ -566,7 +566,7 @@ const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@b
       isForwarded: true,    forwardedNewsletterMessageInfo: {
       newsletterJid: "120363318622514917@newsletter",
       serverMessageId: 1,
-      newsletterName: "no sé",
+      newsletterName: "Abyss Bot",
     }, 
       externalAdReply: {
         mediaUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v",
