@@ -36,7 +36,7 @@ const handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, i
 
 ${tradutor.texto1[1]} ${taguser}
 
-> ★ Moonlight Team ★
+> ★ Unete al grupo de WhatsApp ★
 
 ${tradutor.texto1[2]}
 
@@ -573,7 +573,7 @@ const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@b
         mediaType: 'VIDEO',
         description: 'canal del grupo',
         title: wm,
-        body: "Unete a nuestro grupo de WhatsApp",
+        body: "By: ZephyrByte",
         thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png",
         sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
       }
