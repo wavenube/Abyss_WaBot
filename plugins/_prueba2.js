@@ -1,46 +1,33 @@
-import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Obtener el nombre del archivo actual
-const __filename = fileURLToPath(import.meta.url);
-// Obtener el directorio del archivo actual
-const __dirname = path.dirname(__filename);
 
 const handler = async (m, { conn }) => {
-    const videoUrl = 'https://www.eporner.com/video-h9q5ATLjugN/stepsister-play-with-dick-between-tits-uncensored-hentai/';
-    const filePath = path.join(__dirname, 'video.mp4');
+    const videosDir = path.join(__dirname, 'src', 'videos');
 
     try {
-        // Descargar el video
-        const response = await axios({
-            url: videoUrl,
-            method: 'GET',
-            responseType: 'stream',
-        });
+        // Leer los archivos en la carpeta de videos
+        const files = fs.readdirSync(videosDir);
 
-        // Guardar el video temporalmente en el servidor
-        const writer = fs.createWriteStream(filePath);
-        response.data.pipe(writer);
+        // Filtrar solo los archivos de video (por extensión)
+        const videoFiles = files.filter(file => file.endsWith('.mp4') || file.endsWith('.mkv') || file.endsWith('.avi'));
 
-        // Esperar a que se complete la descarga
-        await new Promise((resolve, reject) => {
-            writer.on('finish', resolve);
-            writer.on('error', reject);
-        });
+        if (videoFiles.length === 0) {
+            return m.reply('No hay videos disponibles en la carpeta.');
+        }
 
-        // Enviar el video a través de WhatsApp
-        await conn.sendMessage(m.chat, { video: fs.readFileSync(filePath) }, { quoted: m });
+        // Seleccionar un video aleatorio
+        const randomVideo = videoFiles[Math.floor(Math.random() * videoFiles.length)];
+        const videoPath = path.join(videosDir, randomVideo);
 
-        // Eliminar el archivo descargado después de enviarlo
-        fs.unlinkSync(filePath);
+        // Enviar el video aleatorio
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(videoPath) }, { quoted: m });
+
     } catch (error) {
-        console.error('Error al descargar o enviar el video:', error);
-        m.reply('Ocurrió un error al intentar descargar o enviar el video.');
+        console.error('Error al enviar el video:', error);
+        m.reply('Ocurrió un error al intentar enviar el video.');
     }
 };
 
-handler.command = /^(animevid|sendvideo)$/i; // Puedes ajustar el comando según lo necesites
+handler.command = /^(hentai|sendvideo)$/i; // Puedes ajustar el comando según lo necesites
 
 export default handler;
