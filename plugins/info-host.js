@@ -36,7 +36,7 @@ ${tradutor.texto1[15]}
 ${tradutor.texto1[16]}
 `.trim();
   const buttonMessage= {
-    'document': {url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`},
+    'document': {url: `https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6`},
     'mimetype': `application/${document}`,
     'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
     'fileLength': 99999999999999,
@@ -45,13 +45,13 @@ ${tradutor.texto1[16]}
       'forwardingScore': 200,
       'isForwarded': true,
       'externalAdReply': {
-        'mediaUrl': 'https://github.com/BrunoSobrino/TheMystic-Bot-MD',
+        'mediaUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6',
         'mediaType': 2,
         'previewType': 'pdf',
         'title': tradutor.texto2,
         'body': wm,
         'thumbnail': imagen1,
-        'sourceUrl': 'https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q'}},
+        'sourceUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6'}},
     'caption': text,
     'footer': wm,
     // 'buttons':[
