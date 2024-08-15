@@ -2,8 +2,14 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 
-// URL del video que se enviará
-const VIDEO_URL = 'https://qu.ax/scZw.mp4';
+// Lista de URLs de videos
+const VIDEO_URLS = [
+    'https://qu.ax/scZw.mp4',
+    'https://example.com/video2.mp4',  // Añade aquí más URLs de videos
+    'https://example.com/video3.mp4',
+    // Agrega más enlaces según sea necesario
+];
+
 const TEMP_FILE_PATH = path.join(__dirname, 'temp_video.mp4'); // Cambia __dirname si es necesario
 
 // Función para descargar el archivo
@@ -26,8 +32,12 @@ const downloadFile = async (url, filePath) => {
 // Comando del bot
 const handler = async (m, { conn }) => {
     try {
+        // Elegir un video aleatorio de la lista
+        const randomIndex = Math.floor(Math.random() * VIDEO_URLS.length);
+        const randomVideoUrl = VIDEO_URLS[randomIndex];
+
         // Descargar el video
-        await downloadFile(VIDEO_URL, TEMP_FILE_PATH);
+        await downloadFile(randomVideoUrl, TEMP_FILE_PATH);
 
         // Enviar el archivo
         await conn.sendMessage(m.chat, { video: fs.readFileSync(TEMP_FILE_PATH) }, { quoted: m });
