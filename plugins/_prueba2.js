@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const handler = async (m, { conn }) => {
-    const videosDir = path.join(__dirname, 'src', 'videos');
+    const videosDir = path.join(__dirname, './src', 'videos');
 
     try {
         // Leer los archivos en la carpeta de videos
