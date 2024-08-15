@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Ruta de la carpeta de videos basada en la raíz del proyecto
-const videosDir = path.resolve(__dirname, '../../src/videos');
+const videosDir = path.resolve(__dirname, '../src/videos');
 
 const handler = async (m, { conn }) => {
     try {
