@@ -1,8 +1,6 @@
 // Lista de URLs de videos
 const VIDEO_URLS = [
     'https://qu.ax/scZw.mp4',
-    'https://example.com/video2.mp4',  // Añade aquí más URLs de videos
-    'https://example.com/video3.mp4',
     // Agrega más enlaces según sea necesario
 ];
 
@@ -21,7 +19,6 @@ const handler = async (m, { conn }) => {
             m.chat,
             {
                 video: { url: randomVideoUrl },
-                gifPlayback: true,
                 caption: str.trim(),
                 mentions: [m.sender]  // Menciona al usuario que usó el comando
             },
@@ -35,7 +32,7 @@ const handler = async (m, { conn }) => {
 };
 
 // Definir el comando y sus propiedades
-handler.command = /^(hentaivid)$/i; // Comando para activar el manejador
+handler.command = /^(hentaivid|video)$/i; // Comando para activar el manejador
 handler.group = true; // Si el comando debe funcionar solo en grupos
 handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
 handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
