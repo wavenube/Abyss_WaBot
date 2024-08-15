@@ -1,6 +1,12 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Obtener el nombre del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+// Obtener el directorio del archivo actual
+const __dirname = path.dirname(__filename);
 
 const handler = async (m, { conn }) => {
     const videoUrl = 'https://www.eporner.com/video-h9q5ATLjugN/stepsister-play-with-dick-between-tits-uncensored-hentai/';
