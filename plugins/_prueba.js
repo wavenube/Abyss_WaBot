@@ -1,10 +1,10 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
-import { Buffer } from 'buffer';
 
-const VIDEO_FOLDER_PATH = './src/videos';
+// URL del video que se enviará
+const VIDEO_URL = 'https://qu.ax/scZw.mp4';
+const TEMP_FILE_PATH = path.join(__dirname, 'temp_video.mp4'); // Cambia __dirname si es necesario
 
 // Función para descargar el archivo
 const downloadFile = async (url, filePath) => {
@@ -24,24 +24,16 @@ const downloadFile = async (url, filePath) => {
 };
 
 // Comando del bot
-const handler = async (m, { conn, args }) => {
+const handler = async (m, { conn }) => {
     try {
-        // Verificar si el usuario proporcionó un enlace
-        if (!args[0]) {
-            return m.reply('⚠️ Por favor, proporciona un enlace directo al video.');
-        }
-
-        const videoUrl = args[0];
-        const tempFilePath = path.join(VIDEO_FOLDER_PATH, 'temp_video.mp4');
-
         // Descargar el video
-        await downloadFile(videoUrl, tempFilePath);
+        await downloadFile(VIDEO_URL, TEMP_FILE_PATH);
 
         // Enviar el archivo
-        await conn.sendMessage(m.chat, { video: fs.readFileSync(tempFilePath) }, { quoted: m });
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(TEMP_FILE_PATH) }, { quoted: m });
 
         // Eliminar el archivo temporal
-        fs.unlinkSync(tempFilePath);
+        fs.unlinkSync(TEMP_FILE_PATH);
 
     } catch (error) {
         console.error('Error al enviar el video:', error);
