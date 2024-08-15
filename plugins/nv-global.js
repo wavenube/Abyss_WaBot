@@ -215,7 +215,7 @@ if (!chat.isBanned && m.text.match(/(Te revelas|te revelas)/gi)) {
     mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'te_revelas.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
 }
 
-if (!chat.isBanned && m.text.match(/(Adios|adios|A bueno adios master|a bueno adios master)/gi)) {
+if (!chat.isBanned && m.text.match(/(Adios|adios|A bueno adios master|a bueno adios master|master)/gi)) {
     if (!db.data.chats[m.chat].audios) return;
     if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
     const vn = './media/A bueno adios master.mp3';
@@ -242,7 +242,7 @@ if (!chat.isBanned && m.text.match(/(Blackpin in your area|blackpin in your area
 if (!chat.isBanned && m.text.match(/(Buen dia grupo|buen dia grupo)/gi)) {
     if (!db.data.chats[m.chat].audios) return;
     if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
-    const vn = './media/Buen dia grupo.mp3';
+    const vn = './media/Buen día grupo.mp3';
     mconn.conn.sendPresenceUpdate('recording', m.chat);
     mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'Buen dia grupo.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
 }
@@ -383,6 +383,54 @@ if (!chat.isBanned && m.text.match(/(Chica|chica)/gi)) {
     mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'chica.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
 }
 
+if (!chat.isBanned && m.text.match(/(Ara|Ara ara|ara ara|Arara)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/Ara.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+
+if (!chat.isBanned && m.text.match(/(Calla fan de bts|bts|BTS)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/Calla Fan de BTS.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+
+if (!chat.isBanned && m.text.match(/(gay|diagnosticado)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/DiagnosticadoConGay.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+
+if (!chat.isBanned && m.text.match(/(Zzz|zzz)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/Esta Zzzz.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+
+if (!chat.isBanned && m.text.match(/(Biblia|biblia)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/La biblia.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+
+  if (!chat.isBanned && m.text.match(/(Motivacion|motivar)/gi)) {
+    if (!db.data.chats[m.chat].audios) return;
+    if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
+    const vn = './media/Motivacion.mp3';
+    mconn.conn.sendPresenceUpdate('recording', m.chat);
+    mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'elmo_es_chingon.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+}
+  
   return !0;
 };
 export default handler;
