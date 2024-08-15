@@ -1,5 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Obtener el directorio actual cuando se usa ES6
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const handler = async (m, { conn }) => {
     const videosDir = path.join(__dirname, 'src', 'videos');
@@ -28,6 +33,6 @@ const handler = async (m, { conn }) => {
     }
 };
 
-handler.command = /^(hentai|sendvideo)$/i; // Puedes ajustar el comando según lo necesites
+handler.command = /^(hentaivid|sendvideo)$/i; // Puedes ajustar el comando según lo necesites
 
 export default handler;
