@@ -1,35 +1,40 @@
-import { Hentai, Format, Utils } from 'hentai';  // Importa las funciones necesarias
+import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
 
-const handler = async (m, { conn, usedPrefix, command }) => {
+const handler = async (m, { conn }) => {
+    const videoUrl = 'https://www.eporner.com/video-h9q5ATLjugN/stepsister-play-with-dick-between-tits-uncensored-hentai/';
+    const filePath = path.join(__dirname, 'video.mp4');
+
     try {
-        // Obtener un ID de doujin al azar
-        const random_id = Utils.get_random_id();
+        // Descargar el video
+        const response = await axios({
+            url: videoUrl,
+            method: 'GET',
+            responseType: 'stream',
+        });
 
-        // Crear una instancia del doujin utilizando el ID
-        const doujin = new Hentai(random_id);
+        // Guardar el video temporalmente en el servidor
+        const writer = fs.createWriteStream(filePath);
+        response.data.pipe(writer);
 
-        // Verificar si el doujin existe
-        if (!Hentai.exists(doujin.id)) {
-            return m.reply('No se encontró ningún contenido con ese ID.');
-        }
+        // Esperar a que se complete la descarga
+        await new Promise((resolve, reject) => {
+            writer.on('finish', resolve);
+            writer.on('error', reject);
+        });
 
-        // Obtener las URLs de las imágenes
-        const imageUrls = doujin.image_urls;
+        // Enviar el video a través de WhatsApp
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(filePath) }, { quoted: m });
 
-        // Enviar la primera imagen al chat
-        if (imageUrls.length > 0) {
-            await conn.sendFile(m.chat, imageUrls[0], `${doujin.title(Format.Pretty)}.jpg`, null, m);
-        } else {
-            return m.reply('No se encontraron imágenes en este doujin.');
-        }
+        // Eliminar el archivo descargado después de enviarlo
+        fs.unlinkSync(filePath);
     } catch (error) {
-        console.error(error);
-        return m.reply('Ocurrió un error al intentar obtener el contenido.');
+        console.error('Error al descargar o enviar el video:', error);
+        m.reply('Ocurrió un error al intentar descargar o enviar el video.');
     }
 };
 
-// Registro del comando
-handler.command = /^(animevid2)$/i;  // Configura el comando para que responda a "animevid"
+handler.command = /^(animevid|sendvideo)$/i; // Puedes ajustar el comando según lo necesites
 
-// Exporta el handler para que sea reconocido como un comando
 export default handler;
