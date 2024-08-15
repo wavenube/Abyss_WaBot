@@ -10,7 +10,7 @@ const VIDEO_URLS = [
     // Agrega más enlaces según sea necesario
 ];
 
-const TEMP_FILE_PATH = path.join(__dirname, 'temp_video.mp4'); // Cambia __dirname si es necesario
+const TEMP_FILE_PATH = path.join(__dirname, 'temp_video.mp4');
 
 // Función para descargar el archivo
 const downloadFile = async (url, filePath) => {
@@ -40,7 +40,7 @@ const handler = async (m, { conn }) => {
         await downloadFile(randomVideoUrl, TEMP_FILE_PATH);
 
         // Enviar el archivo
-        await conn.sendMessage(m.chat, { video: fs.readFileSync(TEMP_FILE_PATH) }, { quoted: m });
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(TEMP_FILE_PATH), caption: 'Aquí tienes un video aleatorio!' }, { quoted: m });
 
         // Eliminar el archivo temporal
         fs.unlinkSync(TEMP_FILE_PATH);
@@ -51,7 +51,8 @@ const handler = async (m, { conn }) => {
     }
 };
 
-handler.command = /^(prueba|video)$/i;
+// Definir el comando y sus propiedades
+handler.command = /^(prueba|video)$/i; // Comando para activar el manejador
 handler.group = true; // Si el comando debe funcionar solo en grupos
 handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
 handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
