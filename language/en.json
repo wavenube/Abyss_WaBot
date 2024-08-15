@@ -1,7 +1,7 @@
 {
     "___creditos": {
         "___Contribuidor": "https://github.com/jeffersonalionco",
-        "___Criador": "https://github.com/BrunoSobrino"
+        "___Criador": "https://github.com/ZephyrByteSobrino"
     },
     "plugins": {
         "antiarab": {
@@ -799,7 +799,7 @@
         },
         "downloader_ytmeta": {
             "texto1": "[❗] Enter a YouTube link.",
-            "texto2": "🤴🏻 Download by BrunoSobrino & TheAbyss-Bot-MD 🤖"
+            "texto2": "🤴🏻 Download by ZephyrByteSobrino & TheAbyss-Bot-MD 🤖"
         },
         "downloader_ytv_2": {
             "texto1": "[❗𝐈𝐍𝐅𝐎❗] Enter the command followed by the YouTube video link*",
@@ -2411,15 +2411,15 @@
             "texto1": [
                 "*[❗] You are in a conversation or order to use the chatbot function*\n\n*—◉ Examples of Petitions and Orders*\n*◉ Reflection on the Netflix series Merlin 2022*\n*◉ JS code for a card game*"
             ],
-            "texto2": "You will act as a WhatsApp Bot created by BrunoSobrino, you will be The Abyss - Bot.",
-            "texto3": "You will act as a WhatsApp Bot created by BrunoSobrino, you will be The Abyss - Bot.",
+            "texto2": "You will act as a WhatsApp Bot created by ZephyrByteSobrino, you will be The Abyss - Bot.",
+            "texto3": "You will act as a WhatsApp Bot created by ZephyrByteSobrino, you will be The Abyss - Bot.",
             "texto4": "*[❗] Error, please try again*"
         },
         "herramientas_chatgptvoz": {
             "texto1": [
                 "*[❗] You are in a conversation or order to use the chatbot function*\n\n*—◉ Examples of Petitions and Orders*\n*◉ Reflection on the Netflix series Merlin 2022*\n*◉ JS code for a card game*"
             ],
-            "texto2": "You will act as a WhatsApp Bot created by BrunoSobrino, you will be The Abyss - Bot.",
+            "texto2": "You will act as a WhatsApp Bot created by ZephyrByteSobrino, you will be The Abyss - Bot.",
             "texto3": "*[❗] Error, please try again*"
         },
         "herramientas_clima": {
@@ -2649,7 +2649,7 @@
                 " ➤ KEY:",
                 "646180192175788481",
                 "➤ BANK: STP",
-                "➤ BENEFICIARY: Bruno Sobrino",
+                "➤ BENEFICIARY: ZephyrByte Sobrino",
                 "➤ CONCEPT: SUPPORT",
                 "➤ PAYPAL: https://www.paypal.me/TheShadowBrokers133",
                 "👉🏻 CONTACT IF NECESSARY",
@@ -2660,7 +2660,7 @@
         "info_estado": {
             "texto1": [
                 "*< INFORMATION - STATE />*_",
-                "▢ *Owner:* Bruno Sobrino",
+                "▢ *Owner:* ZephyrByte Sobrino",
                 "▢ *WA:* +5219992095479",
                 "▢ *PayPal:* paypal.me/TheShadowBrokers133",
                 "▢ *Ping:*",
@@ -2719,7 +2719,7 @@
             "texto2": "The Best Hosting 🚀"
         },
         "info_instalarbot": {
-            "texto1": "*—◉ MAIN BOT INSTALLATION*\n> Tutorial: https://youtu.be/eC9TfKICpcY\n> Official Page: https://boxmineworld.com\n> Control Panel: https://dash.boxmineworld.com/home\n> Panel: https://panel.boxmineworld.com\n> Support: https://discord.gg/84qsr4v \n\n------------------------------------\n—◉ TERTIARY BOT INSTALLATION\n> Tutorial: https://youtu.be/yRS4m36Zwkw\n\n------------------------------------\n\n*—◉ INSTALLATION COMMANDS*\n> Commands:\n- cd && termux-setup-storage\n- apt-get update -y && apt-get upgrade -y\n- pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn \n- git clone https://github.com/BrunoSobrino/TheAbyss-Bot-MD.git && cd TheAbyss-Bot-MD\n- yarn install\n- npm install\n- npm update\n- npm start\n\n------------------------------------\n\n—◉ ✔️ RE-ACTIVATION IN CASE OF STOP IN TERMUX ✔️\nENTER THE FOLLOWING COMMANDS ONE BY ONE:\n> cd TheAbyss-Bot-MD\n> npm start\n\n------------------------------------\n\n—◉ 👽 GET ANOTHER QR CODE IN TERMUX 👽\nENTER THE FOLLOWING COMMANDS ONE BY ONE:\n> cd TheAbyss-Bot-MD\n> rm -rf AbyssSession\n> npm start",
+            "texto1": "*—◉ MAIN BOT INSTALLATION*\n> Tutorial: https://youtu.be/eC9TfKICpcY\n> Official Page: https://boxmineworld.com\n> Control Panel: https://dash.boxmineworld.com/home\n> Panel: https://panel.boxmineworld.com\n> Support: https://discord.gg/84qsr4v \n\n------------------------------------\n—◉ TERTIARY BOT INSTALLATION\n> Tutorial: https://youtu.be/yRS4m36Zwkw\n\n------------------------------------\n\n*—◉ INSTALLATION COMMANDS*\n> Commands:\n- cd && termux-setup-storage\n- apt-get update -y && apt-get upgrade -y\n- pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn \n- git clone https://github.com/ZephyrByteSobrino/TheAbyss-Bot-MD.git && cd TheAbyss-Bot-MD\n- yarn install\n- npm install\n- npm update\n- npm start\n\n------------------------------------\n\n—◉ ✔️ RE-ACTIVATION IN CASE OF STOP IN TERMUX ✔️\nENTER THE FOLLOWING COMMANDS ONE BY ONE:\n> cd TheAbyss-Bot-MD\n> npm start\n\n------------------------------------\n\n—◉ 👽 GET ANOTHER QR CODE IN TERMUX 👽\nENTER THE FOLLOWING COMMANDS ONE BY ONE:\n> cd TheAbyss-Bot-MD\n> rm -rf AbyssSession\n> npm start",
             "texto2": "The Best WhatsApp Bot"
         },
         "info_listprem": {
@@ -2759,7 +2759,7 @@
                 "▢ *Size:*",
                 "▢ *Last update:*",
                 "▢ *URL:*",
-                "https://github.com/BrunoSobrino/TheAbyss-Bot-MD",
+                "https://github.com/ZephyrByteSobrino/TheAbyss-Bot-MD",
                 "Forks ·",
                 "Stars ·",
                 "Issues\n\n",
@@ -3824,7 +3824,7 @@
             "texto11": [
                 "[ ⚠️ ] Warning",
                 "[ ⚠️ ] Warning",
-                "https://github.com/BrunoSobrino/TheAbyss-Bot-MD"
+                "https://github.com/ZephyrByteSobrino/TheAbyss-Bot-MD"
             ]
         },
         "participantsUpdate": {
