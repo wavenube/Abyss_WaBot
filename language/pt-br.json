@@ -802,7 +802,7 @@
         },
         "downloader_ytmeta": {
             "texto1": "*[❗] Insira um link do YouTube.*",
-            "texto2": "🤴🏻 Download por BrunoSobrino & TheMystic-Bot-MD 🤖"
+            "texto2": "🤴🏻 Download por BrunoSobrino & TheAbyss-Bot-MD 🤖"
         },
         "downloader_ytv_2": {
             "texto1": "*[❗𝐈𝐍𝐅𝐎❗] Insira o comando mais o link do vídeo do YouTube*",
@@ -859,8 +859,8 @@
         "fix_owner_esperando_mensajes": {
             "texto1": "*[❗] Utilize este comando diretamente no número principal do Bot.*",
             "texto2": "*[❗] Iniciando processo de exclusão de todos os arquivos de sessão, exceto o arquivo creds.json...*",
-            "texto3": "*[❗] A pasta MysticSession não existe ou está vazia.*",
-            "texto4": "*[❗] Nenhum arquivo para excluir foi encontrado na pasta MysticSession.*",
+            "texto3": "*[❗] A pasta AbyssSession não existe ou está vazia.*",
+            "texto4": "*[❗] Nenhum arquivo para excluir foi encontrado na pasta AbyssSession.*",
             "texto5": [
                 "*[❗] Foram excluídos",
                 "arquivos de sessão, exceto o arquivo creds.json.*"
@@ -2194,7 +2194,7 @@
                 "[❗INFORMAÇÃO❗] IMPOSSÍVEL ADICIONAR",
                 "À SUA CONTA PORQUE OCORREU UM PROBLEMA. NOTE QUE A PESSOA SAIU DO GRUPO OU CANCELOU SUA PRIVACIDADE DE GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. O CONVITE FOI ENVIADO AO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO OU A PESSOA CONFIRMOU SUA PRIVACIDADE DE GRUPO. OS ADMINISTRADORES ENVIARÃO O CONVITE AO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. CONVIDO VOCÊ AO CONVITE DO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES ENVIARÃO O CONVITE DO GRUPO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES GARANTIRÃO QUE O CONVITE AO GRUPO SEJA ENVIADO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES GARANTIRÃO QUE O CONVITE AO GRUPO SEJA ENVIADO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO !!"
             ],
-            "texto4": "Oi!! Olá, eu sou The Mystic - Bot e sou um Bot para WhatsApp. Alguém do grupo usou o comando para te adicionar ao grupo, mas não pude te adicionar, então estou te enviando o convite para que você se junte a nós. Estamos te esperando!!",
+            "texto4": "Oi!! Olá, eu sou The Abyss - Bot e sou um Bot para WhatsApp. Alguém do grupo usou o comando para te adicionar ao grupo, mas não pude te adicionar, então estou te enviando o convite para que você se junte a nós. Estamos te esperando!!",
             "texto5": "[❗INFORMAÇÃO❗] IMPOSSÍVEL ADICIONAR SEU NÚMERO PORQUE OCORREU UM PROBLEMA. NOTE QUE A PESSOA SAIU DO GRUPO OU CANCELOU SUA PRIVACIDADE DE GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. O CONVITE FOI ENVIADO AO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO OU A PESSOA CONFIRMOU SUA PRIVACIDADE DE GRUPO. OS ADMINISTRADORES ENVIARÃO O CONVITE AO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. CONVIDO VOCÊ AO CONVITE DO GRUPO EM SUAS CONFIGURAÇÕES DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES ENVIARÃO O CONVITE DO GRUPO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES GARANTIRÃO QUE O CONVITE AO GRUPO SEJA ENVIADO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO. OS ADMINISTRADORES GARANTIRÃO QUE O CONVITE AO GRUPO SEJA ENVIADO AO SEU CONFIGURAÇÃO DE PRIVACIDADE DE GRUPO !!"
         },
         "gc_admins": {
@@ -2416,15 +2416,15 @@
             "texto1": [
                 "*[❗] Você está em uma conversa ou ordem para usar a função de chatbot*\n\n*—◉ Exemplos de Petições e Ordens*\n*◉ Reflexão sobre a série Merlina 2022 da Netflix*\n*◉ Código em JS para um jogo de cartas*"
             ],
-            "texto2": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Mystic - Bot.",
-            "texto3": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Mystic - Bot.",
+            "texto2": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Abyss - Bot.",
+            "texto3": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Abyss - Bot.",
             "texto4": "*[❗] Erro, tente novamente*"
         },
         "herramientas_chatgptvoz": {
             "texto1": [
                 "*[❗] Você está em uma conversa ou ordem para usar a função de chatbot*\n\n*—◉ Exemplos de Petições e Ordens*\n*◉ Reflexão sobre a série Merlina 2022 da Netflix*\n*◉ Código em JS para um jogo de cartas*"
             ],
-            "texto2": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Mystic - Bot.",
+            "texto2": "Você vai atuar como um Bot de WhatsApp criado por BrunoSobrino, você será The Abyss - Bot.",
             "texto3": "*[❗] Erro, tente novamente*"
         },
         "herramientas_clima": {
@@ -2704,7 +2704,7 @@
         "info_host": {
             "texto1": [
                 "*🚀 -----[ Cafirexos]------- 🚀*",
-                "*Olá a todos 👋🏻 Estamos empolgados em anunciar nossa nova colaboração com Cafirexos 🤖 Agora você pode ter seu próprio bot de THE-MYSTIC-BOT-MD em sua plataforma online, permitindo que seus bots estejam ativos 24/7. 💻*",
+                "*Olá a todos 👋🏻 Estamos empolgados em anunciar nossa nova colaboração com Cafirexos 🤖 Agora você pode ter seu próprio bot de THE-Abyss-BOT-MD em sua plataforma online, permitindo que seus bots estejam ativos 24/7. 💻*",
                 "_A instalação dessas versões foi aprovada e já está em pleno funcionamento. Além disso, *os servidores são totalmente compatíveis, permitindo que você escolha o tipo de inicialização do bot de acordo com suas necessidades.* Prepare-se para uma experiência de usuário contínua e emocionante!_ ",
                 "*Página oficial:*",
                 "https://www.cafirexos.com/",
@@ -2724,7 +2724,7 @@
             "texto2": "O Melhor Hospedagem 🚀"
         },
         "info_instalarbot": {
-            "texto1": "*—◉ INSTALAÇÃO DO BOT PRINCIPAL*\n> Tutorial: https://youtu.be/eC9TfKICpcY\n> Página Oficial: https://boxmineworld.com\n> Painel de Controle: https://dash.boxmineworld.com/home\n> Painel: https://panel.boxmineworld.com\n> Suporte: https://discord.gg/84qsr4v \n\n------------------------------------\n—◉ INSTALAÇÃO DO BOT TERCIÁRIO\n> Tutorial: https://youtu.be/yRS4m36Zwkw\n\n------------------------------------\n\n*—◉ COMANDOS DE INSTALAÇÃO*\n> Comandos:\n- cd && termux-setup-storage\n- apt-get update -y && apt-get upgrade -y\n- pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn \n- git clone https://github.com/BrunoSobrino/TheMystic-Bot-MD.git && cd TheMystic-Bot-MD\n- yarn install\n- npm install\n- npm update\n- npm start\n\n------------------------------------\n\n—◉ ✔️ ATIVAÇÃO EM CASO DE PARADA NO TERMUX ✔️\nDIGITE OS SEGUINTES COMANDOS UM POR UM:\n> cd TheMystic-Bot-MD\n> npm start\n\n------------------------------------\n\n—◉ 👽 OBTENHA OUTRO CÓDIGO QR NO TERMUX 👽\nDIGITE OS SEGUINTES COMANDOS UM POR UM:\n> cd TheMystic-Bot-MD\n> rm -rf MysticSession\n> npm start",
+            "texto1": "*—◉ INSTALAÇÃO DO BOT PRINCIPAL*\n> Tutorial: https://youtu.be/eC9TfKICpcY\n> Página Oficial: https://boxmineworld.com\n> Painel de Controle: https://dash.boxmineworld.com/home\n> Painel: https://panel.boxmineworld.com\n> Suporte: https://discord.gg/84qsr4v \n\n------------------------------------\n—◉ INSTALAÇÃO DO BOT TERCIÁRIO\n> Tutorial: https://youtu.be/yRS4m36Zwkw\n\n------------------------------------\n\n*—◉ COMANDOS DE INSTALAÇÃO*\n> Comandos:\n- cd && termux-setup-storage\n- apt-get update -y && apt-get upgrade -y\n- pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn \n- git clone https://github.com/BrunoSobrino/TheAbyss-Bot-MD.git && cd TheAbyss-Bot-MD\n- yarn install\n- npm install\n- npm update\n- npm start\n\n------------------------------------\n\n—◉ ✔️ ATIVAÇÃO EM CASO DE PARADA NO TERMUX ✔️\nDIGITE OS SEGUINTES COMANDOS UM POR UM:\n> cd TheAbyss-Bot-MD\n> npm start\n\n------------------------------------\n\n—◉ 👽 OBTENHA OUTRO CÓDIGO QR NO TERMUX 👽\nDIGITE OS SEGUINTES COMANDOS UM POR UM:\n> cd TheAbyss-Bot-MD\n> rm -rf AbyssSession\n> npm start",
             "texto2": "O Melhor Bot do WhatsApp"
         },
         "info_listprem": {
@@ -2759,12 +2759,12 @@
             "texto1": [
                 "_*< INFORMAÇÕES - REPOSITÓRIO />*_",
                 "▢ *Nome:*",
-                "TheMystic-Bot-MD",
+                "TheAbyss-Bot-MD",
                 "▢ *Visitantes:*",
                 "▢ *Tamanho:*",
                 "▢ *Última atualização:*",
                 "▢ *URL:*",
-                "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+                "https://github.com/BrunoSobrino/TheAbyss-Bot-MD",
                 "Forks ·",
                 "Stars ·",
                 "Issues\n\n",
@@ -2799,7 +2799,7 @@
             "texto1": "*VOCÊ ESTÁ QUENTE 🥵🔥*"
         },
         "maker_logos": {
-            "texto1": "*[❗ℹ️] VOCÊ QUER FAZER UM LOGOTIPO?*\n—◉ _#logo (efeito) (texto)_\n*EXEMPLO:*\n—◉ _#logo 3d-deep-sea-metal Mystic_\n\n*[❗] POR FAVOR, LISTE O TEXTO NO QUAL O LOGOTIPO SERÁ APLICADO:*\n—◉ _#logo (efeito) (texto1|texto2)_\n*EXEMPLO:*\n—◉ _#logo Wolf-Logo-Galaxy Mystic|Bot_\n\n*<LISTA DE EFEITOS/>*\n\n° 📝 #logo ",
+            "texto1": "*[❗ℹ️] VOCÊ QUER FAZER UM LOGOTIPO?*\n—◉ _#logo (efeito) (texto)_\n*EXEMPLO:*\n—◉ _#logo 3d-deep-sea-metal Abyss_\n\n*[❗] POR FAVOR, LISTE O TEXTO NO QUAL O LOGOTIPO SERÁ APLICADO:*\n—◉ _#logo (efeito) (texto1|texto2)_\n*EXEMPLO:*\n—◉ _#logo Wolf-Logo-Galaxy Abyss|Bot_\n\n*<LISTA DE EFEITOS/>*\n\n° 📝 #logo ",
             "texto2": [
                 "*[❗ℹ️] O EFEITO",
                 "NÃO ESTÁ EM LISTA DE EFEITOS*"
@@ -3367,7 +3367,7 @@
                 "║┈┈┈┈┈┈┈┈┈┈┈┈┈",
                 "Diamantes* 💎",
                 "Tokens* 🪙",
-                "MysticCoins* 👾",
+                "AbyssCoins* 👾",
                 "Exp* ⚡",
                 "╚═════════════════⬣"
             ]
@@ -3490,7 +3490,7 @@
                 "*—◉ Continue explorando e realizando missões para alcançar novas alturas na Guilda dos Aventureiros. Continue interagindo com o Bot!*"
             ]
         },
-        "rpg_minar_mysticcoins": {
+        "rpg_minar_Abysscoins": {
             "texto1": [
                 "Que pro 😎 você minerou",
                 "🌟✨ Legal!! Você recebe",
@@ -3829,7 +3829,7 @@
             "texto11": [
                 "[ ⚠️ ] Aviso",
                 "[ ⚠️ ] Aviso",
-                "https://github.com/BrunoSobrino/TheMystic-Bot-MD"
+                "https://github.com/BrunoSobrino/TheAbyss-Bot-MD"
             ]
         },
         "participantsUpdate": {
