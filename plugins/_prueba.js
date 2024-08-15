@@ -1,42 +1,57 @@
-let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-    // Mensaje principal
-    let mainMessage = 'Selecciona el menú que deseas obtener:';
+import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import { Buffer } from 'buffer';
 
-    // Opciones del menú desplegable
-    let listSections = [
-        {
-            title: "IMÁGENES DIVERTIDAS",
-            rows: [
-                {
-                    title: "WAIFU",
-                    description: "Muestra una imagen de waifu (ⓓ).",
-                    id: `${usedPrefix}waifu`
-                },
-                {
-                    title: "NEKO",
-                    description: "Muestra una imagen de neko (ⓓ).",
-                    id: `${usedPrefix}neko`
-                },
-                {
-                    title: "MEGUMIN",
-                    description: "Muestra una imagen de Megumin (ⓓ).",
-                    id: `${usedPrefix}megumin`
-                },
-                {
-                    title: "LOLI",
-                    description: "Muestra una imagen de loli (ⓓ).",
-                    id: `${usedPrefix}loli`
-                }
-            ]
-        }
-    ];
+const VIDEO_FOLDER_PATH = './src/videos';
 
-    // Enviar el menú desplegable
-    await conn.sendList(m.chat, '  ≡ *Menú Desplegable*', `\n ${mainMessage}`, 'Selecciona una opción', null, listSections, m);
+// Función para descargar el archivo
+const downloadFile = async (url, filePath) => {
+    const response = await axios({
+        url,
+        method: 'GET',
+        responseType: 'stream',
+    });
+
+    const writer = fs.createWriteStream(filePath);
+    response.data.pipe(writer);
+
+    return new Promise((resolve, reject) => {
+        writer.on('finish', resolve);
+        writer.on('error', reject);
+    });
 };
 
-handler.help = ['menuimagenes']
-handler.tags = ['fun']
-handler.command = ['menuimagenes', 'animemenu']
+// Comando del bot
+const handler = async (m, { conn, args }) => {
+    try {
+        // Verificar si el usuario proporcionó un enlace
+        if (!args[0]) {
+            return m.reply('⚠️ Por favor, proporciona un enlace directo al video.');
+        }
+
+        const videoUrl = args[0];
+        const tempFilePath = path.join(VIDEO_FOLDER_PATH, 'temp_video.mp4');
+
+        // Descargar el video
+        await downloadFile(videoUrl, tempFilePath);
+
+        // Enviar el archivo
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(tempFilePath) }, { quoted: m });
+
+        // Eliminar el archivo temporal
+        fs.unlinkSync(tempFilePath);
+
+    } catch (error) {
+        console.error('Error al enviar el video:', error);
+        m.reply(`Ocurrió un error al intentar enviar el video: ${error.message}`);
+    }
+};
+
+handler.command = /^(prueba|video)$/i;
+handler.group = true; // Si el comando debe funcionar solo en grupos
+handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
+handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
 
 export default handler;
