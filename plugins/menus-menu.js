@@ -66,10 +66,10 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
   ${tradutor.texto1[11]}
  
- > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
-,> *${usedPrefix}terminosycondiciones*
-,> *${usedPrefix}grupos*
+> *${usedPrefix}terminosycondiciones*
+> *${usedPrefix}grupos*
 ,> *${usedPrefix}estado*
 ,> *${usedPrefix}infobot*
 ,> *${usedPrefix}speedtest*
@@ -85,7 +85,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[12]}
  
- > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}serbot --code*
 ,> *${usedPrefix}serbot*
@@ -114,7 +114,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[13]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}mates <noob / easy / medium / hard / extreme / impossible / impossible2>*
 ,> *${usedPrefix}fake <txt1> <@tag> <txt2>*
@@ -156,7 +156,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[14]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}enable welcome*
 ,> *${usedPrefix}disable welcome*
@@ -190,7 +190,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[15]}
 
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}play <txt>*
 ,> *${usedPrefix}play2 <txt>*
@@ -250,7 +250,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[17]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}add <num>*
 ,> *${usedPrefix}kick <@tag>*
@@ -286,7 +286,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[18]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}toanime <img>*
 ,> *${usedPrefix}togifaud <video>*
@@ -304,7 +304,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[19]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}logos <efecto> <txt>*
 ,> *${usedPrefix}logochristmas <txt>*
@@ -322,7 +322,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[20]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}piropo*
 ,> *${usedPrefix}consejo*
@@ -334,7 +334,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[21]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}kpop <blackpink/exo/bts>*
 ,> *${usedPrefix}cristianoronaldo*
@@ -371,7 +371,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[23]}
  
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}bass*
 ,> *${usedPrefix}blown*
@@ -391,7 +391,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[24]}
   
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}start*
 ,> *${usedPrefix}next*
@@ -402,7 +402,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[25]}
   
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}inspect <wagc_url>*
 ,> *${usedPrefix}chatgpt <txt>*
@@ -439,7 +439,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[26]}
 
- > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}adventure*
 ,> *${usedPrefix}cazar*
@@ -466,7 +466,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[27]}
   
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ✦ • ─────◥
 ,> *${usedPrefix}sticker* *<responder a img o video>*
 ,> *${usedPrefix}sticker* *<url>*
@@ -499,7 +499,7 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
   ${tradutor.texto1[28]}
   
-  > *━━━━━━━━━━━━━*
+> *━━━━━━━━━━━━━*
 ,◤───── ★ • ─────◥
 ,> *${usedPrefix}dsowner*
 ,> *${usedPrefix}setprefix *<prefijo>**_
