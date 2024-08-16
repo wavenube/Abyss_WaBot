@@ -1,48 +1,42 @@
-import axios from 'axios';
-
-// Comando del bot
-const handler = async (m, { conn, text }) => {
+// Comando del bot para enviar un catálogo de imágenes
+const handler = async (m, { conn }) => {
     try {
-        // Verificar si se ha proporcionado un texto para generar la imagen
-        if (!text) return m.reply('Por favor, proporciona una descripción de la imagen que quieres generar. Ejemplo: .generar ramo de flores');
+        // Rutas de las imágenes
+        const images = [
+            './src/abyss.png',  // Cambia estos nombres por las imágenes que tú tengas
+            './src/abyss2.png',
+            './src/abyss3.png',
+            './src/abyss4.png',
+        ];
 
-        // URL de la API de OpenAI para generación de imágenes
-        const url = 'https://api.openai.com/v1/images/generations';
+        // Opciones de mensaje para cada imagen
+        const mediaMessages = images.map((image, index) => ({
+            type: 'imageMessage',
+            image: { url: image },
+            caption: `Imagen ${index + 1}`,
+            footer: 'Desliza para ver más',
+        }));
 
-        // Petición a la API de OpenAI
-        const response = await axios.post(url, {
-            prompt: text,
-            n: 1, // Número de imágenes a generar
-            size: '512x512' // Tamaño de la imagen
-        }, {
-            headers: {
-                'Authorization': `Bearer sk-Q6y-twU6iY83mjn2irR4kUmVdKSxrAL2R0L5-JnR-tT3BlbkFJGIxjv4YbEOw5FVBfOcPCei4CfkJAM6yj7YfCrav1UA`,  // Reemplaza con tu nueva API Key de OpenAI
-                'Content-Type': 'application/json'
-            }
-        });
-
-        // URL de la imagen generada
-        const imageUrl = response.data.data[0].url;
-
-        // Enviar la imagen generada
-        await conn.sendMessage(
-            m.chat,
-            {
-                image: { url: imageUrl },
-                caption: `Imagen generada para: "${text.trim()}"`,
-                mentions: [m.sender]  // Menciona al usuario que usó el comando
-            },
-            { quoted: m }  // Responde al mensaje original si es necesario
-        );
-
+        // Enviar las imágenes en un solo mensaje
+        for (let mediaMessage of mediaMessages) {
+            await conn.sendMessage(
+                m.chat,
+                {
+                    image: mediaMessage.image,
+                    caption: mediaMessage.caption,
+                    mentions: [m.sender],
+                },
+                { quoted: m }
+            );
+        }
     } catch (error) {
-        console.error('Error al generar la imagen:', error);
-        m.reply(`Ocurrió un error al intentar generar la imagen: ${error.message}`);
+        console.error('Error al enviar las imágenes:', error);
+        m.reply(`Ocurrió un error al intentar enviar las imágenes: ${error.message}`);
     }
 };
 
 // Definir el comando y sus propiedades
-handler.command = /^(prueba4|generate)$/i; // Comando para activar el manejador
+handler.command = /^(catalogo|catalog)$/i; // Comando para activar el manejador
 handler.group = false; // Si el comando debe funcionar solo en grupos
 handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
 handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
