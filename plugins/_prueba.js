@@ -16,7 +16,7 @@ const handler = async (m, { conn, text }) => {
             size: '512x512' // Tamaño de la imagen
         }, {
             headers: {
-                'Authorization': `sk-Q6y-twU6iY83mjn2irR4kUmVdKSxrAL2R0L5-JnR-tT3BlbkFJGIxjv4YbEOw5FVBfOcPCei4CfkJAM6yj7YfCrav1UA`,  // Reemplaza con tu API Key de OpenAI
+                'Authorization': `Bearer sk-Q6y-twU6iY83mjn2irR4kUmVdKSxrAL2R0L5-JnR-tT3BlbkFJGIxjv4YbEOw5FVBfOcPCei4CfkJAM6yj7YfCrav1UA`,  // Reemplaza con tu nueva API Key de OpenAI
                 'Content-Type': 'application/json'
             }
         });
