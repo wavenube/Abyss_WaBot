@@ -55,6 +55,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${tradutor.texto1[0]} 
 ┣ ඬ⃟ 🔞 _${usedPrefix}yuri2_
 ┣ ඬ⃟ 🔞 _${usedPrefix}trapito_
 ┣ ඬ⃟ 🔞 _${usedPrefix}hentai_
+┣ ඬ⃟ 🔞 _${usedPrefix}hentaivid
 ┣ ඬ⃟ 🔞 _${usedPrefix}nsfwloli_
 ┣ ඬ⃟ 🔞 _${usedPrefix}nsfworgy_
 ┣ ඬ⃟ 🔞 _${usedPrefix}nsfwfoot_
