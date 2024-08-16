@@ -9,22 +9,31 @@ const handler = async (m, { conn }) => {
             './src/abyss4.png',
         ];
 
-        // Opciones de mensaje para cada imagen
-        const mediaMessages = images.map((image, index) => ({
-            type: 'imageMessage',
+        // Enviar todas las imágenes en un solo mensaje
+        const mediaMessage = images.map(image => ({
             image: { url: image },
-            caption: `Imagen ${index + 1}`,
-            footer: 'Desliza para ver más',
+            caption: 'Aquí tienes una imagen',
         }));
 
-        // Enviar las imágenes en un solo mensaje
-        for (let mediaMessage of mediaMessages) {
+        await conn.sendMessage(
+            m.chat,
+            {
+                image: mediaMessage[0].image,
+                caption: 'Imagen 1',
+                mentions: [m.sender],
+                mediaMessage,
+            },
+            { quoted: m }
+        );
+
+        for (let i = 1; i < mediaMessage.length; i++) {
             await conn.sendMessage(
                 m.chat,
                 {
-                    image: mediaMessage.image,
-                    caption: mediaMessage.caption,
+                    image: mediaMessage[i].image,
+                    caption: `Imagen ${i + 1}`,
                     mentions: [m.sender],
+                    mediaMessage: mediaMessage.slice(i, i + 1),
                 },
                 { quoted: m }
             );
@@ -42,3 +51,4 @@ handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
 handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
 
 export default handler;
+
