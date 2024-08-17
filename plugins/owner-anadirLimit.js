@@ -11,20 +11,20 @@ const handler = async (m, {conn, text}) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0];
   else who = m.chat;
-  if (!who) throw tradutor.texto1;
+  if (!who) throw 'prueba';
   const txt = text.replace('@' + who.split`@`[0], '').trim();
-  if (!txt) throw tradutor.texto2;
-  if (isNaN(txt)) throw tradutor.texto3;
+  if (!txt) throw 'prueba';
+  if (isNaN(txt)) throw 'prueba';
   const dmt = parseInt(txt);
   let limit = dmt;
   const pjk = Math.ceil(dmt * pajak);
   limit += pjk;
-  if (limit < 1) throw tradutor.texto4;
+  if (limit < 1) throw 'prueba';
   const users = global.db.data.users;
   users[who].limit += dmt;
-  m.reply(`≡ ${tradutor.texto5[0]}
+  m.reply(`≡ 'prueba'
 ┌──────────────
-▢ ${tradutor.texto5[1]} ${dmt}
+▢ Se han transferido ${dmt}
 └──────────────`);
 };
 handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
