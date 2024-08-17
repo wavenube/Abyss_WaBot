@@ -1,4 +1,3 @@
-
 const {
     useMultiFileAuthState,
     DisconnectReason,
@@ -27,10 +26,10 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 
   let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn
   if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
-	throw `📌 ${mssg.nobbot}\n\n wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}botclone`
+  throw 📌 Este comando solo puede ser usado en el bot principal\n\n wa.me/${global.conn.user.jid.split@[0]}?text=${usedPrefix}botclone
 }
 
-	//=====
+  //=====
   async function bbts() {
 
   let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8)
@@ -43,7 +42,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
     args[0] ? fs.writeFileSync("./bebots/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
     
 //--
-const {state, saveState, saveCreds} = await useMultiFileAuthState(`./bebots/${authFolderB}`)
+const {state, saveState, saveCreds} = await useMultiFileAuthState(./bebots/${authFolderB})
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
@@ -84,20 +83,20 @@ let conn = makeWASocket(connectionOptions)
 
 if (methodCode && !conn.authState.creds.registered) {
     if (!phoneNumber) {
-        //parent.sendMessage(m.chat, { text: `✴️ Su número de teléfono no está definido` }, { quoted: m })
+        //parent.sendMessage(m.chat, { text: ✴️ Su número de teléfono no está definido }, { quoted: m })
         process.exit(0);
     }
     let cleanedNumber = phoneNumber.replace(/[^0-9]/g, '');
     if (!Object.keys(PHONENUMBER_MCC).some(v => cleanedNumber.startsWith(v))) {
-        //parent.sendMessage(m.chat, { text: `✴️ Su número debe comenzar con el código de país` }, { quoted: m })
+        //parent.sendMessage(m.chat, { text: ✴️ Su número debe comenzar con el código de país }, { quoted: m })
         process.exit(0);
     }
 
     setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-         //parent.sendFile(m.chat, 'https://i.ibb.co/SKKdvRb/code.jpg', 'qrcode.png', `➤ Code: *${codeBot}*\n\n${mssg.botqr}`, m)
-	 parent.sendButton2(m.chat, `➤ Code: *${codeBot}*\n\n${mssg.botqr}`, mssg.ig, 'https://i.ibb.co/SKKdvRb/code.jpg', [], codeBot, null, m) 
+         //parent.sendFile(m.chat, 'https://i.ibb.co/SKKdvRb/code.jpg', 'qrcode.png', ➤ Code: *${codeBot}*\n\n${mssg.botqr}, m)
+   parent.sendMessage(m.chat, {text: ➤ Code: *${codeBot}*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número}, {quoted: m})
         rl.close();
     }, 3000);
 }
@@ -112,7 +111,7 @@ async function connectionUpdate(update) {
     if (isNewLogin) conn.isInit = true
     // scan qr
    /* if (qr) {
-      let scan = await parent.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), 'qrcode.png', `${mssg.botqr}`, m)
+      let scan = await parent.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), 'qrcode.png', ${mssg.botqr}, m)
   setTimeout(() => {
     parent.sendMessage(m.chat, { delete: scan.key })
   }, 50000) //50 segundos
@@ -126,9 +125,9 @@ async function connectionUpdate(update) {
       global.conns.splice(i, 1)
 
      if (code !== DisconnectReason.connectionClosed){ 
-        parent.sendMessage(conn.user.jid, {text : `⚠️ ${mssg.recon}`}, { quoted: m }) //reconectar
+        parent.sendMessage(conn.user.jid, {text : ⚠️ Conexión perdida...}, { quoted: m }) //reconectar
     } else {
-        parent.sendMessage(m.chat, {text : `⛔ ${mssg.sesClose}`}, { quoted: m }) // session cerrada
+        parent.sendMessage(m.chat, {text : ⛔ La conexión se cerró, Tendras que conectarte manualmente enviando el *ID*}, { quoted: m }) // session cerrada
     }
     }
     //----
@@ -137,12 +136,12 @@ async function connectionUpdate(update) {
     if (connection == 'open') {
     conn.isInit = true
     global.conns.push(conn)
-    await parent.sendMessage(m.chat, {text : args[0] ? `✅ ${mssg.connet}` : `✅ ${mssg.connID}`}, { quoted: m })
+    await parent.sendMessage(m.chat, {text : args[0] ? ✅ Conectado con exito : ✅ *Conectado con éxito!*\n\nEn unos segundos te mandaremos el *Id* que debes usar para volver a conectarte\n\n*NOTA:* Sal del grupo de *DyLux  ┃ ᴮᴼᵀ*\nguarde este enlace para que pueda unirse después\nhttps://instabio.cc/fg98ff}, { quoted: m })
     await sleep(5000)
     if (args[0]) return
-		await parent.sendMessage(conn.user.jid, {text : `✅ ${mssg.connMsg}`}, { quoted: m })
-		parent.sendMessage(conn.user.jid, {text : usedPrefix + command + " " + Buffer.from(fs.readFileSync("./bebots/" + authFolderB + "/creds.json"), "utf-8").toString("base64")}, { quoted: m })
-	  }
+    await parent.sendMessage(conn.user.jid, {text : ✅ La siguiente vez que se conecte envía el siguiente mensaje para iniciar sesión sin escanear otro código *QR*}, { quoted: m })
+    parent.sendMessage(conn.user.jid, {text : usedPrefix + command + " " + Buffer.from(fs.readFileSync("./bebots/" + authFolderB + "/creds.json"), "utf-8").toString("base64")}, { quoted: m })
+    }
  
   }
 
@@ -157,11 +156,11 @@ async function connectionUpdate(update) {
     }}, 60000)
     
 
-	
+  
 let handler = await import('../handler.js')
 let creloadHandler = async function (restatConn) {
 try {
-const Handler = await import(`../handler.js?update=${Date.now()}`).catch(console.error)
+const Handler = await import(../handler.js?update=${Date.now()}).catch(console.error)
 if (Object.keys(Handler || {}).length) handler = Handler
 } catch (e) {
 console.error(e)
