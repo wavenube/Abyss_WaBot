@@ -1,4 +1,4 @@
-// Comando del bot para crear un evento
+// Definir el comando del bot
 const handler = async (m, { conn, text }) => {
     try {
         // Verificar si se ha proporcionado un nombre para el evento
@@ -6,7 +6,7 @@ const handler = async (m, { conn, text }) => {
 
         // Crear el mensaje de evento
         const eventName = text.trim();
-        const eventDescription = "Únete a nuestro evento especial en WhatsApp!";
+        const eventDescription = "¡Estás invitado a un evento especial!";
         const eventTime = "Fecha y hora: Viernes 20:00";
 
         const eventMessage = `🔔 *${eventName}*\n\n${eventDescription}\n\n${eventTime}`;
