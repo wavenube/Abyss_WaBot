@@ -9,7 +9,7 @@ import moment from 'moment-timezone';
 
 global.botnumber = ""
 global.confirmCode = ""
-
+global.isBaileysFail = false
 global.owner = [
   ['5492613619545', '👑 Abyss Owner 👑', true],
   ['34638075812']
