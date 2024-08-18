@@ -2,8 +2,8 @@
 const VIDEO_URLS = [
     'https://qu.ax/scZw.mp4',
     'https://qu.ax/sKfw.mp4',
-    'https://qu.ax/TOgC.mp4',
-    'https://qu.ax/YHAm.mp4',
+    'https://qu.ax/urcH.mp4',
+    'https://qu.ax/PZCF.mp4',
     'https://qu.ax/rvnd.mp4',
     'https://qu.ax/rvnd.mp4',
     'https://qu.ax/OxHZ.mp4',
@@ -13,7 +13,7 @@ const VIDEO_URLS = [
     'https://qu.ax/bFdc.mp4',
     'https://qu.ax/vHNs.mp4',
     'https://qu.ax/uppk.mp4',
-    '',
+    'https://qu.ax/YnM.mp4',
     // Agrega más enlaces según sea necesario
 ];
 
