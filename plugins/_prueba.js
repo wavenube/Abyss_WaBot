@@ -1,47 +1,58 @@
 import axios from 'axios';
 
-const handler = async (m, { conn }) => {
+// Clave API proporcionada
+const API_KEY = '28fe5b4bc34e8cdf9c199acf337ed07a';
+const API_URL = 'http://apilayer.net/api/validate';
+
+// Comando del bot
+const handler = async (m, { conn, text }) => {
     try {
-        // URL del archivo personajes.json en GitHub
-        const response = await axios.get('https://raw.githubusercontent.com/wavenube/Abyss_WaBot/master/plugins/_personajes.json');
-        const personajes = response.data;
+        // Verificar que se ha proporcionado un número de teléfono
+        if (!text) return m.reply('Por favor, proporciona un número de teléfono para obtener la información. Ejemplo: .dox +1234567890');
 
-        // Verificar que la respuesta sea un array
-        if (!Array.isArray(personajes)) {
-            m.reply('El formato del archivo personajes.json es incorrecto.');
-            return;
+        // Llamada a la API para obtener la información del número de teléfono
+        const response = await axios.get(API_URL, {
+            params: {
+                access_key: API_KEY,
+                number: text.trim(),
+                format: 1
+            }
+        });
+
+        const data = response.data;
+
+        // Verificar si la API devolvió datos válidos
+        if (data.valid) {
+            // Crear mensaje con la información del número de teléfono
+            const infoMessage = `
+**Número de Teléfono:** ${text.trim()}
+**Código de País:** ${data.country_code}
+**Nombre del País:** ${data.country_name}
+**Ubicación:** ${data.location}
+**Compañía de Telefonía:** ${data.carrier}
+**Tipo de Línea:** ${data.line_type}
+            `;
+
+            // Enviar el mensaje con la información
+            await conn.sendMessage(
+                m.chat,
+                { text: infoMessage, mentions: [m.sender] }, // Mencionar al usuario que solicitó la información
+                { quoted: m }  // Responder al mensaje original si es necesario
+            );
+        } else {
+            m.reply('Número de teléfono inválido o sin datos disponibles.');
         }
-
-        // Seleccionar un personaje aleatorio del JSON
-        const personaje = personajes[Math.floor(Math.random() * personajes.length)];
-
-        // Verificar que el personaje tenga las propiedades necesarias
-        if (!personaje.name || !personaje.url || !personaje.description) {
-            m.reply('El personaje seleccionado no tiene la información completa.');
-            return;
-        }
-
-        // Enviar el personaje al usuario
-        await conn.sendMessage(
-            m.chat,
-            {
-                image: { url: personaje.url },
-                caption: `🧍‍♂️ *${personaje.name}*\n\n${personaje.description}`,
-                mentions: [m.sender]
-            },
-            { quoted: m }
-        );
 
     } catch (error) {
-        console.error('Error al obtener el personaje:', error);
-        m.reply(`Ocurrió un error al intentar obtener un personaje: ${error.message}`);
+        console.error('Error al obtener la información del número de teléfono:', error);
+        m.reply(`Ocurrió un error al intentar obtener la información: ${error.message}`);
     }
 };
 
 // Definir el comando y sus propiedades
-handler.command = /^(rw|randomwaifu)$/i;
-handler.group = false;
-handler.admin = false;
-handler.botAdmin = false;
+handler.command = /^(prueba)$/i; // Comando para activar el manejador
+handler.group = false; // Si el comando debe funcionar solo en grupos
+handler.admin = false; // Cambiar a true si solo administradores pueden usarlo
+handler.botAdmin = false; // Cambiar a true si el bot debe ser admin para usar el comando
 
 export default handler;
