@@ -10,8 +10,8 @@ const handler = async (m, { conn }) => {
         const personaje = personajes[Math.floor(Math.random() * personajes.length)];
 
         const characterInfo = {
-            name: personaje.name || 'Akira',
-            image: personaje.img || 'https://th.bing.com/th/id/R.a97cb305833f546f3f89cd70b68ff975?rik=0vRE%2bI%2f0n8zTCA&pid=ImgRaw&r=0',  // URL de la imagen del personaje
+            name: personaje.name || 'Personaje Desconocido',
+            image: personaje.url || 'https://example.com/default.jpg',  // URL de la imagen del personaje
             description: personaje.description || 'Descripción no disponible.',
             userId: m.sender,
             claimed: false
