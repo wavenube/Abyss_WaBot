@@ -1,26 +1,22 @@
 import axios from 'axios';
 
-// Almacenar personajes en memoria temporal (por simplicidad)
-let charactersDB = {};
-let usersCharacters = {};
-
-// Comando para obtener un personaje aleatorio
 const handler = async (m, { conn }) => {
     try {
-        // Llamada a la API para obtener un personaje de anime aleatorio (utilizaremos MyAnimeList API)
-        const response = await axios.get('https://api.jikan.moe/v4/characters/random');
-        const character = response.data.data;
+        // URL del archivo JSON en GitHub
+        const res = (await axios.get('https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/anime-akira.json')).data;
+        const character = res[Math.floor(res.length * Math.random())];
 
         const characterInfo = {
-            name: character.name,
-            image: character.images.jpg.image_url,
-            description: character.about,
+            name: character.name || 'Personaje Desconocido',
+            image: character.url || 'https://example.com/default.jpg',  // URL de la imagen del personaje
+            description: character.description || 'Descripción no disponible.',
             userId: m.sender,
             claimed: false
         };
 
-        // Guardar el personaje en la memoria temporal
-        charactersDB[m.chat] = characterInfo;
+        // Almacenar el personaje en una variable temporal
+        conn.characterDB = conn.characterDB || {};
+        conn.characterDB[m.chat] = characterInfo;
 
         // Enviar el personaje al usuario
         await conn.sendMessage(
@@ -36,7 +32,7 @@ const handler = async (m, { conn }) => {
         // Establecer un temporizador de 15 segundos para capturar al personaje
         setTimeout(() => {
             if (!characterInfo.claimed) {
-                delete charactersDB[m.chat];
+                delete conn.characterDB[m.chat];
                 m.reply(`⏳ El tiempo para capturar a ${characterInfo.name} ha expirado.`);
             }
         }, 15000);
