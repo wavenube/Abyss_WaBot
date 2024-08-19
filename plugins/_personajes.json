@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Akira",
+    "url": "https://example.com/akira.jpg",
+    "description": "Akira es un personaje misterioso y valiente."
+  },
+  {
+    "name": "Akiyama",
+    "url": "https://example.com/akiyama.jpg",
+    "description": "Akiyama es conocido por su inteligencia y astucia."
+  },
+  {
+    "name": "Anna",
+    "url": "https://example.com/anna.jpg",
+    "description": "Anna es amable y siempre está dispuesta a ayudar a los demás."
+  }
+]
