@@ -10,7 +10,7 @@ const handler = async (m, { conn }) => {
         const personaje = personajes[Math.floor(Math.random() * personajes.length)];
 
         const characterInfo = {
-            name: personaje.name || 'Personaje Desconocido',
+            name: personaje.name || 'Akira',
             image: personaje.url || 'https://www.nme.com/wp-content/uploads/2020/10/Akira_Anime.jpg',  // URL de la imagen del personaje
             description: personaje.description || 'Descripción no disponible.',
             userId: m.sender,
