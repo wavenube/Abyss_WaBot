@@ -11,7 +11,7 @@ const handler = async (m, { conn }) => {
 
         const characterInfo = {
             name: personaje.name || 'Personaje Desconocido',
-            image: personaje.url || 'https://example.com/default.jpg',  // URL de la imagen del personaje
+            image: personaje.url || 'https://www.nme.com/wp-content/uploads/2020/10/Akira_Anime.jpg',  // URL de la imagen del personaje
             description: personaje.description || 'Descripción no disponible.',
             userId: m.sender,
             claimed: false
