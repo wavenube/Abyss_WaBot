@@ -2,14 +2,17 @@ import axios from 'axios';
 
 const handler = async (m, { conn }) => {
     try {
-        // URL del archivo JSON en GitHub
-        const res = (await axios.get('https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/anime-akira.json')).data;
-        const character = res[Math.floor(res.length * Math.random())];
+        // URL del archivo JSON en GitHub o servidor
+        const res = await axios.get('https://raw.githubusercontent.com/wavenube/Abyss_WaBot/blob/master/plugins/_personajes.json'); // Reemplaza con la URL correcta
+        const personajes = res.data;
+
+        // Seleccionar un personaje aleatorio
+        const personaje = personajes[Math.floor(Math.random() * personajes.length)];
 
         const characterInfo = {
-            name: character.name || 'Personaje Desconocido',
-            image: character.url || 'https://example.com/default.jpg',  // URL de la imagen del personaje
-            description: character.description || 'Descripción no disponible.',
+            name: personaje.name || 'Personaje Desconocido',
+            image: personaje.url || 'https://example.com/default.jpg',  // URL de la imagen del personaje
+            description: personaje.description || 'Descripción no disponible.',
             userId: m.sender,
             claimed: false
         };
