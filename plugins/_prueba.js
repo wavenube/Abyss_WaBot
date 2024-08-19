@@ -2,43 +2,35 @@ import axios from 'axios';
 
 const handler = async (m, { conn }) => {
     try {
-        // URL del archivo JSON en GitHub
-        const res = await axios.get('https://raw.githubusercontent.com/wavenube/Abyss_WaBot/master/plugins/_personajes.json');
-        const personajes = res.data;
+        // URL del archivo personajes.json en GitHub
+        const response = await axios.get('https://raw.githubusercontent.com/wavenube/Abyss_WaBot/master/plugins/_personajes.json');
+        const personajes = response.data;
 
-        // Seleccionar un personaje aleatorio
+        // Verificar que la respuesta sea un array
+        if (!Array.isArray(personajes)) {
+            m.reply('El formato del archivo personajes.json es incorrecto.');
+            return;
+        }
+
+        // Seleccionar un personaje aleatorio del JSON
         const personaje = personajes[Math.floor(Math.random() * personajes.length)];
 
-        const characterInfo = {
-            name: personaje.name || 'Akira',
-            image: personaje.url || 'https://www.nme.com/wp-content/uploads/2020/10/Akira_Anime.jpg',  // URL de la imagen del personaje
-            description: personaje.description || 'Descripción no disponible.',
-            userId: m.sender,
-            claimed: false
-        };
-
-        // Almacenar el personaje en una variable temporal
-        conn.characterDB = conn.characterDB || {};
-        conn.characterDB[m.chat] = characterInfo;
+        // Verificar que el personaje tenga las propiedades necesarias
+        if (!personaje.name || !personaje.url || !personaje.description) {
+            m.reply('El personaje seleccionado no tiene la información completa.');
+            return;
+        }
 
         // Enviar el personaje al usuario
         await conn.sendMessage(
             m.chat,
             {
-                image: { url: characterInfo.image },
-                caption: `🧍‍♂️ *${characterInfo.name}*\n\n${characterInfo.description}\n\nResponde a este mensaje con *claimcharacter* en 15 segundos para capturarlo!`,
+                image: { url: personaje.url },
+                caption: `🧍‍♂️ *${personaje.name}*\n\n${personaje.description}`,
                 mentions: [m.sender]
             },
             { quoted: m }
         );
-
-        // Establecer un temporizador de 15 segundos para capturar al personaje
-        setTimeout(() => {
-            if (!characterInfo.claimed) {
-                delete conn.characterDB[m.chat];
-                m.reply(`⏳ El tiempo para capturar a ${characterInfo.name} ha expirado.`);
-            }
-        }, 15000);
 
     } catch (error) {
         console.error('Error al obtener el personaje:', error);
