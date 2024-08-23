@@ -68,7 +68,7 @@ etc`;
 };
 
 // Exportar el módulo
-module.exports = { prueba1 };
+module.exports = { menu };
 
 // Monitoreo del archivo para recarga automática
 let file = require.resolve(__filename);
