@@ -1,25 +1,11 @@
-let lastDecoratedMessage = null; // Variable global para almacenar el último mensaje decorado
+import MessageType from '@whiskeysockets/baileys';
 
-const handlerDecorate = async (m, { conn, usedPrefix, text }) => {
-    if (!text) throw '⚠️ *Por favor, escribe el texto que quieres decorar.*';
+const handlerDecorate = async (m, { conn, text }) => {
+    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
 
+    // Crear el mensaje decorado
     const str = `${text}`.trim();
-    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // Puedes cambiar la URL de la imagen
-
-    const fkontak = {
-        key: { 
-            participants: "0@s.whatsapp.net", 
-            remoteJid: "status@broadcast", 
-            fromMe: false, 
-            id: "Halo" 
-        }, 
-        message: { 
-            contactMessage: { 
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` 
-            }
-        }, 
-        participant: "0@s.whatsapp.net" 
-    };
+    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // URL de la imagen
 
     const messageOptions = {
         image: { url: pp },
@@ -38,20 +24,20 @@ const handlerDecorate = async (m, { conn, usedPrefix, text }) => {
                 description: 'canal del grupo',
                 title: 'wm',
                 body: "By: ZephyrByte",
-                thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png",
+                thumbnailUrl: pp,
                 sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
             }
         }
     };
 
-    // Enviar el mensaje decorado
-    const sentMsg = await conn.sendMessage(m.chat, messageOptions, { quoted: fkontak });
+    // Guardar el mensaje decorado en la base de datos del usuario
+    global.db.data.users[m.sender].lastDecoratedMessage = messageOptions;
 
-    // Guardar el último mensaje decorado
-    lastDecoratedMessage = sentMsg;
+    // Enviar el mensaje decorado al chat actual
+    await conn.sendMessage(m.chat, messageOptions, { quoted: m });
+
+    conn.reply(m.chat, 'Mensaje decorado creado. Puedes enviarlo a todos los grupos usando el comando `.enviar`', m);
 };
 
-handlerDecorate.command = /^(decorar2)$/i;
-handlerDecorate.exp = 50;
-
+handlerDecorate.command = /^decorar$/i;
 export default handlerDecorate;
