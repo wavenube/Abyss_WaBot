@@ -53,9 +53,9 @@ const handlerDecorate = async (m, { conn, text }) => {
     lastDecoratedMessage = sentMsg;
 };
 
-handlerDecorate.command = /^(decorar2)$/i;
-handlerDecorate.exp = 50;
-export default handlerDecorate;
+handler.command = /^(decorar2)$/i;
+handler.exp = 50;
+export default handler;
 
 // Comando 'enviar'
 const handlerEnviar = async (m, { conn }) => {
@@ -75,6 +75,6 @@ const handlerEnviar = async (m, { conn }) => {
     conn.reply(m.chat, '✅ *Mensaje enviado a todos los grupos.*', m);
 };
 
-handlerEnviar.command = /^(enviar)$/i;
-handlerEnviar.exp = 50;
-export default handlerEnviar;
+handler.command = /^(enviar)$/i;
+handler.exp = 50;
+export default handler;
