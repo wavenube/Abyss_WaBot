@@ -11,7 +11,6 @@ const handler = async (m, { conn, usedPrefix }) => {
     // Ruta de la imagen
     const pp = imagen1;
     // Leer la imagen y preparar el mensaje multimedia
-    const mediaMessage = await prepareWAMessageMedia({ image: fs.readFileSync(imagePath) }, { upload: conn.waUploadToServer });
 
     // Generar el mensaje interactivo con botones y la imagen adjunta
     const msg = generateWAMessageFromContent(m.chat, {
