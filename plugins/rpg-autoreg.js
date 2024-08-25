@@ -65,7 +65,7 @@ async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'MENU COMPLETO',
-                                    id: `${usedPrefix}menu`
+                                    id: `${usedPrefix}allmenu`
                                 })
                             },
                             {
