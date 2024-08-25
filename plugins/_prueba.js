@@ -45,23 +45,47 @@ const handler = async function(m, { conn }) {
     user.money = (user.money || 0) + 200;
     user.exp = (user.exp || 0) + 200;
 
-    // Crear y enviar el mensaje interactivo con botón
-    const buttonMessage = {
-        text: mensaje,
-        footer: 'Selecciona una opción:',
-        buttons: [
-            {
-                buttonId: '/menu',
-                buttonText: { displayText: 'Ver Comandos' },
-                type: 1
-            }
-        ],
-        headerType: 1
-    };
+ const msg = generateWAMessageFromContent(m.chat, {
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    body: { text: bienvenida },
+                    footer: { text: 'Selecciona una opción' }, // Pie de página opcional
+                    nativeFlowMessage: {
+                        buttons: [
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'MENU COMPLETO',
+                                    id: `${usedPrefix}allmenu`
+                                })
+                            },
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'PRUEBA DE VELOCIDAD',
+                                    id: `${usedPrefix}menu`
+                                })
+                            },
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'AUTO VERIFICAR',
+                                    id: `${usedPrefix}allmenu`
+                                })
+                            },
+                        ],
+                        messageParamsJson: "",
+                    },
+                },
+            },
+        }
+    }, { userJid: conn.user.jid, quoted: m });
+
 
     // Enviar el mensaje con el botón
-    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
-};
+      await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+}
 
 handler.help = ['autoverificar'];
 handler.tags = ['xp'];
