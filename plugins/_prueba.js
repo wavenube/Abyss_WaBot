@@ -1,48 +1,54 @@
-import { generateWAMessageFromContent, prepareWAMessageMedia } from '@whiskeysockets/baileys';
-import fs from 'fs';
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
 
 const handler = async (m, { conn, usedPrefix }) => {
-    // Mensaje de advertencia para no hacer spam de comandos
+    // Mensaje de advertencia para no hacer spam
     await conn.sendMessage(m.chat, { text: '⚠️ *No hagas spam de comandos.*' }, { quoted: m });
 
     // Mensaje de bienvenida
     const bienvenida = `👋 ¡Bienvenido(a)!\nElige una opción del menú:`;
 
-    // Ruta de la imagen
-    const pp = imagen1;
-    // Leer la imagen y preparar el mensaje multimedia
+    // Crear y enviar el mensaje interactivo con botones
+    await sendInteractiveMessage(m, conn, bienvenida, usedPrefix);
+};
 
-    // Generar el mensaje interactivo con botones y la imagen adjunta
+// Función para enviar el mensaje interactivo con botones
+async function sendInteractiveMessage(m, conn, bienvenida, usedPrefix) {
+    // Generar el mensaje interactivo con botones
     const msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
             message: {
-                imageMessage: mediaMessage.imageMessage,
-                caption: bienvenida,
-                buttonsMessage: {
-                    footerText: 'Selecciona una opción',
-                    buttons: [
-                        {
-                            buttonText: { displayText: 'AllMenu' },
-                            buttonId: `${usedPrefix}allmenu`,
-                            type: 1
-                        },
-                        {
-                            buttonText: { displayText: 'Menu' },
-                            buttonId: `${usedPrefix}menu`,
-                            type: 1
-                        },
-                    ],
-                    headerType: 4 // Indica que el mensaje tiene imagen (ver sección 'headerType' en la documentación)
-                }
+                interactiveMessage: {
+                    body: { text: bienvenida },
+                    footer: { text: 'Selecciona una opción' }, // Pie de página opcional
+                    nativeFlowMessage: {
+                        buttons: [
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'AllMenu',
+                                    id: `${usedPrefix}allmenu`
+                                })
+                            },
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'Menu',
+                                    id: `${usedPrefix}menu`
+                                })
+                            },
+                        ],
+                        messageParamsJson: "",
+                    },
+                },
             },
         }
     }, { userJid: conn.user.jid, quoted: m });
 
-    // Enviar el mensaje con la imagen y los botones
+    // Enviar el mensaje
     await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
-};
+}
 
 // Configuración del comando
-handler.command = /^(prueba2)$/i; // Este comando se activará con "bienvenida" o "welcome"
+handler.command = /^(prueba)$/i; // Este comando se activará con "bienvenida" o "welcome"
 
 export default handler;
