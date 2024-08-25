@@ -38,9 +38,6 @@ const handler = async function(m, { conn }) {
 ⤷ 2 diamante 💎
 ⤷ 200 exp
 
-◉ Para ver los comandos del bot usar:
-/menu
-
 ◉ Total de usuarios registrados: ${Object.keys(global.db.data.users).filter(user => global.db.data.users[user].registered).length}
 `;
 
@@ -48,8 +45,22 @@ const handler = async function(m, { conn }) {
     user.money = (user.money || 0) + 200;
     user.exp = (user.exp || 0) + 200;
 
-    // Enviar el mensaje de registro
-    await conn.sendMessage(m.chat, { text: mensaje }, { quoted: m });
+    // Crear y enviar el mensaje interactivo con botón
+    const buttonMessage = {
+        text: mensaje,
+        footer: 'Selecciona una opción:',
+        buttons: [
+            {
+                buttonId: '/menu',
+                buttonText: { displayText: 'Ver Comandos' },
+                type: 1
+            }
+        ],
+        headerType: 1
+    };
+
+    // Enviar el mensaje con el botón
+    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 };
 
 handler.help = ['autoverificar'];
