@@ -50,16 +50,11 @@ const handler = async function(m, { conn, usedPrefix }) {
     const imageUrl = './src/abyss.png'; // Reemplaza con la URL de tu imagen
     const imageMessage = await prepareWAMessageMedia({ image: { url: imageUrl } }, { upload: conn.waUploadToServer });
 
-    // Crear y enviar el mensaje interactivo con botones
-    await sendInteractiveMessage(m, conn, mensaje, usedPrefix, imageMessage);
-};
-
-// Función para enviar el mensaje interactivo con botones
-async function sendInteractiveMessage(m, conn, mensaje, usedPrefix, imageMessage) {
-    // Generar el mensaje interactivo con botones
-    const msg = generateWAMessageFromContent(m.chat, {
+    // Crear el mensaje interactivo con la imagen
+    const messageContent = {
         viewOnceMessage: {
             message: {
+                imageMessage: imageMessage.imageMessage,
                 interactiveMessage: {
                     body: { text: mensaje },
                     footer: { text: 'Selecciona una opción' }, // Pie de página opcional
@@ -83,14 +78,14 @@ async function sendInteractiveMessage(m, conn, mensaje, usedPrefix, imageMessage
                         messageParamsJson: "",
                     },
                 },
-                ...imageMessage // Añade la imagen al mensaje
             },
-        }
-    }, { userJid: conn.user.jid, quoted: m });
+        },
+    };
 
-    // Enviar el mensaje
+    // Generar y enviar el mensaje
+    const msg = generateWAMessageFromContent(m.chat, messageContent, { userJid: conn.user.jid, quoted: m });
     await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
-}
+};
 
 // Configuración del comando
 handler.command = /^(autoverificar)$/i;
