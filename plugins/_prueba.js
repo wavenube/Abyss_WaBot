@@ -21,11 +21,11 @@ const handler = async function(m, { conn, usedPrefix }) {
 
     // Obtener la fecha y hora actuales
     const date = new Date();
-    const fecha = ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()};
+    const fecha = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
     const hora = date.toTimeString().split(' ')[0];
 
     // Construir el mensaje de registro
-    const mensaje = 
+    const mensaje = `
 [ ✅ REGISTRO COMPLETADO ]
 
 ◉ Nombre: ${taguser}
@@ -40,7 +40,7 @@ const handler = async function(m, { conn, usedPrefix }) {
 ⤷ 200 exp
 
 ◉ Total de usuarios registrados: ${Object.keys(global.db.data.users).filter(user => global.db.data.users[user].registered).length}
-;
+`;
 
     // Incrementar las recompensas del usuario
     user.money = (user.money || 0) + 200;
@@ -65,14 +65,14 @@ async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'MENU COMPLETO',
-                                    id: ${usedPrefix}allmenu
+                                    id: `${usedPrefix}menu`
                                 })
                             },
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: 'VER MI PERFIL',
-                                    id: ${usedPrefix}perfil
+                                    display_text: 'PERFIL',
+                                    id: `${usedPrefix}perfil`
                                 })
                             },
                         ],
