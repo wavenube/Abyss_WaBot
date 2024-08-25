@@ -46,14 +46,14 @@ async function sendInteractiveMessage(m, conn, bienvenida, usedPrefix) {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'PRUEBA DE VELOCIDAD',
-                                    id: `${usedPrefix}menu`
+                                    id: `${usedPrefix}ping`
                                 })
                             },
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'AUTO VERIFICAR',
-                                    id: `${usedPrefix}allmenu`
+                                    id: `${usedPrefix}autoverificar`
                                 })
                             },
                         ],
