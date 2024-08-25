@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { generateWAMessageFromContent, prepareWAMessageMedia } from '@whiskeysockets/baileys';
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
 
 const handler = async function(m, { conn, usedPrefix }) {
     const user = global.db.data.users[m.sender];
@@ -21,11 +21,11 @@ const handler = async function(m, { conn, usedPrefix }) {
 
     // Obtener la fecha y hora actuales
     const date = new Date();
-    const fecha = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+    const fecha = ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()};
     const hora = date.toTimeString().split(' ')[0];
 
     // Construir el mensaje de registro
-    const mensaje = `
+    const mensaje = 
 [ ✅ REGISTRO COMPLETADO ]
 
 ◉ Nombre: ${taguser}
@@ -40,21 +40,22 @@ const handler = async function(m, { conn, usedPrefix }) {
 ⤷ 200 exp
 
 ◉ Total de usuarios registrados: ${Object.keys(global.db.data.users).filter(user => global.db.data.users[user].registered).length}
-`;
+;
 
     // Incrementar las recompensas del usuario
     user.money = (user.money || 0) + 200;
     user.exp = (user.exp || 0) + 200;
 
-    // Preparar la imagen
-    const imageUrl = './src/abyss.png'; // Reemplaza con la URL de tu imagen
-    const imageMessage = await prepareWAMessageMedia({ image: { url: imageUrl } }, { upload: conn.waUploadToServer });
+    // Crear y enviar el mensaje interactivo con botones
+    await sendInteractiveMessage(m, conn, mensaje, usedPrefix);
+};
 
-    // Crear el mensaje interactivo con la imagen
-    const messageContent = {
+// Función para enviar el mensaje interactivo con botones
+async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
+    // Generar el mensaje interactivo con botones
+    const msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
             message: {
-                imageMessage: imageMessage.imageMessage,
                 interactiveMessage: {
                     body: { text: mensaje },
                     footer: { text: 'Selecciona una opción' }, // Pie de página opcional
@@ -64,14 +65,14 @@ const handler = async function(m, { conn, usedPrefix }) {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'MENU COMPLETO',
-                                    id: `${usedPrefix}allmenu`
+                                    id: ${usedPrefix}allmenu
                                 })
                             },
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'VER MI PERFIL',
-                                    id: `${usedPrefix}perfil`
+                                    id: ${usedPrefix}perfil
                                 })
                             },
                         ],
@@ -79,13 +80,12 @@ const handler = async function(m, { conn, usedPrefix }) {
                     },
                 },
             },
-        },
-    };
+        }
+    }, { userJid: conn.user.jid, quoted: m });
 
-    // Generar y enviar el mensaje
-    const msg = generateWAMessageFromContent(m.chat, messageContent, { userJid: conn.user.jid, quoted: m });
+    // Enviar el mensaje
     await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
-};
+}
 
 // Configuración del comando
 handler.command = /^(autoverificar)$/i;
