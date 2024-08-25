@@ -38,15 +38,22 @@ async function sendInteractiveMessage(m, conn, bienvenida, usedPrefix) {
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: 'AllMenu',
+                                    display_text: 'MENU COMPLETO',
                                     id: `${usedPrefix}allmenu`
                                 })
                             },
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: 'Menu',
+                                    display_text: 'PRUEBA DE VELOCIDAD',
                                     id: `${usedPrefix}menu`
+                                })
+                            },
+                            {
+                                name: 'quick_reply',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'AUTO VERIFICAR',
+                                    id: `${usedPrefix}allmenu`
                                 })
                             },
                         ],
