@@ -5,7 +5,7 @@ const handler = async (m, { conn, usedPrefix, text }) => {
     const str = `${text}`.trim();
 
     // Definir la imagen a enviar
-    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // Puedes cambiar la URL de la imagen
+    const pp = './src/abyss.png'; // Puedes cambiar la URL de la imagen
 
     // Enviar el mensaje decorado con la estructura que proporcionaste
     const fkontak = {
