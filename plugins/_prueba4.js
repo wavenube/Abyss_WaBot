@@ -1,4 +1,5 @@
-let lastDecoratedMessage = null; // Declaración global
+// Definir la variable en un contexto global
+let lastDecoratedMessage = null;
 
 // Comando 'decorar'
 const handlerDecorate = async (m, { conn, text }) => {
@@ -52,7 +53,7 @@ const handlerDecorate = async (m, { conn, text }) => {
     lastDecoratedMessage = sentMsg;
 };
 
-handlerDecorate.command = /^(decorar3)$/i;
+handlerDecorate.command = /^(decorar2)$/i;
 handlerDecorate.exp = 50;
 export default handlerDecorate;
 
