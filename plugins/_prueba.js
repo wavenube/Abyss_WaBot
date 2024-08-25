@@ -1,64 +1,50 @@
-import { prepareWAMessageMedia, generateWAMessageFromContent } from '@whiskeysockets/baileys';
+import { generateWAMessageFromContent, prepareWAMessageMedia } from '@whiskeysockets/baileys';
+import fs from 'fs';
 
 const handler = async (m, { conn, usedPrefix }) => {
-    // Mensaje de advertencia para no hacer spam
+    // Mensaje de advertencia para no hacer spam de comandos
     await conn.sendMessage(m.chat, { text: '⚠️ *No hagas spam de comandos.*' }, { quoted: m });
 
     // Mensaje de bienvenida
     const bienvenida = `👋 ¡Bienvenido(a)!\nElige una opción del menú:`;
 
-    // URL de imagen para el menú
-    const imageUrl = 'https://example.com/imagen_de_bienvenida.jpg'; // Reemplaza con la URL de tu imagen
+    // Ruta de la imagen
+    const imagePath = './src/abyss.png';
 
-    // Crear y enviar el mensaje interactivo con botones
-    await sendInteractiveMessage(m, conn, bienvenida, imageUrl, usedPrefix);
-};
+    // Leer la imagen y preparar el mensaje multimedia
+    const mediaMessage = await prepareWAMessageMedia({ image: fs.readFileSync(imagePath) }, { upload: conn.waUploadToServer });
 
-// Función para enviar el mensaje interactivo con botones
-async function sendInteractiveMessage(m, conn, bienvenida, imageUrl, usedPrefix) {
-    // Preparar el mensaje con la imagen
-    const messa = await prepareWAMessageMedia({ image: { url: imageUrl } }, { upload: conn.waUploadToServer });
-
-    // Generar el mensaje interactivo con botones
+    // Generar el mensaje interactivo con botones y la imagen adjunta
     const msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
             message: {
-                interactiveMessage: {
-                    body: { text: bienvenida },
-                    footer: { text: 'Selecciona una opción' }, // Pie de página opcional
-                    header: {
-                        hasMediaAttachment: true,
-                        imageMessage: messa.imageMessage, // La imagen que se incluirá en el mensaje
-                    },
-                    nativeFlowMessage: {
-                        buttons: [
-                            {
-                                name: 'quick_reply',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: 'AllMenu',
-                                    id: `${usedPrefix}allmenu`
-                                })
-                            },
-                            {
-                                name: 'quick_reply',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: 'Menu',
-                                    id: `${usedPrefix}menu`
-                                })
-                            },
-                        ],
-                        messageParamsJson: "",
-                    },
-                },
+                imageMessage: mediaMessage.imageMessage,
+                caption: bienvenida,
+                buttonsMessage: {
+                    footerText: 'Selecciona una opción',
+                    buttons: [
+                        {
+                            buttonText: { displayText: 'AllMenu' },
+                            buttonId: `${usedPrefix}allmenu`,
+                            type: 1
+                        },
+                        {
+                            buttonText: { displayText: 'Menu' },
+                            buttonId: `${usedPrefix}menu`,
+                            type: 1
+                        },
+                    ],
+                    headerType: 4 // Indica que el mensaje tiene imagen (ver sección 'headerType' en la documentación)
+                }
             },
         }
     }, { userJid: conn.user.jid, quoted: m });
 
-    // Enviar el mensaje
+    // Enviar el mensaje con la imagen y los botones
     await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
-}
+};
 
 // Configuración del comando
-handler.command = /^(prueba1)$/i; // Este comando se activará con "bienvenida" o "welcome"
+handler.command = /^(prueba2)$/i; // Este comando se activará con "bienvenida" o "welcome"
 
 export default handler;
