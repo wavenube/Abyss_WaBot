@@ -1,27 +1,15 @@
-// Definir la variable en un contexto global
-let lastDecoratedMessage = null;
+import MessageType from '@whiskeysockets/baileys';
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
+
+let lastDecoratedMessage = null; // Variable global para almacenar el último mensaje decorado
 
 // Comando 'decorar'
 const handlerDecorate = async (m, { conn, text }) => {
-    if (!text) throw '⚠️ *Por favor, escribe el texto que quieres decorar.*';
+    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
 
+    // Crear el mensaje decorado
     const str = `${text}`.trim();
-    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // Puedes cambiar la URL de la imagen
-
-    const fkontak = {
-        key: { 
-            participants: "0@s.whatsapp.net", 
-            remoteJid: "status@broadcast", 
-            fromMe: false, 
-            id: "Halo" 
-        }, 
-        message: { 
-            contactMessage: { 
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` 
-            }
-        }, 
-        participant: "0@s.whatsapp.net" 
-    };
+    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // URL de la imagen
 
     const messageOptions = {
         image: { url: pp },
@@ -40,41 +28,58 @@ const handlerDecorate = async (m, { conn, text }) => {
                 description: 'canal del grupo',
                 title: 'wm',
                 body: "By: ZephyrByte",
-                thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png",
+                thumbnailUrl: pp,
                 sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
             }
         }
     };
 
-    // Enviar el mensaje decorado
-    const sentMsg = await conn.sendMessage(m.chat, messageOptions, { quoted: fkontak });
+    // Guardar el mensaje decorado
+    lastDecoratedMessage = generateWAMessageFromContent(m.chat, messageOptions, { quoted: m });
 
-    // Guardar el último mensaje decorado
-    lastDecoratedMessage = sentMsg;
+    // Enviar el mensaje decorado al chat actual
+    await conn.relayMessage(m.chat, lastDecoratedMessage.message, { messageId: lastDecoratedMessage.key.id });
+
+    conn.reply(m.chat, 'Mensaje decorado creado. Puedes enviarlo a todos los grupos usando el comando `.enviar`', m);
 };
 
-handler.command = /^(decorar2)$/i;
-handler.exp = 50;
-export default handler;
+handlerDecorate.command = /^decorar$/i;
+export default handlerDecorate;
 
 // Comando 'enviar'
 const handlerEnviar = async (m, { conn }) => {
-    if (!lastDecoratedMessage) throw '⚠️ *No hay ningún mensaje decorado para reenviar.*';
+    if (!lastDecoratedMessage) return conn.reply(m.chat, 'No hay ningún mensaje decorado para reenviar.', m);
 
-    // Obtener todos los chats donde el bot es miembro
-    const chats = await conn.groupFetchAllParticipating();
+    // Función para enviar el mensaje a los grupos del bot o subbot
+    const sendToGroups = async (botConn) => {
+        const allChats = Object.keys(botConn.chats);
 
-    // Filtrar solo los chats que son grupos
-    const groupChats = Object.values(chats).filter(chat => chat.id.endsWith('@g.us'));
+        for (let chatId of allChats) {
+            try {
+                // Solo enviar mensaje a grupos
+                if (chatId.endsWith('@g.us')) {
+                    await botConn.relayMessage(chatId, lastDecoratedMessage.message, { messageId: lastDecoratedMessage.key.id });
+                }
+            } catch (e) {
+                console.error(`Error al enviar mensaje a ${chatId}:`, e);
+            }
+        }
+    };
 
-    // Reenviar el último mensaje decorado a cada grupo
-    for (const group of groupChats) {
-        await conn.relayMessage(group.id, lastDecoratedMessage.message, { messageId: lastDecoratedMessage.key.id });
+    // Enviar el mensaje decorado a los grupos del bot principal
+    await sendToGroups(conn);
+
+    // Enviar el mensaje decorado a los grupos de los subbots
+    for (let subBot of global.conns) {
+        try {
+            await sendToGroups(subBot);
+        } catch (e) {
+            console.error(`Error al enviar mensaje con subbot:`, e);
+        }
     }
 
-    conn.reply(m.chat, '✅ *Mensaje enviado a todos los grupos.*', m);
+    conn.reply(m.chat, 'Mensaje enviado a todos los grupos y subbots.', m);
 };
 
-handler.command = /^(enviar)$/i;
-handler.exp = 50;
-export default handler;
+handlerEnviar.command = /^enviar$/i;
+export default handlerEnviar;
