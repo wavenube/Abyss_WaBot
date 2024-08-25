@@ -69,6 +69,6 @@ async function sendInteractiveMessage(m, conn, bienvenida, usedPrefix) {
 }
 
 // Configuración del comando
-handler.command = /^(prueba)$/i; // Este comando se activará con "bienvenida" o "welcome"
+handler.command = /^(menu)$/i; // Este comando se activará con "bienvenida" o "welcome"
 
 export default handler;
