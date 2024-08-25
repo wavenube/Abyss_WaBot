@@ -1,9 +1,10 @@
 import { createHash } from 'crypto';
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
 
-const handler = async function(m, { conn }) {
+const handler = async function(m, { conn, usedPrefix }) {
     const user = global.db.data.users[m.sender];
     const taguser = '@' + m.sender.split('@')[0];
-    
+
     // Verificar si el usuario ya está registrado
     if (user.registered === true) {
         throw 'Ya estás registrado.';
@@ -45,25 +46,25 @@ const handler = async function(m, { conn }) {
     user.money = (user.money || 0) + 200;
     user.exp = (user.exp || 0) + 200;
 
- const msg = generateWAMessageFromContent(m.chat, {
+    // Crear y enviar el mensaje interactivo con botones
+    await sendInteractiveMessage(m, conn, mensaje, usedPrefix);
+};
+
+// Función para enviar el mensaje interactivo con botones
+async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
+    // Generar el mensaje interactivo con botones
+    const msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
             message: {
                 interactiveMessage: {
-                    body: { text: bienvenida },
+                    body: { text: mensaje },
                     footer: { text: 'Selecciona una opción' }, // Pie de página opcional
                     nativeFlowMessage: {
                         buttons: [
                             {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: 'MENU COMPLETO',
-                                    id: `${usedPrefix}allmenu`
-                                })
-                            },
-                            {
-                                name: 'quick_reply',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: 'PRUEBA DE VELOCIDAD',
+                                    display_text: 'Ver Comandos',
                                     id: `${usedPrefix}menu`
                                 })
                             },
@@ -71,7 +72,7 @@ const handler = async function(m, { conn }) {
                                 name: 'quick_reply',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'AUTO VERIFICAR',
-                                    id: `${usedPrefix}allmenu`
+                                    id: `${usedPrefix}autoverificar`
                                 })
                             },
                         ],
@@ -82,13 +83,11 @@ const handler = async function(m, { conn }) {
         }
     }, { userJid: conn.user.jid, quoted: m });
 
-
-    // Enviar el mensaje con el botón
-      await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+    // Enviar el mensaje
+    await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
 }
 
-handler.help = ['autoverificar'];
-handler.tags = ['xp'];
+// Configuración del comando
 handler.command = /^(autoverificar)$/i;
 
 export default handler;
