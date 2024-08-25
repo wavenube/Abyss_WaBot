@@ -52,7 +52,7 @@ const handlerDecorate = async (m, { conn, text }) => {
     lastDecoratedMessage = sentMsg;
 };
 
-handlerDecorate.command = /^(decorar2)$/i;
+handlerDecorate.command = /^(decorar3)$/i;
 handlerDecorate.exp = 50;
 export default handlerDecorate;
 
