@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
+import { generateWAMessageFromContent, prepareWAMessageMedia } from '@whiskeysockets/baileys';
 
 const handler = async function(m, { conn, usedPrefix }) {
     const user = global.db.data.users[m.sender];
@@ -46,12 +46,16 @@ const handler = async function(m, { conn, usedPrefix }) {
     user.money = (user.money || 0) + 200;
     user.exp = (user.exp || 0) + 200;
 
+    // Preparar la imagen
+    const imageUrl = './src/abyss.png'; // Reemplaza con la URL de tu imagen
+    const imageMessage = await prepareWAMessageMedia({ image: { url: imageUrl } }, { upload: conn.waUploadToServer });
+
     // Crear y enviar el mensaje interactivo con botones
-    await sendInteractiveMessage(m, conn, mensaje, usedPrefix);
+    await sendInteractiveMessage(m, conn, mensaje, usedPrefix, imageMessage);
 };
 
 // Función para enviar el mensaje interactivo con botones
-async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
+async function sendInteractiveMessage(m, conn, mensaje, usedPrefix, imageMessage) {
     // Generar el mensaje interactivo con botones
     const msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
@@ -79,6 +83,7 @@ async function sendInteractiveMessage(m, conn, mensaje, usedPrefix) {
                         messageParamsJson: "",
                     },
                 },
+                ...imageMessage // Añade la imagen al mensaje
             },
         }
     }, { userJid: conn.user.jid, quoted: m });
