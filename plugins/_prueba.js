@@ -4,8 +4,21 @@ const handler = async (m, { conn, usedPrefix }) => {
     // Mensaje de advertencia para no hacer spam
     await conn.sendMessage(m.chat, { text: '⚠️ *No hagas spam de comandos.*' }, { quoted: m });
 
-    // Mensaje de bienvenida
-    const bienvenida = `👋 ¡Bienvenido(a)!\nElige una opción del menú:`;
+    // Frases aleatorias para acompañar el mensaje de bienvenida
+    const frases = [
+        "✨ Que tengas un día lleno de éxitos y alegrías.",
+        "🌟 Recuerda que cada día es una nueva oportunidad.",
+        "😊 Sonríe, hoy será un gran día.",
+        "💪 ¡No olvides que eres increíble!",
+        "🌈 Aprovecha al máximo cada momento.",
+        "🎯 Hoy es el día perfecto para alcanzar tus metas."
+    ];
+
+    // Seleccionar una frase aleatoria
+    const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+
+    // Mensaje de bienvenida con la frase aleatoria
+    const bienvenida = `👋 ¡Bienvenido(a)!\nElige una opción del menú:\n\n${fraseAleatoria}`;
 
     // Crear y enviar el mensaje interactivo con botones
     await sendInteractiveMessage(m, conn, bienvenida, usedPrefix);
