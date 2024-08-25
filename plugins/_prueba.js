@@ -9,8 +9,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     const bienvenida = `👋 ¡Bienvenido(a)!\nElige una opción del menú:`;
 
     // Ruta de la imagen
-    const imagePath = './src/abyss.png';
-
+    const pp = imagen1;
     // Leer la imagen y preparar el mensaje multimedia
     const mediaMessage = await prepareWAMessageMedia({ image: fs.readFileSync(imagePath) }, { upload: conn.waUploadToServer });
 
