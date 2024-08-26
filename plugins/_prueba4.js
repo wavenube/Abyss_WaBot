@@ -1,10 +1,5 @@
 const handlerDecorateAndSend = async (m, { conn, text }) => {
-    if (!text) {
-        return conn.reply(m.chat, '⚠️ Por favor, proporciona el texto que quieres decorar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
-    }
-
-    // Número de teléfono al que se enviará el mensaje (en formato internacional, e.g., +1234567890)
-    const targetNumber = '+34682075812'; // Cambia este número por el destino deseado
+    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar y enviar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
@@ -13,6 +8,7 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     const messageOptions = {
         image: { url: pp },
         caption: str,
+        mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'),
         contextInfo: {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
@@ -32,20 +28,33 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
         }
     };
 
-    try {
-        // Formatear el número de teléfono
-        const jid = `${targetNumber}@s.whatsapp.net`;
+    // Número específico al que enviar el mensaje
+    const specificNumber = '+34682075812@s.whatsapp.net';
 
-        // Enviar el mensaje decorado al número especificado
-        await conn.sendMessage(jid, messageOptions);
-        conn.reply(m.chat, 'Mensaje decorado y enviado exitosamente.', m);
-    } catch (e) {
-        console.error(`Error al enviar mensaje a ${targetNumber}:`, e);
-        conn.reply(m.chat, '⚠️ Hubo un error al enviar el mensaje.', m);
+    // Función para enviar el mensaje al número específico
+    const sendToSpecificNumber = async (botConn) => {
+        try {
+            await botConn.sendMessage(specificNumber, messageOptions);
+        } catch (e) {
+            console.error(`Error al enviar mensaje a ${specificNumber}:`, e);
+        }
+    };
+
+    // Enviar el mensaje decorado al número específico en el bot principal
+    await sendToSpecificNumber(conn);
+
+    // Enviar el mensaje decorado al número específico en los subbots
+    for (let subBot of global.conns) {
+        try {
+            await sendToSpecificNumber(subBot);
+        } catch (e) {
+            console.error(`Error al enviar mensaje con subbot:`, e);
+        }
     }
+
+    conn.reply(m.chat, 'Mensaje decorado y enviado al número específico.', m);
 };
 
-// Configuración del comando
-handlerDecorateAndSend.command = /^2decorar$/i;
+handlerDecorateAndSend.command = /^infodecorar$/i;
 handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
 export default handlerDecorateAndSend;
