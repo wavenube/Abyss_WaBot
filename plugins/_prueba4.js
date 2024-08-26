@@ -1,6 +1,7 @@
 const handlerEnviar = async (m, { conn }) => {
     // Recuperar el último mensaje decorado de la base de datos del usuario
-    const lastDecoratedMessage = global.db.data.users[m.sender].lastDecoratedMessage;
+    const user = global.db.data.users[m.sender];
+    const lastDecoratedMessage = user.lastDecoratedMessage;
 
     if (!lastDecoratedMessage) return conn.reply(m.chat, 'No hay ningún mensaje decorado para reenviar.', m);
 
