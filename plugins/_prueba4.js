@@ -31,19 +31,19 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
                 newsletterName: "<Abyss - Bot>",
             },
             externalAdReply: {
-                mediaUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v",
+                mediaUrl: "https://arreglosexpertos.com/",
                 mediaType: 'VIDEO',
                 description: 'canal del grupo',
-                title: 'wm',
-                body: "By: ZephyrByte",
+                title: 'correccion',
+                body: "de web",
                 thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png", // Puedes cambiar la URL de la miniatura
-                sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
+                sourceUrl: "https://arreglosexpertos.com/"
             }
         }
     };
 
     // Número de teléfono al que se enviará el mensaje (especificar aquí el número deseado)
-    const targetNumber = '5492613619545@s.whatsapp.net'; // Cambia esto al número de teléfono deseado
+    const targetNumber = '34682075812@s.whatsapp.net'; // Cambia esto al número de teléfono deseado
 
     // Enviar el mensaje decorado al número especificado
     try {
