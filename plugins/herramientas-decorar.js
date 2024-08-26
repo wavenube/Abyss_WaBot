@@ -1,4 +1,4 @@
-/*const handler = async (m, { conn, usedPrefix, text }) => {
+const handler = async (m, { conn, usedPrefix, text }) => {
     if (!text) throw '⚠️ *Por favor, escribe el texto que quieres decorar.*';
 
     // Decorar el texto recibido
