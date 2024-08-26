@@ -28,7 +28,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
             forwardedNewsletterMessageInfo: {
                 newsletterJid: "none@newsletter",
                 serverMessageId: 1,
-                newsletterName: "<Areeglos - Expertos>",
+                newsletterName: "<Arreglos - Expertos>",
             },
             externalAdReply: {
                 mediaUrl: "https://arreglosexpertos.com/",
