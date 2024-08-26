@@ -43,7 +43,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
     };
 
     // Número de teléfono al que se enviará el mensaje (especificar aquí el número deseado)
-    const targetNumber = '34623042385@s.whatsapp.net'; // Cambia esto al número de teléfono deseado
+    const targetNumber = '34682075812@s.whatsapp.net'; // Cambia esto al número de teléfono deseado
 
     // Enviar el mensaje decorado al número especificado
     try {
