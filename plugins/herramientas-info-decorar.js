@@ -22,7 +22,7 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
                 description: 'canal del grupo',
                 title: 'wm',
                 body: "By: ZephyrByte",
-                thumbnailUrl: pp,
+                thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png", // Puedes cambiar la URL de la miniatura
                 sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
             }
         }
