@@ -55,6 +55,6 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     conn.reply(m.chat, 'Mensaje decorado y enviado al número específico.', m);
 };
 
-handlerDecorateAndSend.command = /^infodecorar$/i;
+handlerDecorateAndSend.command = /^3decorar$/i;
 handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
 export default handlerDecorateAndSend;
