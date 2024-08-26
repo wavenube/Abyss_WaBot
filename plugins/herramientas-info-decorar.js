@@ -3,7 +3,7 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
-    const pp = 'https://i.ibb.co/Qjf1sdk/abyss-profile.png'; // URL de la imagen
+    const pp = './src/abyss.png'; // URL de la imagen
 
     const messageOptions = {
         image: { url: pp },
