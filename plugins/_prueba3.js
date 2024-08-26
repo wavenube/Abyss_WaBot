@@ -1,5 +1,3 @@
-import MessageType from '@whiskeysockets/baileys';
-
 const handlerDecorate = async (m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
 
