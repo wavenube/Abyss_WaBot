@@ -12,7 +12,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
         return conn.reply(m.chat, `${tradutor.texto1[0]}\n*${usedPrefix + command} ${tradutor.texto1[1]} ${usedPrefix}play ${tradutor.texto1[2]}`, m);
     }
     if (text.length < 10) return conn.reply(m.chat, tradutor.texto2, m);
-    if (text.length > 1000) return conn.reply(m.chat, tradutor.texto3, m);
+    if (text.length > 10000) return conn.reply(m.chat, tradutor.texto3, m);
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
