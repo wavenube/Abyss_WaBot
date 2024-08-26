@@ -432,6 +432,9 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 > *${usedPrefix}igstalk <usr>*
 > *${usedPrefix}tiktokstalk <usr>*
 > *${usedPrefix}img <txt>*
+> *${usedPrefix}raid (se raaidea el grupo)*
+> *${usedPrefix}decorar (decoras txt)*
+> *${usedPrefix}infodecorar (adm y owner)*
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
