@@ -1,22 +1,24 @@
-const handler = async (m, { conn, usedPrefix, text }) => {
-    if (!text) throw '⚠️ *Por favor, escribe el texto que quieres decorar.*';
+const handlerDecorateAndSend = async (m, { conn, text }) => {
+    if (!text || !text.includes(' ')) {
+        return conn.reply(m.chat, '⚠️ Por favor, proporciona un número de teléfono y el texto que quieres decorar. Ejemplo: `.decorar +1234567890 Este es un mensaje de prueba`', m);
+    }
 
-    // Decorar el texto recibido
-    const str = `${text}`.trim();
-    const pp = './src/abyss.png'; // Imagen de la decoración
+    // Extraer número de teléfono y mensaje del texto
+    const [phoneNumber, ...messageParts] = text.split(' ');
+    const messageText = messageParts.join(' ').trim();
 
-    // Mensaje de carga inicial
-    const loadingMessage = '🕒 *Procesando...*';
+    // Validar el número de teléfono
+    if (!phoneNumber.match(/^\+\d{10,15}$/)) {
+        return conn.reply(m.chat, '⚠️ Número de teléfono inválido. Debe ser en formato internacional, e.g., +1234567890', m);
+    }
 
-    // Enviar el mensaje de carga
-    let { key } = await conn.sendMessage(m.chat, { text: loadingMessage }, { quoted: m });
+    // Crear el mensaje decorado
+    const str = `${messageText}`.trim();
+    const pp = './src/abyss.png'; // URL de la imagen
 
-    // Esperar unos segundos antes de editar el mensaje
-    await new Promise(resolve => setTimeout(resolve, 2000)); // Espera de 2 segundos
-
-    // Opciones para el mensaje final decorado
     const messageOptions = {
-        text: str,
+        image: { url: pp },
+        caption: str,
         mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'),
         contextInfo: {
             isForwarded: true,
@@ -29,7 +31,7 @@ const handler = async (m, { conn, usedPrefix, text }) => {
                 mediaUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v",
                 mediaType: 'VIDEO',
                 description: 'canal del grupo',
-                title: 'wm', // Aquí puedes reemplazar con el texto que desees
+                title: 'wm',
                 body: "By: ZephyrByte",
                 thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png", // Puedes cambiar la URL de la miniatura
                 sourceUrl: "https://whatsapp.com/channel/0029VakDx9I0gcfFXnzZIX2v"
@@ -37,12 +39,17 @@ const handler = async (m, { conn, usedPrefix, text }) => {
         }
     };
 
-    // Editar el mensaje con el texto decorado
-    await conn.sendMessage(m.chat, { ...messageOptions, edit: key }, { quoted: m });
+    // Enviar el mensaje decorado al número de teléfono especificado
+    try {
+        await conn.sendMessage(phoneNumber + '@s.whatsapp.net', messageOptions);
+        conn.reply(m.chat, 'Mensaje decorado y enviado exitosamente.', m);
+    } catch (e) {
+        console.error(`Error al enviar mensaje a ${phoneNumber}:`, e);
+        conn.reply(m.chat, '⚠️ Hubo un error al enviar el mensaje.', m);
+    }
 };
 
 // Configuración del comando
-handler.command = /^decorar2$/i;
-handler.exp = 50;
-
-export default handler;
+handlerDecorateAndSend.command = /^2decorar$/i;
+handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
+export default handlerDecorateAndSend;
