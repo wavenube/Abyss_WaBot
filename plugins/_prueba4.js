@@ -16,7 +16,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
-    const pp = './src/abyss.png'; // URL de la imagen
+    const pp = './src/prueba.png'; // URL de la imagen
 
     // Opciones del mensaje decorado
     const messageOptions = {
