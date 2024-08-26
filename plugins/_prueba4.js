@@ -19,7 +19,6 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     const messageOptions = {
         image: { url: pp },
         caption: str,
-        mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'),
         contextInfo: {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
@@ -41,7 +40,11 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
 
     // Enviar el mensaje decorado al número de teléfono especificado
     try {
-        await conn.sendMessage(phoneNumber + '@s.whatsapp.net', messageOptions);
+        // Verifica que el número de teléfono tenga el formato correcto
+        const jid = `${phoneNumber}@s.whatsapp.net`;
+
+        // Enviar el mensaje decorado al número especificado
+        await conn.sendMessage(jid, messageOptions);
         conn.reply(m.chat, 'Mensaje decorado y enviado exitosamente.', m);
     } catch (e) {
         console.error(`Error al enviar mensaje a ${phoneNumber}:`, e);
@@ -50,6 +53,6 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
 };
 
 // Configuración del comando
-handlerDecorateAndSend.command = /^2decorar$/i;
+handlerDecorateAndSend.command = /^decorar$/i;
 handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
 export default handlerDecorateAndSend;
