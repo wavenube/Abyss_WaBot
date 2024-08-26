@@ -33,6 +33,6 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
 };
 
 // Configuration of the command
-handlerDecorateAndSend.command = /^decorar$/i;
+handlerDecorateAndSend.command = /^4decorar$/i;
 handlerDecorateAndSend.owner = true; // Only the bot owner can use this command
 export default handlerDecorateAndSend;
