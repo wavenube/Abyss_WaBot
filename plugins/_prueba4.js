@@ -1,6 +1,6 @@
 let commandUsage = {};
 
-const handler = async (m, { conn, usedPrefix, command }) => {
+const spamDetectionHandler = async (m, { conn, usedPrefix, command }) => {
     const datas = global;
     const idioma = datas.db.data.users[m.sender].language;
     const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`));
@@ -38,10 +38,9 @@ const handler = async (m, { conn, usedPrefix, command }) => {
         delete commandUsage[m.sender]; // Resetear el contador para ese usuario después de banearlo
         return;
     }
-
-    // Continuar con la ejecución normal si no hay spam de comandos
 };
 
-handler.command = /./i; // Monitorea todos los comandos
-handler.rowner = false; // No restringido solo al propietario
-export default handler;
+// Este handler se ejecuta antes de cualquier otro comando para monitorear el spam
+spamDetectionHandler.command = /./i; // Monitorea todos los comandos
+spamDetectionHandler.rowner = false; // No restringido solo al propietario
+export default spamDetectionHandler;
