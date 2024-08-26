@@ -1,5 +1,6 @@
 const handlerDecorateAndSend = async (m, { conn, text }) => {
-    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar y enviar. Ejemplo: `.decorar + texto`', m);
+    // Verificar que el texto se haya proporcionado
+    if (!text) return conn.reply(m.chat, '⚠️ Por favor, proporciona un texto para decorar y enviar. Ejemplo: `.decorar + texto`', m);
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
@@ -35,10 +36,10 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     // Enviar el mensaje decorado al número especificado
     try {
         await conn.sendMessage(targetNumber, messageOptions, { quoted: m });
-        m.reply('Mensaje decorado y enviado al número especificado.', m);
+        m.reply('✅ Mensaje decorado y enviado al número especificado.', m);
     } catch (e) {
         console.error(`Error al enviar mensaje a ${targetNumber}:`, e);
-        m.reply('Hubo un error al enviar el mensaje.', m);
+        m.reply('❌ Hubo un error al enviar el mensaje.', m);
     }
 };
 
