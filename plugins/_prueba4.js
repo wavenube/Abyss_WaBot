@@ -26,7 +26,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
         contextInfo: {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: "120363318622514917@newsletter",
+                newsletterJid: "none@newsletter",
                 serverMessageId: 1,
                 newsletterName: "<Abyss - Bot>",
             },
