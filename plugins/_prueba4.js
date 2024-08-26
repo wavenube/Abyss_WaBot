@@ -1,10 +1,13 @@
 let commandUsage = {};
 
-const spamDetectionHandler = async (m, { conn, usedPrefix, command }) => {
+const antiSpamHandler = async (m, { conn }) => {
     const datas = global;
     const idioma = datas.db.data.users[m.sender].language;
     const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`));
     const tradutor = _translate.plugins.owner_banuser;
+
+    const timeLimit = 10000; // 10 segundos
+    const commandLimit = 3;
 
     if (!commandUsage[m.sender]) {
         commandUsage[m.sender] = {
@@ -12,15 +15,13 @@ const spamDetectionHandler = async (m, { conn, usedPrefix, command }) => {
             lastCommand: Date.now()
         };
     } else {
-        commandUsage[m.sender].count++;
-    }
-
-    // Tiempo límite y conteo de spam (3 comandos en 10 segundos)
-    const timeLimit = 10000; // 10 segundos
-    const commandLimit = 3;
-
-    if (Date.now() - commandUsage[m.sender].lastCommand > timeLimit) {
-        commandUsage[m.sender].count = 1; // Reinicia el conteo después de 10 segundos
+        if (Date.now() - commandUsage[m.sender].lastCommand > timeLimit) {
+            // Reinicia el conteo después de 10 segundos
+            commandUsage[m.sender].count = 1;
+        } else {
+            // Incrementa el contador si está dentro del límite de tiempo
+            commandUsage[m.sender].count++;
+        }
     }
 
     commandUsage[m.sender].lastCommand = Date.now();
@@ -36,11 +37,10 @@ const spamDetectionHandler = async (m, { conn, usedPrefix, command }) => {
 
         m.reply(tradutor.texto2 || '🚫 Has sido baneado por enviar spam de comandos.');
         delete commandUsage[m.sender]; // Resetear el contador para ese usuario después de banearlo
-        return;
     }
 };
 
-// Este handler se ejecuta antes de cualquier otro comando para monitorear el spam
-spamDetectionHandler.command = /./i; // Monitorea todos los comandos
-spamDetectionHandler.rowner = false; // No restringido solo al propietario
-export default spamDetectionHandler;
+antiSpamHandler.command = /./i; // Monitorea todos los comandos
+antiSpamHandler.rowner = false; // No restringido solo al propietario
+
+export default antiSpamHandler;
