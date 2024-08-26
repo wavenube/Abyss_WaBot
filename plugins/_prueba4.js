@@ -1,14 +1,18 @@
-const handler = async (m, { conn, text }) => {
+const handler = async (m, { conn, usedPrefix, text }) => {
     if (!text) throw '⚠️ *Por favor, escribe el texto que quieres decorar.*';
 
     // Decorar el texto recibido
     const str = `${text}`.trim();
+    const pp = './src/abyss.png'; // Imagen de la decoración
 
-    // Mensaje inicial que será editado
-    const initialMessage = '🕒 *Procesando...*'; // Mensaje inicial que indica que se está procesando
+    // Mensaje de carga inicial
+    const loadingMessage = '🕒 *Procesando...*';
 
-    // Enviar el mensaje inicial
-    let { key } = await conn.sendMessage(m.chat, { text: initialMessage }, { quoted: m });
+    // Enviar el mensaje de carga
+    let { key } = await conn.sendMessage(m.chat, { text: loadingMessage }, { quoted: m });
+
+    // Esperar unos segundos antes de editar el mensaje
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Espera de 2 segundos
 
     // Opciones para el mensaje final decorado
     const messageOptions = {
