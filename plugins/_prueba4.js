@@ -16,7 +16,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
-    const pp = './src/abyss.png'; // URL de la imagen
+    const pp = 'https://ibb.co/PNbM1Xb][img]https://i.ibb.co/PNbM1Xb/Captura-de-pantalla-2024-08-26-155449.png'; // URL de la imagen
 
     // Opciones del mensaje decorado
     const messageOptions = {
@@ -36,7 +36,7 @@ const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) =>
                 description: 'canal del grupo',
                 title: 'correccion',
                 body: "de web",
-                thumbnailUrl: "https://i.ibb.co/Qjf1sdk/abyss-profile.png", // Puedes cambiar la URL de la miniatura
+                thumbnailUrl: "https://ibb.co/PNbM1Xb][img]https://i.ibb.co/PNbM1Xb/Captura-de-pantalla-2024-08-26-155449.png", // Puedes cambiar la URL de la miniatura
                 sourceUrl: "https://arreglosexpertos.com/"
             }
         }
