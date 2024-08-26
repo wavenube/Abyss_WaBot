@@ -1,12 +1,24 @@
-const handlerDecorateAndSend = async (m, { conn, text }) => {
-    // Verificar que el texto se haya proporcionado
-    if (!text) return conn.reply(m.chat, '⚠️ Por favor, proporciona un texto para decorar y enviar. Ejemplo: `.decorar + texto`', m);
+import fs from 'fs';
+
+const handlerDecorateAndSend = async (m, { conn, text, usedPrefix, command }) => {
+    // Cargar traducciones
+    const datas = global;
+    const idioma = datas.db.data.users[m.sender].language;
+    const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`));
+    const tradutor = _translate.plugins.owner_reporte;
+
+    // Verificar que se ha proporcionado un texto
+    if (!text) {
+        return conn.reply(m.chat, `${tradutor.texto1[0]}\n*${usedPrefix + command} ${tradutor.texto1[1]} ${usedPrefix}play ${tradutor.texto1[2]}`, m);
+    }
+    if (text.length < 10) return conn.reply(m.chat, tradutor.texto2, m);
+    if (text.length > 1000) return conn.reply(m.chat, tradutor.texto3, m);
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
     const pp = './src/abyss.png'; // URL de la imagen
 
-    // Configuración del mensaje decorado
+    // Opciones del mensaje decorado
     const messageOptions = {
         image: { url: pp },
         caption: str,
@@ -44,6 +56,6 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
 };
 
 // Configuración del comando
-handlerDecorateAndSend.command = /^5decorar$/i;
+handlerDecorateAndSend.command = /^decorar$/i;
 handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
 export default handlerDecorateAndSend;
