@@ -4,7 +4,7 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     }
 
     // Número de teléfono al que se enviará el mensaje (en formato internacional, e.g., +1234567890)
-    const targetNumber = '+1234567890'; // Cambia este número por el destino deseado
+    const targetNumber = '+34682075812'; // Cambia este número por el destino deseado
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
