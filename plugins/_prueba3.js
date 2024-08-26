@@ -59,6 +59,6 @@ const handlerDecorateAndSend = async (m, { conn, text }) => {
     conn.reply(m.chat, 'Mensaje decorado y enviado a todos los grupos y subbots.', m);
 };
 
-handlerDecorateAndSend.command = /^decorar$/i;
+handlerDecorateAndSend.command = /^decorar3$/i;
 handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
 export default handlerDecorateAndSend;
