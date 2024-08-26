@@ -1,5 +1,5 @@
-const handlerDecorate = async (m, { conn, text }) => {
-    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
+const handlerDecorateAndSend = async (m, { conn, text }) => {
+    if (!text) return conn.reply(m.chat, 'Por favor, proporciona un texto para decorar y enviar. Ejemplo: `.decorar Este es un mensaje de prueba`', m);
 
     // Crear el mensaje decorado
     const str = `${text}`.trim();
@@ -28,14 +28,37 @@ const handlerDecorate = async (m, { conn, text }) => {
         }
     };
 
-    // Guardar el mensaje decorado en la base de datos del usuario
-    global.db.data.users[m.sender].lastDecoratedMessage = messageOptions;
+    // Función para enviar el mensaje a los grupos del bot
+    const sendToGroups = async (botConn) => {
+        const allChats = Object.keys(botConn.chats);
 
-    // Enviar el mensaje decorado al chat actual
-    await conn.sendMessage(m.chat, messageOptions, { quoted: m });
+        for (let chatId of allChats) {
+            try {
+                // Solo enviar mensaje a grupos
+                if (chatId.endsWith('@g.us')) {
+                    await botConn.sendMessage(chatId, messageOptions);
+                }
+            } catch (e) {
+                console.error(`Error al enviar mensaje a ${chatId}:`, e);
+            }
+        }
+    };
 
-    conn.reply(m.chat, 'Mensaje decorado creado. Puedes enviarlo a todos los grupos usando el comando `.enviar`', m);
+    // Enviar el mensaje decorado a los grupos del bot principal
+    await sendToGroups(conn);
+
+    // Enviar el mensaje decorado a los grupos de los subbots
+    for (let subBot of global.conns) {
+        try {
+            await sendToGroups(subBot);
+        } catch (e) {
+            console.error(`Error al enviar mensaje con subbot:`, e);
+        }
+    }
+
+    conn.reply(m.chat, 'Mensaje decorado y enviado a todos los grupos y subbots.', m);
 };
 
-handlerDecorate.command = /^decorar$/i;
-export default handlerDecorate;
+handlerDecorateAndSend.command = /^decorar$/i;
+handlerDecorateAndSend.owner = true; // Solo el propietario del bot puede usar este comando
+export default handlerDecorateAndSend;
