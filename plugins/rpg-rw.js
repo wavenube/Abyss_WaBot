@@ -1,47 +1,44 @@
 import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
-// Variable global para almacenar el personaje actual y su propietario
+// Variable global para almacenar el personaje actual
 global.currentPersonaje = null;
-global.reclamadorActual = null;
-global.reclamadorTimeout = null;
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
-    // Selecciona un personaje aleatorio
-    const personaje = personajes.find(p => p.estado === "libre");
+    // Filtra los personajes que están libres
+    const personajesLibres = personajes.filter(p => p.estado === 'libre');
 
-    if (!personaje) {
-        await conn.sendMessage(m.chat, { text: `❌ No hay personajes libres disponibles en este momento.` }, { quoted: m });
+    // Verifica si hay personajes disponibles
+    if (personajesLibres.length === 0) {
+        await conn.sendMessage(m.chat, { text: `❌ No hay personajes disponibles en este momento.` }, { quoted: m });
         return;
     }
+
+    // Selecciona un personaje aleatorio
+    const personaje = personajesLibres[Math.floor(Math.random() * personajesLibres.length)];
 
     // Muestra la información del personaje
     const str = `
 🖼️ **Imagen**: ${personaje.imagen}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
-📜 **Estado**: ${personaje.estado === "libre" ? "Libre" : "Ocupado"}
     `.trim();
 
     // Guarda el personaje actual en la variable global
     global.currentPersonaje = personaje;
-    global.reclamadorActual = null; // Reinicia el reclamador actual
 
     // Envia el mensaje con la información del personaje
     await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
 
     // Añade el temporizador para la reclamación
-    global.reclamadorTimeout = setTimeout(async () => {
-        if (!global.reclamadorActual) {
+    setTimeout(async () => {
+        if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
+            await conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
+        } else {
             await conn.sendMessage(m.chat, `⏳ El tiempo ha expirado para reclamar a ${personaje.nombre}.`, { quoted: m });
-            // Marca el personaje como libre nuevamente
-            personaje.estado = "libre";
         }
-        // Limpia el personaje reclamado después del tiempo de espera
-        global.currentPersonaje = null;
-    }, 10000); // 10 segundos
+    }, 10000); // 10 segundos para reclamar
 };
 
-// Exportar el manejador de comandos
 handlerRW.command = /^rw$/i;
 handlerRW.owner = false; // Puede ser usado por cualquier usuario
 export default handlerRW;
