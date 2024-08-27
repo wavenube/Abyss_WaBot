@@ -1,4 +1,4 @@
-import { personajes } from './personajes.js';
+import { personajes } from './plugins/personajes.js';
 
 const handlerVenderCh = async (m, { conn, text }) => {
     // Obtiene el nombre del personaje que se quiere vender
