@@ -1,47 +1,60 @@
-const axios = require('axios');
-const fs = require('fs');
+import { createHash } from 'crypto';
 
-// Lista de personajes con URL de imágenes, títulos y descripciones
 const personajes = [
-    { name: 'Sasuke', imageUrl: 'https://example.com/sasuke.jpg', title: 'Sasuke Uchiha', description: 'Un ninja prodigioso.' },
-    { name: 'Naruto', imageUrl: 'https://example.com/naruto.jpg', title: 'Naruto Uzumaki', description: 'El ninja más valiente.' },
-    // Añade más personajes según sea necesario
+   {
+        nombre: "Naruto Uzumaki",
+        imagen: "https://th.bing.com/th/id/R.d536e2ce81f57260a1b086b8eb72cfed?rik=M%2b4DWVkBbtGdHA&pid=ImgRaw&r=0",
+        titulo: "El Séptimo Hokage",
+        descripcion: "Un ninja con un gran corazón y una determinación inquebrantable."
+    },
+    {
+        nombre: "Sasuke Uchiha",
+        imagen: "https://th.bing.com/th/id/OIP.yY8XGyS5FU5VyJuc-4eDaAHaFj?rs=1&pid=ImgDetMain",
+        titulo: "El Último Uchiha",
+        descripcion: "Un prodigio del clan Uchiha con un pasado sombrío."
+    },
+    // Agrega más personajes aquí
 ];
 
-// Función para obtener un personaje aleatorio
-const getRandomCharacter = () => {
-    const randomIndex = Math.floor(Math.random() * personajes.length);
-    return personajes[randomIndex];
-};
-
-// Comando .rw
-const handlerRW = async (m, { conn }) => {
-    const character = getRandomCharacter();
-
-    try {
-        // Intentar obtener la imagen del personaje
-        const imageResponse = await axios.get(character.imageUrl, { responseType: 'arraybuffer' });
-        const imageBuffer = Buffer.from(imageResponse.data, 'binary');
-        
-        // Construir el mensaje con la información del personaje
-        const messageText = `
-> 𝌡 PERSONAJE
-* Nombre: ${character.title}
-* Descripción: ${character.description}
-`;
-
-        // Enviar la imagen y el texto
-        await conn.sendMessage(m.chat, { image: imageBuffer, caption: messageText }, { quoted: m });
-
-        // Añadir lógica para gestionar la reclamación del personaje
-        // (aquí se podría usar un temporizador para permitir que el usuario reclame el personaje)
-    } catch (error) {
-        console.error('Error al obtener o enviar la imagen del personaje:', error);
-        conn.reply(m.chat, 'Hubo un error al obtener la imagen del personaje. Intenta de nuevo más tarde.', m);
-    }
+const handlerRW = async (m, { conn, usedPrefix }) => {
+    // Selecciona un personaje aleatorio
+    const personaje = personajes[Math.floor(Math.random() * personajes.length)];
+    
+    // Muestra la información del personaje
+    const str = `
+🖼️ **Imagen**: ${personaje.imagen}
+🎯 **Título**: ${personaje.titulo}
+📝 **Descripción**: ${personaje.descripcion}
+    `.trim();
+    
+    const { key } = await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
+    
+    // Espera 15 segundos para que el usuario reclame el personaje
+    const timer = setTimeout(async () => {
+        if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
+            await conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
+        } else {
+            await conn.sendMessage(m.chat, `⏳ El tiempo ha expirado para reclamar a ${personaje.nombre}.`, { quoted: m });
+        }
+    }, 15000);
+    
+    // Maneja el reclamo del personaje
+    conn.on('chat-update', chatUpdate => {
+        if (chatUpdate.messages && chatUpdate.messages.all().length) {
+            const message = chatUpdate.messages.all()[0];
+            if (message.text && message.text.toLowerCase() === `${usedPrefix}reclamar ${personaje.nombre}`) {
+                if (!global.db.data.users[m.sender].personajeReclamado) {
+                    global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
+                    clearTimeout(timer);
+                    conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
+                } else {
+                    conn.sendMessage(m.chat, `❌ Ya has reclamado un personaje.`, { quoted: m });
+                }
+            }
+        }
+    });
 };
 
 handlerRW.command = /^rw$/i;
-handlerRW.help = ['rw'];
-handlerRW.tags = ['games'];
+handlerRW.owner = false; // Puede ser usado por cualquier usuario
 export default handlerRW;
