@@ -4,17 +4,8 @@ import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 global.currentPersonaje = null;
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
-    // Filtra los personajes que están libres y no están en la pokedex de ningún usuario
-    const personajesLibres = personajes.filter(p => p.estado === 'libre' && !Object.values(global.db.data.users).some(user => user.personajes && user.personajes.includes(p.nombre)));
-
-    // Verifica si hay personajes disponibles
-    if (personajesLibres.length === 0) {
-        await conn.sendMessage(m.chat, { text: `❌ No hay personajes disponibles en este momento.` }, { quoted: m });
-        return;
-    }
-
-    // Selecciona un personaje aleatorio
-    const personaje = personajes.find(p => p.nombre === global.currentPersonaje?.nombre) || personajesLibres[Math.floor(Math.random() * personajesLibres.length)];
+    // Selecciona un personaje aleatorio de la lista completa de personajes
+    const personaje = personajes[Math.floor(Math.random() * personajes.length)];
 
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
@@ -29,8 +20,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     global.currentPersonaje = personaje;
 
     try {
-        
-     // Intenta enviar el mensaje con la imagen
+        // Intenta enviar el mensaje con la imagen
         await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
     } catch (error) {
         // En caso de error al cargar la imagen
