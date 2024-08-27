@@ -1,3 +1,7 @@
+// _prueba-personaje.js
+
+import { personajes } from './personajes.js'; // Ajusta la ruta según tu estructura de archivos
+
 const handlerPokedex = async (m, { conn }) => {
     const user = global.db.data.users[m.sender];
 
