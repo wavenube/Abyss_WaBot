@@ -3,13 +3,13 @@ import { createHash } from 'crypto';
 const personajes = [
     {
         nombre: "Naruto Uzumaki",
-        imagen: "https://th.bing.com/th/id/R.d536e2ce81f57260a1b086b8eb72cfed?rik=M%2b4DWVkBbtGdHA&pid=ImgRaw&r=0",
+        imagen: "https://www.layleegirl.com/wp-content/uploads/2020/08/Naruto.jpg",
         titulo: "El Séptimo Hokage",
         descripcion: "Un ninja con un gran corazón y una determinación inquebrantable."
     },
     {
         nombre: "Sasuke Uchiha",
-        imagen: "https://th.bing.com/th/id/OIP.yY8XGyS5FU5VyJuc-4eDaAHaFj?rs=1&pid=ImgDetMain",
+        imagen: "https://www.layleegirl.com/wp-content/uploads/2020/08/Sasuke.jpg",
         titulo: "El Último Uchiha",
         descripcion: "Un prodigio del clan Uchiha con un pasado sombrío."
     },
@@ -31,7 +31,9 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     
     // Espera 15 segundos para que el usuario reclame el personaje
     const timer = setTimeout(async () => {
-        if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
+        // Verifica si el usuario ha reclamado el personaje
+        const usuario = global.db.data.users[m.sender] || { personajeReclamado: null };
+        if (usuario.personajeReclamado === personaje.nombre) {
             await conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
         } else {
             await conn.sendMessage(m.chat, `⏳ El tiempo ha expirado para reclamar a ${personaje.nombre}.`, { quoted: m });
@@ -39,18 +41,28 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     }, 15000);
     
     // Maneja el reclamo del personaje
+    conn.sendMessage(m.chat, `⏳ Tienes 15 segundos para reclamar a ${personaje.nombre} con el comando: ${usedPrefix}reclamar ${personaje.nombre}`, { quoted: m });
+
+    // Escucha los mensajes entrantes
+    const handleMessage = async (msg) => {
+        if (msg.text && msg.text.toLowerCase() === `${usedPrefix}reclamar ${personaje.nombre}` && msg.sender === m.sender) {
+            // Verifica si el personaje ya ha sido reclamado
+            const usuario = global.db.data.users[m.sender] || { personajeReclamado: null };
+            if (!usuario.personajeReclamado) {
+                global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
+                clearTimeout(timer);
+                await conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
+            } else {
+                await conn.sendMessage(m.chat, `❌ Ya has reclamado un personaje.`, { quoted: m });
+            }
+        }
+    };
+
+    // Escucha los mensajes en el chat
     conn.on('chat-update', chatUpdate => {
         if (chatUpdate.messages && chatUpdate.messages.all().length) {
-            const message = chatUpdate.messages.all()[0];
-            if (message.text && message.text.toLowerCase() === `${usedPrefix}reclamarch ${personaje.nombre}`) {
-                if (!global.db.data.users[m.sender].personajeReclamado) {
-                    global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
-                    clearTimeout(timer);
-                    conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
-                } else {
-                    conn.sendMessage(m.chat, `❌ Ya has reclamado un personaje.`, { quoted: m });
-                }
-            }
+            const messages = chatUpdate.messages.all();
+            messages.forEach(handleMessage);
         }
     });
 };
