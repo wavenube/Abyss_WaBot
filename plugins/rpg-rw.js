@@ -1,4 +1,4 @@
-import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
+import { personajes } from './plugins/personajes.js'; // Ajusta la ruta si es necesario
 
 // Variable global para almacenar el personaje actual y su propietario
 global.currentPersonaje = null;
