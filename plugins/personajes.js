@@ -24,7 +24,7 @@ export const personajes = [
     },
     {
         "nombre": "Goku",
-        "imagen": "https://www.pixelstalk.net/wp-content/uploads/images5/Goku-4K-HD-Wallpaper-Free-download.jpg",
+        "imagen": "./src/fotos/Goku-4K-HD-Wallpaper-Free-download.jpg",
         "titulo": "El Saiyajin Legendario",
         "descripcion": "Un guerrero de corazón puro y la fuerza de un dios.",
         "estado": "libre"
