@@ -4,8 +4,8 @@ import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 global.currentPersonaje = null;
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
-    // Filtra los personajes que están libres
-    const personajesLibres = personajes.filter(p => p.estado === 'libre');
+    // Filtra los personajes que están libres y no están en la pokedex de ningún usuario
+    const personajesLibres = personajes.filter(p => p.estado === 'libre' && !Object.values(global.db.data.users).some(user => user.personajes && user.personajes.includes(p.nombre)));
 
     // Verifica si hay personajes disponibles
     if (personajesLibres.length === 0) {
@@ -30,8 +30,8 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
 
     // Añade el temporizador para la reclamación
-    setTimeout(async () => {
-        if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
+    global.reclamadorTimeout = setTimeout(async () => {
+        if (global.db.data.users[global.reclamadorActual]?.personajeReclamado === personaje.nombre) {
             await conn.sendMessage(m.chat, `🎉 ¡Has reclamado a ${personaje.nombre}!`, { quoted: m });
         } else {
             await conn.sendMessage(m.chat, `⏳ El tiempo ha expirado para reclamar a ${personaje.nombre}.`, { quoted: m });
