@@ -35,5 +35,5 @@ ${sn}`;
 
 handlerPerfil.help = ['profile [@user]'];
 handlerPerfil.tags = ['xp'];
-handlerPerfil.command = /^perfil|profile?$/i;
+handlerPerfil.command = /^perfil3|profile?$/i;
 export default handlerPerfil;
