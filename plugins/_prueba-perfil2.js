@@ -1,4 +1,4 @@
-const handlerClaimch = async (m, { conn, usedPrefix }) => {
+const handlerClaimch = async (m, { conn }) => {
     // Verifica si hay un personaje actualmente disponible para reclamar
     const personaje = global.currentPersonaje;
 
@@ -13,6 +13,16 @@ const handlerClaimch = async (m, { conn, usedPrefix }) => {
         return;
     }
 
+    // Verifica si el personaje ya ha sido reclamado por otra persona
+    if (global.reclamadorActual) {
+        if (global.reclamadorActual === m.sender) {
+            await conn.sendMessage(m.chat, { text: `❌ Ya has reclamado este personaje.` }, { quoted: m });
+        } else {
+            await conn.sendMessage(m.chat, { text: `❌ El personaje ya ha sido reclamado por otra persona.` }, { quoted: m });
+        }
+        return;
+    }
+
     // Agrega el personaje al perfil del usuario
     if (!global.db.data.users[m.sender].personajes) {
         global.db.data.users[m.sender].personajes = [];
@@ -23,6 +33,8 @@ const handlerClaimch = async (m, { conn, usedPrefix }) => {
     } else {
         global.db.data.users[m.sender].personajes.push(personaje.nombre);
         global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
+        global.reclamadorActual = m.sender;
+        clearTimeout(global.reclamadorTimeout); // Limpia el temporizador
         await conn.sendMessage(m.chat, { text: `🎉 Has agregado a ${personaje.nombre} a tu perfil.` }, { quoted: m });
     }
 
