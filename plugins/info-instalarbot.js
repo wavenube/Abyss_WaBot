@@ -1,39 +1,46 @@
+const handlerInstallBot = async (m, { conn }) => {
+    const installMessage = `
+╭─────────────┈⊷
+│ COMO INSTALAR ESTE BOT?
+╰┬────────────┈⊷
+┌┤📌 *REQUISITOS PARA LA INSTALACION*
+┌┤❇️ _Dudas: wa.me/5492613619545_
+┌┤❇️ 1 GB de almacenamiento
+┌┤❇️ un WhatsApp (secundario)
+┌┤❇️ un número virtual o real (otro número)
+┌┤❇️ 2 dispositivos o una PC para escanear
+╰────────────┈⊷
 
+📌 *COMANDO DE INSTALACION*
 
+\`#serbot\`
 
-const handler = async (m, {conn, usedPrefix}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.info_instalarbot
+> (𝘌𝘴𝘤𝘢𝘯𝘦𝘢𝘳 𝘦𝘭 𝘘𝘙 o código, 𝘙𝘢𝘱𝘪𝘥𝘰)
 
-  const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
-  const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `${tradutor.texto1}`.trim();
-  const buttonMessage= {
-    'document': {url: `https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6`},
-    'mimetype': `application/${document}`,
-    'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
-    'fileLength': 99999999999999,
-    'pageCount': 200,
-    'contextInfo': {
-      'forwardingScore': 200,
-      'isForwarded': true,
-      'externalAdReply': {
-        'mediaUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6',
-        'mediaType': 2,
-        'previewType': 'pdf',
-        'title': tradutor.texto2,
-        'body': wm,
-        'thumbnail': imagen1,
-        'sourceUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6'}},
-    'caption': text,
-    'footer': wm,
-    // 'buttons':[
-    // {buttonId: `${usedPrefix}menu`, buttonText: {displayText: '𝙼𝙴𝙽𝚄'}, type: 1},
-    // {buttonId: `${usedPrefix}donar`, buttonText: {displayText: '𝙳𝙾𝙽𝙰𝚁'}, type: 1}],
-    'headerType': 6};
-  conn.sendMessage(m.chat, buttonMessage, {quoted: m});
+🚀 --------[ Cafirexos host ]--------- 🚀
+
+*Página oficial:*
+https://www.cafirexos.com/
+
+*Panel:*
+https://panel.cafirexos.com/
+
+*Dashboard:*
+https://dash.cafirexos.com/home
+
+*Dudas UNICAMENTE SOBRE EL HOST:*
+https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ 
+_(Pregunta por Diego: cafirexos)_
+
+*Canal de WhatsApp:*
+https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q
+    `;
+
+    // Enviar el mensaje con las instrucciones de instalación
+    await conn.sendMessage(m.chat, { text: installMessage }, { quoted: m });
 };
-handler.command = ['instalarbot', 'instalarbot'];
-export default handler;
+
+// Configuración del comando
+handlerInstallBot.command = /^instalarbot$/i;
+handlerInstallBot.owner = false; // Cualquier usuario puede usar este comando
+export default handlerInstallBot;
