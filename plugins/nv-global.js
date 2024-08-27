@@ -383,7 +383,7 @@ if (!chat.isBanned && m.text.match(/(Chica|chica)/gi)) {
     mconn.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'chica.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
 }
 
-if (!chat.isBanned && m.text.match(/(Ara|Ara ara|ara ara|Arara)/gi)) {
+if (!chat.isBanned && m.text.match(/(Ara ara|ara ara|Arara)/gi)) {
     if (!db.data.chats[m.chat].audios) return;
     if (!db.data.settings[this.user.jid].audios_bot && !m.isGroup) return;
     const vn = './media/Ara.mp3';
