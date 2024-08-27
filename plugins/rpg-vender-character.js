@@ -1,4 +1,4 @@
-import { personajes } from './plugins/personajes.js';
+import { personajes } from './personajes.js';
 
 const handlerVenderCh = async (m, { conn, text }) => {
     // Obtiene el nombre del personaje que se quiere vender
@@ -10,7 +10,7 @@ const handlerVenderCh = async (m, { conn, text }) => {
     }
 
     // Encuentra el personaje en la Pokédex del usuario
-    const userPersonajes = global.db.data.users[m.sender].personajes;
+    const userPersonajes = global.db.data.users[m.sender].personajes || [];
     const personajeIndex = userPersonajes.findIndex(p => p.toLowerCase() === personajeNombre.toLowerCase());
 
     if (personajeIndex === -1) {
@@ -27,10 +27,10 @@ const handlerVenderCh = async (m, { conn, text }) => {
     }
 
     // Obtiene el valor en diamantes del personaje
-    const valorDiamantes = personaje.valor || 0;
+    const valorDiamantes = parseInt(personaje.valor, 10);
 
-    if (valorDiamantes <= 0) {
-        await conn.sendMessage(m.chat, { text: `❌ Este personaje no tiene valor en diamantes y no puede ser vendido.` }, { quoted: m });
+    if (isNaN(valorDiamantes) || valorDiamantes <= 0) {
+        await conn.sendMessage(m.chat, { text: `❌ Este personaje no tiene un valor válido en diamantes y no puede ser vendido.` }, { quoted: m });
         return;
     }
 
