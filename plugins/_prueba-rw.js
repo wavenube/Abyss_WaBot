@@ -40,8 +40,9 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     }, 15000);
 
     // Manejador de mensajes para la reclamación del personaje
-    conn.on('message-new', async (message) => {
+    const handlerReclamar = async (message) => {
         if (!message || !message.text) return;
+
         const texto = message.text.toLowerCase();
         const reclamacion = `${usedPrefix}reclamar ${personaje.nombre}`.toLowerCase();
 
@@ -54,9 +55,19 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
                 await conn.sendMessage(m.chat, `❌ Ya has reclamado un personaje.`, { quoted: m });
             }
         }
-    });
+    };
+
+    // Añade el manejador de mensajes a la lista global de manejadores
+    if (!global.messageHandlers) global.messageHandlers = [];
+    global.messageHandlers.push(handlerReclamar);
 };
 
-handlerRW.command = /^rw$/i;
-handlerRW.owner = false; // Puede ser usado por cualquier usuario
-export default handlerRW;
+// Manejador de mensajes global
+const globalMessageHandler = async (message) => {
+    if (!global.messageHandlers) return;
+    for (const handler of global.messageHandlers) {
+        await handler(message);
+    }
+};
+
+export { handlerRW, globalMessageHandler };
