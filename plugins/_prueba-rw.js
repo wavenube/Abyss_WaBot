@@ -1,5 +1,6 @@
 import { createHash } from 'crypto';
 
+// Lista de personajes
 const personajes = [
     {
         nombre: "Naruto Uzumaki",
@@ -70,7 +71,41 @@ const globalMessageHandler = async (message) => {
     }
 };
 
-export { handlerRW, globalMessageHandler };
+// Manejador de comandos para reclamar el personaje
+const handlerClaimch = async (m, { conn, usedPrefix }) => {
+    // Obtén el personaje reclamado del usuario
+    const personajeReclamado = global.db.data.users[m.sender].personajeReclamado;
+    if (!personajeReclamado) {
+        await conn.sendMessage(m.chat, `❌ No tienes ningún personaje reclamado.`, { quoted: m });
+        return;
+    }
+
+    // Verifica si el personaje existe en la lista
+    const personaje = personajes.find(p => p.nombre === personajeReclamado);
+    if (!personaje) {
+        await conn.sendMessage(m.chat, `❌ El personaje reclamado ya no está disponible.`, { quoted: m });
+        return;
+    }
+
+    // Agrega el personaje al perfil del usuario
+    if (!global.db.data.users[m.sender].personajes) {
+        global.db.data.users[m.sender].personajes = [];
+    }
+
+    if (global.db.data.users[m.sender].personajes.includes(personajeReclamado)) {
+        await conn.sendMessage(m.chat, `❌ Ya tienes este personaje en tu perfil.`, { quoted: m });
+    } else {
+        global.db.data.users[m.sender].personajes.push(personajeReclamado);
+        await conn.sendMessage(m.chat, `🎉 Has agregado a ${personajeReclamado} a tu perfil.`, { quoted: m });
+    }
+
+    // Limpia el personaje reclamado
+    global.db.data.users[m.sender].personajeReclamado = null;
+};
+
+export { handlerRW, globalMessageHandler, handlerClaimch };
 handlerRW.command = /^rw$/i;
 handlerRW.owner = false; // Puede ser usado por cualquier usuario
+handlerClaimch.command = /^claimch$/i;
+handlerClaimch.owner = false; // Puede ser usado por cualquier usuario
 export default handlerRW;
