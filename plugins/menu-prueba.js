@@ -22,7 +22,7 @@ const handler = async (m, { conn, usedPrefix }) => {
         "🌮 Los problemas del mundo se resuelven mejor con tacos."
         "😴 Si no tienes nada que hacer, entonces haz una siesta."
         "🎉 Sobreviviste a otro día, ¡hora de celebrarlo!"
-"🚶‍♂️ Camina con estilo, aunque solo sea hasta la nevera."
+        "🚶‍♂️ Camina con estilo, aunque solo sea hasta la nevera."
     ];
 
     // Seleccionar una frase aleatoria
