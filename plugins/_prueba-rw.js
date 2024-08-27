@@ -1,5 +1,20 @@
 import { createHash } from 'crypto';
-import fetch from 'node-fetch';
+
+const personajes = [
+    {
+        nombre: "Naruto Uzumaki",
+        imagen: "https://example.com/naruto.jpg",
+        titulo: "El Séptimo Hokage",
+        descripcion: "Un ninja con un gran corazón y una determinación inquebrantable."
+    },
+    {
+        nombre: "Sasuke Uchiha",
+        imagen: "https://example.com/sasuke.jpg",
+        titulo: "El Último Uchiha",
+        descripcion: "Un prodigio del clan Uchiha con un pasado sombrío."
+    },
+    // Agrega más personajes aquí
+];
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
     // Selecciona un personaje aleatorio
