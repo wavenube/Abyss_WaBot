@@ -6,8 +6,15 @@ const handlerInfoBot = async (m, { conn }) => {
     const totalRAM = (os.totalmem() / (1024 ** 3)).toFixed(2) + ' GB'; // RAM Total en GB
     const freeRAM = (os.freemem() / (1024 ** 3)).toFixed(2) + ' GB'; // RAM Libre en GB
     const platform = os.platform(); // Plataforma del sistema operativo
-    const username = os.userInfo().username; // Nombre del usuario del sistema
     const cpuModel = os.cpus()[0].model; // Modelo del CPU
+
+    // Intentar obtener el nombre del usuario, con manejo de errores
+    let username;
+    try {
+        username = os.userInfo().username; // Nombre del usuario del sistema
+    } catch (error) {
+        username = 'No disponible'; // Valor por defecto en caso de error
+    }
 
     // Calcular horas, minutos y segundos del tiempo activo
     const uptimeHours = Math.floor(uptime / 3600);
