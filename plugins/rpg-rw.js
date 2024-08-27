@@ -1,4 +1,4 @@
-import { personajes } from './plugins/personajes.js'; // Ajusta la ruta si es necesario
+import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
 // Variable global para almacenar el personaje actual y su propietario
 global.currentPersonaje = null;
@@ -16,7 +16,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 
     // Muestra la información del personaje
     const str = `
- **Nombre**: ${personaje.nombre}
+🖼️ **Imagen**: ${personaje.imagen}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📜 **Estado**: ${personaje.estado === "libre" ? "Libre" : "Ocupado"}
