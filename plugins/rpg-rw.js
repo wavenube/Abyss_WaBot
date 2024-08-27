@@ -16,6 +16,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 
     // Muestra la información del personaje
     const str = `
+ **Nombre**: ${personaje.nombre}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📜 **Estado**: ${personaje.estado === "libre" ? "Libre" : "Ocupado"}
