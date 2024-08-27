@@ -7,19 +7,15 @@ const handlerClaimch = async (m, { conn }) => {
         return;
     }
 
-    // Verifica si el usuario ya ha reclamado el personaje
-    if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
-        await conn.sendMessage(m.chat, { text: `❌ Ya has reclamado a ${personaje.nombre}.` }, { quoted: m });
+    // Verifica si el personaje está libre para reclamar
+    if (personaje.estado === "ocupado") {
+        await conn.sendMessage(m.chat, { text: `❌ El personaje ${personaje.nombre} ya ha sido reclamado por otra persona.` }, { quoted: m });
         return;
     }
 
-    // Verifica si el personaje ya ha sido reclamado por otra persona
-    if (global.reclamadorActual) {
-        if (global.reclamadorActual === m.sender) {
-            await conn.sendMessage(m.chat, { text: `❌ Ya has reclamado este personaje.` }, { quoted: m });
-        } else {
-            await conn.sendMessage(m.chat, { text: `❌ El personaje ya ha sido reclamado por otra persona.` }, { quoted: m });
-        }
+    // Verifica si el usuario ya ha reclamado el personaje
+    if (global.db.data.users[m.sender].personajeReclamado === personaje.nombre) {
+        await conn.sendMessage(m.chat, { text: `❌ Ya has reclamado a ${personaje.nombre}.` }, { quoted: m });
         return;
     }
 
@@ -33,6 +29,7 @@ const handlerClaimch = async (m, { conn }) => {
     } else {
         global.db.data.users[m.sender].personajes.push(personaje.nombre);
         global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
+        personaje.estado = "ocupado";  // Marca el personaje como ocupado
         global.reclamadorActual = m.sender;
         clearTimeout(global.reclamadorTimeout); // Limpia el temporizador
         await conn.sendMessage(m.chat, { text: `🎉 Has agregado a ${personaje.nombre} a tu perfil.` }, { quoted: m });
