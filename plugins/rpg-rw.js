@@ -14,7 +14,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     }
 
     // Selecciona un personaje aleatorio
-    const personaje = personajesLibres[Math.floor(Math.random() * personajesLibres.length)];
+    const personaje = personajes.find(p => p.nombre === global.currentPersonaje?.nombre) || personajesLibres[Math.floor(Math.random() * personajesLibres.length)];
 
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
