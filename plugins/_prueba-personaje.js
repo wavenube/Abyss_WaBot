@@ -1,6 +1,5 @@
-// _prueba-personaje.js
-
-import { personajes } from './plugins/personajes.js'; // Ajusta la ruta según tu estructura de archivos
+// Importa la lista de personajes desde el archivo personajes.js
+import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
 const handlerPokedex = async (m, { conn }) => {
     const user = global.db.data.users[m.sender];
