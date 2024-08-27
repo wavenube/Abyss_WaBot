@@ -75,6 +75,8 @@ const globalMessageHandler = async (message) => {
 const handlerClaimch = async (m, { conn, usedPrefix }) => {
     // Obtén el personaje reclamado del usuario
     const personajeReclamado = global.db.data.users[m.sender].personajeReclamado;
+    console.log(`Personaje reclamado para ${m.sender}: ${personajeReclamado}`);
+
     if (!personajeReclamado) {
         await conn.sendMessage(m.chat, `❌ No tienes ningún personaje reclamado.`, { quoted: m });
         return;
