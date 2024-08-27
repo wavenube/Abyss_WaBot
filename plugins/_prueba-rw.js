@@ -71,3 +71,6 @@ const globalMessageHandler = async (message) => {
 };
 
 export { handlerRW, globalMessageHandler };
+handlerRW.command = /^rw$/i;
+handlerRW.owner = false; // Puede ser usado por cualquier usuario
+export default handlerRW;
