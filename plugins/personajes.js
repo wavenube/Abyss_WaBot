@@ -22,16 +22,16 @@ export const personajes = [
         imagen: "https://th.bing.com/th/id/R.522e40edeac3d06ef3c7449ad93166c4?rik=C1FW%2bJ1O%2fb4v1g&riu=http%3a%2f%2fnarutorealm.files.wordpress.com%2f2011%2f11%2fhinata_hyuuga__chapter_437_by_explosivechemicals.png&ehk=Fa3sS0nJkz%2bVrUgVOYX80WlaGmr%2bE6Hm1ddQOhKqYCY%3d&risl=&pid=ImgRaw&r=0",
         titulo: "La blanquita tetona",
         descripcion: "nose que decirte, solo vi su rule",
-        "valor": "5",  // Valor en diamantes
+        valor: 5,  // Valor en diamantes
         estado: "libre"  // Estado inicial
     },
     {
-        "nombre": "Goku",
-        "imagen": "./src/fotos/Goku-4K-HD-Wallpaper-Free-download.jpg",
-        "titulo": "El Saiyajin Legendario",
-        "descripcion": "Un guerrero de corazón puro y la fuerza de un dios.",
-        "valor": "5",  // Valor en diamantes
-        "estado": "libre"
+        nombre: "Goku",
+        imagen: "./src/fotos/Goku-4K-HD-Wallpaper-Free-download.jpg",
+        titulo: "El Saiyajin Legendario",
+        descripcion: "Un guerrero de corazón puro y la fuerza de un dios.",
+        valor: 5,  // Valor en diamantes
+        estado: "libre"
     },
     {
         "nombre": "Luffy",
