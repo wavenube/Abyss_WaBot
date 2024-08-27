@@ -17,10 +17,12 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     const personaje = personajesLibres[Math.floor(Math.random() * personajesLibres.length)];
 
     // Muestra la información del personaje
+    const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
     const str = `
 🖼️ **Imagen**: ${personaje.imagen}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
+📍 **Estado**: ${estado}
     `.trim();
 
     // Guarda el personaje actual en la variable global
