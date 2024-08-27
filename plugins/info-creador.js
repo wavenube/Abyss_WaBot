@@ -1,43 +1,26 @@
+const handlerOwnerContact = async (m, { conn }) => {
+    // Definir la información del contacto del creador
+    const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:ZephyrByte\nTEL;TYPE=CELL;TYPE=VOICE;waid=5492613619545:+5492613619545\nEND:VCARD`;
 
+    // Crear el mensaje de contacto
+    const contactMessage = {
+        key: {
+            fromMe: false,
+            participant: '0@s.whatsapp.net',
+            remoteJid: 'status@broadcast'
+        },
+        message: {
+            contactMessage: {
+                vcard
+            }
+        }
+    };
 
-
-const handler = async (m, {conn, usedPrefix}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.info_creador
-
-  const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
-  const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `${tradutor.texto1[0]}
-
-  ${tradutor.texto1[1]}`.trim();
-  const buttonMessage= {
-    'document': {url: `https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6`},
-    'mimetype': `application/${document}`,
-    'fileName': `${tradutor.texto2[0]}`,
-    'fileLength': 99999999999999,
-    'pageCount': 200,
-    'contextInfo': {
-      'forwardingScore': 200,
-      'isForwarded': true,
-      'externalAdReply': {
-        'mediaUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6',
-        'mediaType': 2,
-        'previewType': 'pdf',
-        'title': tradutor.texto2[1],
-        'body': wm,
-        'thumbnail': imagen1,
-        'sourceUrl': 'https://chat.whatsapp.com/IYsbScC3cMzBcakINRWJL6'}},
-    'caption': text,
-    'footer': wm,
-    // 'buttons':[
-    // {buttonId: `${usedPrefix}menu`, buttonText: {displayText: '𝙼𝙴𝙽𝚄'}, type: 1},
-    // {buttonId: `${usedPrefix}donar`, buttonText: {displayText: '𝙳𝙾𝙽𝙰𝚁'}, type: 1}],
-    'headerType': 6};
-  conn.sendMessage(m.chat, buttonMessage, {quoted: m});
+    // Enviar el mensaje de contacto
+    await conn.sendMessage(m.chat, { contacts: { displayName: "ZephyrByte", contacts: [{ vcard }] }}, { quoted: contactMessage });
 };
-handler.help = ['owner', 'creator'];
-handler.tags = ['info'];
-handler.command = /^(owner|creator|creador|propietario)$/i;
-export default handler;
+
+// Configuración del comando
+handlerOwnerContact.command = /^owner$/i;
+handlerOwnerContact.owner = false; // Cualquier usuario puede usar este comando
+export default handlerOwnerContact;
