@@ -1,7 +1,7 @@
 const handlerInstallBot = async (m, { conn }) => {
     const installMessage = `
 ╭─────────────┈⊷
-│ `COMO INSTALAR ESTE BOT?`
+│ COMO INSTALAR ESTE BOT?
 ╰┬────────────┈⊷
 ┌┤📌 *REQUISITOS PARA LA INSTALACION*
 ┌┤❇️ _Dudas: wa.me/5492613619545_
