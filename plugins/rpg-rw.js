@@ -19,8 +19,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
     const str = `
-    🎯 **nombre**: ${personaje.nombre}
-🎯 **Título**: ${personaje.titulo}
+🖼️ **Imagen**: ${personaje.imagen}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📍 **Estado**: ${estado}
@@ -29,8 +28,14 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     // Guarda el personaje actual en la variable global
     global.currentPersonaje = personaje;
 
-    // Envia el mensaje con la información del personaje
-    await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
+    try {
+        // Envía el mensaje con la información del personaje
+        await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
+    } catch (error) {
+        // En caso de error al cargar la imagen
+        console.error("Error al cargar la imagen:", error);
+        await conn.sendMessage(m.chat, { text: `📸 No se pudo cargar la imagen del personaje.` }, { quoted: m });
+    }
 
     // Añade el temporizador para la reclamación
     global.reclamadorTimeout = setTimeout(async () => {
