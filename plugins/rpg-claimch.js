@@ -19,6 +19,12 @@ const handlerClaimch = async (m, { conn }) => {
         return;
     }
 
+    // Verifica si el personaje ya está en la pokedex de otro usuario
+    if (Object.values(global.db.data.users).some(user => user.personajes && user.personajes.includes(personaje.nombre))) {
+        await conn.sendMessage(m.chat, { text: `❌ El personaje ${personaje.nombre} ya ha sido reclamado por otro usuario.` }, { quoted: m });
+        return;
+    }
+
     // Agrega el personaje al perfil del usuario
     if (!global.db.data.users[m.sender].personajes) {
         global.db.data.users[m.sender].personajes = [];
@@ -29,8 +35,11 @@ const handlerClaimch = async (m, { conn }) => {
     } else {
         global.db.data.users[m.sender].personajes.push(personaje.nombre);
         global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
-        personaje.estado = "ocupado";  // Marca el personaje como ocupado
+
+        // Marca el personaje como ocupado
+        personaje.estado = "ocupado";
         global.reclamadorActual = m.sender;
+
         clearTimeout(global.reclamadorTimeout); // Limpia el temporizador
         await conn.sendMessage(m.chat, { text: `🎉 Has agregado a ${personaje.nombre} a tu perfil.` }, { quoted: m });
     }
@@ -39,7 +48,6 @@ const handlerClaimch = async (m, { conn }) => {
     global.currentPersonaje = null;
 };
 
-// Exportar el manejador de comandos
 handlerClaimch.command = /^claimch$/i;
 handlerClaimch.owner = false; // Puede ser usado por cualquier usuario
 export default handlerClaimch;
