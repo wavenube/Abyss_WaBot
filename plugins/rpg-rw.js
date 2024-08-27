@@ -29,13 +29,8 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     global.currentPersonaje = personaje;
 
     try {
-        // Intenta enviar el mensaje con la imagen
-        await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
-    } catch (error) {
-        // En caso de error al cargar la imagen
-        console.error("Error al cargar la imagen:", error.message);
-        await conn.sendMessage(m.chat, { text: `📸 No se pudo cargar la imagen del personaje. Aquí está la información del personaje:\n\n${str}` }, { quoted: m });
-    }
+    await conn.sendMessage(m.chat, { image: { url: personaje.imagen }, caption: str }, { quoted: m });
+
 
     // Añade el temporizador para la reclamación
     global.reclamadorTimeout = setTimeout(async () => {
