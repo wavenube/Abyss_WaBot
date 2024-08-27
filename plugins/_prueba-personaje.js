@@ -16,10 +16,4 @@ const handlerPokedex = async (m, { conn }) => {
     }).join('\n\n');
 
     // Envía la lista de personajes reclamados
-    await conn.sendMessage(m.chat, { text: `📜 **Tus personajes reclamados:**\n\n${personajesReclamados}` }, { quoted: m });
-};
-
-// Exportar el manejador de comandos
-handlerPokedex.command = /^pokedex$/i;
-handlerPokedex.owner = false; // Puede ser usado por cualquier usuario
-export default handlerPokedex;
+    await conn.sendMessage(m.chat, { text: `📜 **Tus personajes reclamados:**\n\n${
