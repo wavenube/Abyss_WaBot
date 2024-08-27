@@ -42,7 +42,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     conn.on('chat-update', chatUpdate => {
         if (chatUpdate.messages && chatUpdate.messages.all().length) {
             const message = chatUpdate.messages.all()[0];
-            if (message.text && message.text.toLowerCase() === `${usedPrefix}reclamar ${personaje.nombre}`) {
+            if (message.text && message.text.toLowerCase() === `${usedPrefix}reclamarch ${personaje.nombre}`) {
                 if (!global.db.data.users[m.sender].personajeReclamado) {
                     global.db.data.users[m.sender].personajeReclamado = personaje.nombre;
                     clearTimeout(timer);
