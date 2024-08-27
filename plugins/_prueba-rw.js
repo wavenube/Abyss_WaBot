@@ -1,36 +1,25 @@
-import { createHash } from 'crypto';
+import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
-// Lista de personajes
-const personajes = [
-    {
-        nombre: "Naruto Uzumaki",
-        imagen: "https://th.bing.com/th/id/R.d536e2ce81f57260a1b086b8eb72cfed?rik=M%2b4DWVkBbtGdHA&pid=ImgRaw&r=0",
-        titulo: "El Séptimo Hokage",
-        descripcion: "Un ninja con un gran corazón y una determinación inquebrantable."
-    },
-    {
-        nombre: "Sasuke Uchiha",
-        imagen: "https://th.bing.com/th/id/OIP.yY8XGyS5FU5VyJuc-4eDaAHaFj?rs=1&pid=ImgDetMain",
-        titulo: "El Último Uchiha",
-        descripcion: "Un prodigio del clan Uchiha con un pasado sombrío."
-    },
-    // Agrega más personajes aquí
-];
-
-// Variables globales para almacenar el personaje actual y su propietario
+// Variable global para almacenar el personaje actual y su propietario
 global.currentPersonaje = null;
 global.reclamadorActual = null;
 global.reclamadorTimeout = null;
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
     // Selecciona un personaje aleatorio
-    const personaje = personajes[Math.floor(Math.random() * personajes.length)];
+    const personaje = personajes.find(p => p.estado === "libre");
+
+    if (!personaje) {
+        await conn.sendMessage(m.chat, { text: `❌ No hay personajes libres disponibles en este momento.` }, { quoted: m });
+        return;
+    }
 
     // Muestra la información del personaje
     const str = `
 🖼️ **Imagen**: ${personaje.imagen}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
+📜 **Estado**: ${personaje.estado === "libre" ? "Libre" : "Ocupado"}
     `.trim();
 
     // Guarda el personaje actual en la variable global
@@ -44,6 +33,8 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     global.reclamadorTimeout = setTimeout(async () => {
         if (!global.reclamadorActual) {
             await conn.sendMessage(m.chat, `⏳ El tiempo ha expirado para reclamar a ${personaje.nombre}.`, { quoted: m });
+            // Marca el personaje como libre nuevamente
+            personaje.estado = "libre";
         }
         // Limpia el personaje reclamado después del tiempo de espera
         global.currentPersonaje = null;
