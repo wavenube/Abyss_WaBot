@@ -6,22 +6,22 @@ const handler = async (m, { conn, usedPrefix }) => {
 
     // Frases aleatorias para acompañar el mensaje de bienvenida
     const frases = [
-        "😎 Hoy toca sobrevivir, ya lo de triunfar lo vemos después."
-        "🍕 Un día sin pizza es un día perdido."
-        "🛌 Si la vida te da sueño, duérmete."
-        "💥 Hoy es un buen día para hacer nada y que nadie te moleste."
-        "☕ No eres tú, es el café que aún no he tomado."
-        "🔧 Si todo falla, echa la culpa a Mercurio retrógrado."
-        "🍔 Recuerda: el gimnasio puede esperar, la hamburguesa no."
-        "💻 La productividad es una leyenda urbana."
-        "🥤 Si el día va mal, siempre puedes pedir un delivery."
-        "🐢 No es procrastinación, es darle tiempo al cerebro para brillar."
-        "🍫 Si el plan A falla, el chocolate siempre es el plan B."
-        "🧘‍♂️ La calma es para los que no tienen Wi-Fi lento."
-        "🎮 A veces, la mejor estrategia es desconectarse y jugar un rato."
-        "🌮 Los problemas del mundo se resuelven mejor con tacos."
-        "😴 Si no tienes nada que hacer, entonces haz una siesta."
-        "🎉 Sobreviviste a otro día, ¡hora de celebrarlo!"
+        "😎 Hoy toca sobrevivir, ya lo de triunfar lo vemos después.",
+        "🍕 Un día sin pizza es un día perdido.",
+        "🛌 Si la vida te da sueño, duérmete.",
+        "💥 Hoy es un buen día para hacer nada y que nadie te moleste.",
+        "☕ No eres tú, es el café que aún no he tomado.",
+        "🔧 Si todo falla, echa la culpa a Mercurio retrógrado.",
+        "🍔 Recuerda: el gimnasio puede esperar, la hamburguesa no.",
+        "💻 La productividad es una leyenda urbana.",
+        "🥤 Si el día va mal, siempre puedes pedir un delivery.",
+        "🐢 No es procrastinación, es darle tiempo al cerebro para brillar.",
+        "🍫 Si el plan A falla, el chocolate siempre es el plan B.",
+        "🧘‍♂️ La calma es para los que no tienen Wi-Fi lento.",
+        "🎮 A veces, la mejor estrategia es desconectarse y jugar un rato.",
+        "🌮 Los problemas del mundo se resuelven mejor con tacos.",
+        "😴 Si no tienes nada que hacer, entonces haz una siesta.",
+        "🎉 Sobreviviste a otro día, ¡hora de celebrarlo!",
         "🚶‍♂️ Camina con estilo, aunque solo sea hasta la nevera."
     ];
 
