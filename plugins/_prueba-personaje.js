@@ -1,16 +1,22 @@
-// En un archivo de configuración o en la parte superior del script
-const personajes = [
-    {
-        nombre: "Naruto Uzumaki",
-        imagen: "https://th.bing.com/th/id/R.d536e2ce81f57260a1b086b8eb72cfed?rik=M%2b4DWVkBbtGdHA&pid=ImgRaw&r=0",
-        titulo: "El Séptimo Hokage",
-        descripcion: "Un ninja con un gran corazón y una determinación inquebrantable."
-    },
-    {
-        nombre: "Sasuke Uchiha",
-        imagen: "https://th.bing.com/th/id/OIP.yY8XGyS5FU5VyJuc-4eDaAHaFj?rs=1&pid=ImgDetMain",
-        titulo: "El Último Uchiha",
-        descripcion: "Un prodigio del clan Uchiha con un pasado sombrío."
-    },
-    // Agrega más personajes aquí
-];
+const handlerPokedex = async (m, { conn }) => {
+    const user = global.db.data.users[m.sender];
+
+    if (!user.personajes || user.personajes.length === 0) {
+        await conn.sendMessage(m.chat, { text: `📜 No tienes personajes reclamados.` }, { quoted: m });
+        return;
+    }
+
+    // Crea una lista de personajes reclamados
+    const personajesReclamados = user.personajes.map((nombre) => {
+        const personaje = personajes.find(p => p.nombre === nombre);
+        return personaje ? `🖼️ **Imagen**: ${personaje.imagen}\n🎯 **Título**: ${personaje.titulo}\n📝 **Descripción**: ${personaje.descripcion}` : '';
+    }).join('\n\n');
+
+    // Envía la lista de personajes reclamados
+    await conn.sendMessage(m.chat, { text: `📜 **Tus personajes reclamados:**\n\n${personajesReclamados}` }, { quoted: m });
+};
+
+// Exportar el manejador de comandos
+handlerPokedex.command = /^pokedex$/i;
+handlerPokedex.owner = false; // Puede ser usado por cualquier usuario
+export default handlerPokedex;
