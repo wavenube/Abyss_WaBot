@@ -13,7 +13,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 🖼️ **Nombre**: ${personaje.nombre}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
-💰 **Valor**: ${personaje.valor}
+💰 **Valor**: ${personaje.valor} diamantes
 📍 **Estado**: ${estado}
 
 > 𝌡 *RECLAMAR*
