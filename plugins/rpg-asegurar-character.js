@@ -59,6 +59,6 @@ const handlerAsegurarCh = async (m, { conn, text }) => {
 };
 
 // Configuración del comando
-handlerAsegurarCh.command = /^asegurarch$/i;
+handlerAsegurarCh.command = /^(asegurarch|asegurar|as)$/i;
 handlerAsegurarCh.owner = false; // Puede ser usado por cualquier usuario
 export default handlerAsegurarCh;
