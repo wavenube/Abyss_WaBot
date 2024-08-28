@@ -16,9 +16,9 @@ const handlerResetAll = async (m, { conn, isOwner }) => {
         userData.asegurados = {}; // Vaciar los personajes asegurados del usuario
     }
 
-    // Restablecer la tienda
+    // Vaciar la tienda
     global.tiendaData = {
-        personajes: [],
+        personajes: [], // Vaciar la lista de personajes en la tienda
     };
 
     // Restablecer la puja
@@ -30,7 +30,7 @@ const handlerResetAll = async (m, { conn, isOwner }) => {
 
     // Restaurar los precios originales de los personajes
     personajes.forEach(p => {
-        p.valor = p.valorOriginal || p.valor; // Asegúrate de que los precios originales estén en los datos de personajes
+        p.valor = p.valorOriginal || p.valor; // Asegurarse de que los precios originales estén en los datos de personajes
     });
 
     // Enviar mensaje de éxito
