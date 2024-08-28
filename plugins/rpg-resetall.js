@@ -38,8 +38,7 @@ const handlerResetAll = async (m, { conn }) => {
 };
 
 // Configuración del comando
-handler.command = /^resetall$/i;
-handler.rowner = true;
-handler.fail = null;
+handlerResetAll.command = /^resetall$/i;
+handlerResetAll.owner = true; // Solo puede ser usado por el propietario del bot
 
-export default handler;
+export default handlerResetAll;
