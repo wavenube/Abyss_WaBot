@@ -1,13 +1,23 @@
 import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
-// Variable global para almacenar los personajes y sus tiempos de restricción
+// Variables globales para controlar los personajes y tiempos de espera
 global.restriccionesPersonajes = {};
+global.personajesSeleccionados = [];
+global.personajesUltimoReinicio = Date.now();
+global.currentPersonaje = null; // Agrega esta línea para almacenar el personaje actual
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
     const ahora = Date.now();
     const tiempoEsperar = 15000; // 15 segundos en milisegundos
+    const tiempoReinicio = 3600000; // 1 hora en milisegundos para reiniciar los personajes disponibles
 
-    // Filtra los personajes que no están en uso
+    // Si hace más de una hora desde el último reinicio, reinicia el conjunto de personajes disponibles
+    if (ahora - global.personajesUltimoReinicio > tiempoReinicio) {
+        global.personajesSeleccionados = [];
+        global.personajesUltimoReinicio = ahora;
+    }
+
+    // Filtra los personajes que no están en uso y no han sido seleccionados recientemente
     let personajesDisponibles = personajes.filter(p => {
         const restriccion = global.restriccionesPersonajes[p.nombre];
         return !restriccion || (ahora - restriccion >= tiempoEsperar);
@@ -18,11 +28,24 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
         personajesDisponibles = personajes;
     }
 
+    // Asegúrate de que no seleccionemos los mismos personajes de la lista de seleccionados recientemente
+    personajesDisponibles = personajesDisponibles.filter(p => !global.personajesSeleccionados.includes(p.nombre));
+
+    // Si todos los personajes han sido seleccionados recientemente, reinicia la lista de seleccionados
+    if (personajesDisponibles.length === 0) {
+        global.personajesSeleccionados = [];
+        personajesDisponibles = personajes;
+    }
+
     // Selecciona un personaje aleatorio de los disponibles
     const personaje = personajesDisponibles[Math.floor(Math.random() * personajesDisponibles.length)];
 
+    // Guarda el personaje actual en la variable global
+    global.currentPersonaje = personaje;
+
     // Actualiza la restricción del personaje seleccionado
     global.restriccionesPersonajes[personaje.nombre] = ahora;
+    global.personajesSeleccionados.push(personaje.nombre);
 
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
