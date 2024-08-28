@@ -392,6 +392,54 @@ export const personajes = [
         "descripcion": "El detective más famoso del mundo, conocido por su inteligencia y habilidades deductivas.",
         "valor": "50",  // Valor en diamantes
         "estado": "libre"
-    }
+    },
+     {
+        "nombre": "Harem",
+        "imagen": "https://wallpapercave.com/wp/wp3878666.jpg",
+        "titulo": "Adquiriste un Harem",
+        "descripcion": "Felicidades soldado, es tu dia de suerte, has conseguido un harem, mi recomendacion? disfruta y goza.",
+        "valor": "100",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Harem",
+        "imagen": "https://fictionhorizon.com/wp-content/uploads/2021/07/Best-Harem-Animes-768x432.png",
+        "titulo": "Adquiriste un Harem",
+        "descripcion": "Felicidades soldado, es tu dia de suerte, has conseguido un harem, mi recomendacion? disfruta y goza.",
+        "valor": "100",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Harem",
+        "imagen": "./src/fotos/harem1.jpg",
+        "titulo": "Adquiriste un Harem",
+        "descripcion": "Felicidades soldado, es tu dia de suerte, has conseguido un harem, mi recomendacion? disfruta y goza.",
+        "valor": "100",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Harem Plus",
+        "imagen": "./src/fotos/harem2.jpg",
+        "titulo": "Adquiriste un Harem Plus",
+        "descripcion": "Resiste soldado, este no es un Harem normal, deberas resistir putazos y sentones, te veo en la otra vida.",
+        "valor": "200",  // Valor en diamantes
+        "estado": "libre"
+    },
+        {
+        "nombre": "Harem Plus",
+        "imagen": "./src/fotos/harem3.jpg",
+        "titulo": "Adquiriste un Harem Plus",
+        "descripcion": "Resiste soldado, este no es un Harem normal, deberas resistir putazos y sentones, te veo en la otra vida.",
+        "valor": "300",  // Valor en diamantes
+        "estado": "libre"
+    },
+     {
+        "nombre": "Harem Plus",
+        "imagen": "./src/fotos/harem4.jpg",
+        "titulo": "Adquiriste un Harem Plus",
+        "descripcion": "Resiste soldado, este no es un Harem normal, deberas resistir putazos y sentones, te veo en la otra vida.",
+        "valor": "200",  // Valor en diamantes
+        "estado": "libre"
+    }       
     // Agrega más personajes aquí
 ];
