@@ -1,3 +1,5 @@
+const cooldown = 5 * 60 * 1000; // 5 minutos en milisegundos
+
 const handlerSteal = async (m, { conn, text }) => {
     // Verifica si el comando incluye la mención de un usuario
     if (!m.mentionedJid[0]) {
@@ -17,6 +19,20 @@ const handlerSteal = async (m, { conn, text }) => {
 
     // Verifica si el usuario objetivo tiene personajes asegurados
     const asegurados = targetUserData.asegurados || {};
+
+    // Verifica el cooldown para el objetivo
+    const lastStealTime = global.db.data.cooldowns[targetUser] || 0;
+    if (Date.now() - lastStealTime < cooldown) {
+        await conn.sendMessage(m.chat, { text: `❌ No puedes robar de este usuario todavía. Espera un poco más.` }, { quoted: m });
+        return;
+    }
+
+    // Verifica el cooldown para el ladrón
+    const lastStealByThief = global.db.data.cooldowns[m.sender] || 0;
+    if (Date.now() - lastStealByThief < cooldown) {
+        await conn.sendMessage(m.chat, { text: `❌ No puedes robar a otra persona todavía. Espera un poco más.` }, { quoted: m });
+        return;
+    }
 
     // Selecciona un personaje aleatorio de la Pokédex del usuario objetivo
     let stolenPersonajeIndex = Math.floor(Math.random() * targetUserData.personajes.length);
@@ -44,6 +60,10 @@ const handlerSteal = async (m, { conn, text }) => {
         thiefUserData.personajes = [];
     }
     thiefUserData.personajes.push(stolenPersonaje);
+
+    // Actualiza el tiempo de cooldown
+    global.db.data.cooldowns[targetUser] = Date.now();
+    global.db.data.cooldowns[m.sender] = Date.now();
 
     // Enviar mensaje de éxito
     const mensaje = `
