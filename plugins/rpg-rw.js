@@ -14,6 +14,8 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📍 **Estado**: ${estado}
+
+> 𝌡 *RECLAMAR*
 \`Usa #claimch para reclamar\`
     `.trim();
 
