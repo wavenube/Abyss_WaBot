@@ -78,7 +78,7 @@ ${readMore}
 🔸 ${usedPrefix}join <wagp_url>
 🔸 ${usedPrefix}fixmsgespera
 🔸 bot (sin prefijo)
-🔸 rpgch < rpg anime \*NEW\*
+🔸 rpg < rpg anime \*NEW\*
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
