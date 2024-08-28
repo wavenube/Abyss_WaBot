@@ -48,6 +48,6 @@ const handlerClaimch = async (m, { conn }) => {
     global.currentPersonaje = null;
 };
 handler.help = ["claimch", "c"]
-handlerClaimch.command = /^(claimch|c)$/i;
-handlerClaimch.owner = false; // Puede ser usado por cualquier usuario
-export default handlerClaimch;
+handler.command = /^(claimch|c)$/i;
+handler.owner = false; // Puede ser usado por cualquier usuario
+export default handler;
