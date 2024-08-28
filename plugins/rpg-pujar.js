@@ -1,4 +1,4 @@
-const handlerPujar = async (m, { conn, text }) => {
+/*const handlerPujar = async (m, { conn, text }) => {
     const ahora = Date.now();
 
     // Verifica si hay una puja en curso
