@@ -12,7 +12,7 @@ const handlerPokedex = async (m, { conn }) => {
     // Crea una lista de personajes reclamados
     const personajesReclamados = user.personajes.map((nombre) => {
         const personaje = personajes.find(p => p.nombre === nombre);
-        return personaje ? `🖼️ **Imagen**: ${personaje.imagen}\n🎯 **Título**: ${personaje.titulo}\n📝 **Descripción**: ${personaje.descripcion}` : '';
+        return personaje ? `🖼️ **Nombre**: ${personaje.nombre}\n🎯 **Título**: ${personaje.titulo}\n📝 **Descripción**: ${personaje.descripcion}` : '';
     }).join('\n\n');
 
     // Envía la lista de personajes reclamados
