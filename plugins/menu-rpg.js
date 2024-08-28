@@ -45,6 +45,7 @@ ${tradutor.texto1[1]} ${taguser}
 🔸 ${usedPrefix}pujarch < creas puja
 🔸 ${usedPrefix}puja +nombre < pujas
 🔸 ${usedPrefix}asegurarch < aseguras
+🔸 ${usedPrefix}infoch < ver personaje
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*`
 
