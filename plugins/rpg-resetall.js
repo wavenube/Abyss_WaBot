@@ -38,7 +38,8 @@ const handlerResetAll = async (m, { conn }) => {
 };
 
 // Configuración del comando
-handlerResetAll.command = /^resetall$/i;
+handler.command = /^resetall$/i;
 handler.rowner = true;
+handler.fail = null;
 
-export default handlerResetAll;
+export default handler;
