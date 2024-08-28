@@ -14,6 +14,12 @@ const handlerPujar = async (m, { conn, text }) => {
         return;
     }
 
+    // Verifica si el usuario ya ha pujado
+    if (global.pujaData.pujadores[m.sender]) {
+        await conn.sendMessage(m.chat, { text: `❌ Solo puedes pujar una vez en esta puja.` }, { quoted: m });
+        return;
+    }
+
     // Busca el personaje en los personajes en puja
     const personaje = global.pujaData.personajes.find(p => p.nombre.toLowerCase() === personajeNombre);
 
@@ -25,6 +31,9 @@ const handlerPujar = async (m, { conn, text }) => {
     // Aumenta el valor del personaje
     const nuevoValor = Math.ceil(personaje.valor * 1.5);
     personaje.valor = nuevoValor;
+
+    // Marca al usuario como que ya ha pujado
+    global.pujaData.pujadores[m.sender] = true;
 
     // Envía un mensaje de confirmación
     const mensaje = `
