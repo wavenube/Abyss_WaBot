@@ -78,6 +78,7 @@ ${readMore}
 🔸 ${usedPrefix}join <wagp_url>
 🔸 ${usedPrefix}fixmsgespera
 🔸 bot (sin prefijo)
+🔸 rpgch < rpg anime \*NEW\*
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -470,32 +471,32 @@ ${readMore}
   
 > *━━━━━━━━━━━━━*
 ◤───── ✦ • ─────◥
-> *${usedPrefix}sticker* *<responder a img o video>*
-> *${usedPrefix}sticker* *<url>*
-> *${usedPrefix}sticker2* *<responder a img o video>*
-> *${usedPrefix}sticker2* *<url>*
-> *${usedPrefix}s* *<responder a img o video>*
-> *${usedPrefix}s* *<url>*
-> *${usedPrefix}emojimix* *<emoji 1>&<emoji 2>*
-> *${usedPrefix}scircle* *<img>*
-> *${usedPrefix}sremovebg* *<img>*
-> *${usedPrefix}semoji* *<tipo> <emoji>*
-> *${usedPrefix}qc* *<txt>*
-> *${usedPrefix}attp* *<txt>*
-> *${usedPrefix}attp2* *<txt>*
-> *${usedPrefix}attp3* *<txt>*
-> *${usedPrefix}ttp* *<txt>*
-> *${usedPrefix}ttp2* *<txt>*
-> *${usedPrefix}ttp3* *<txt>*
-> *${usedPrefix}ttp4* *<txt>*
-> *${usedPrefix}ttp5* *<txt>*
-> *${usedPrefix}pat* *<@tag>*
-> *${usedPrefix}slap* *<@tag>*
-> *${usedPrefix}kiss* *<@tag>*
-> *${usedPrefix}dado*
-> *${usedPrefix}wm* *<packname> <autor>*
-> *${usedPrefix}stickermarker* *<efecto> <img>*
-> *${usedPrefix}stickerfilter* *<efecto> <img>*
+🔹 ${usedPrefix}sticker <responder a img o video>
+🔹 ${usedPrefix}sticker <url>
+🔹 ${usedPrefix}sticker2 <responder a img o video>
+🔹 ${usedPrefix}sticker2 <url>
+🔹 ${usedPrefix}s <responder a img o video>
+🔹 ${usedPrefix}s <url>
+🔹 ${usedPrefix}emojimix <emoji 1>&<emoji 2>
+🔹 ${usedPrefix}scircle <img>
+🔹 ${usedPrefix}sremovebg <img>
+🔹 ${usedPrefix}semoji <tipo> <emoji>
+🔹 ${usedPrefix}qc <txt>
+🔹 ${usedPrefix}attp <txt>
+🔹 ${usedPrefix}attp2 <txt>
+🔹 ${usedPrefix}attp3 <txt>
+🔹 ${usedPrefix}ttp <txt>
+🔹 ${usedPrefix}ttp2 <txt>
+🔹 ${usedPrefix}ttp3 <txt>
+🔹 ${usedPrefix}ttp4 <txt>
+🔹 ${usedPrefix}ttp5 <txt>
+🔹 ${usedPrefix}pat <@tag>
+🔹 ${usedPrefix}slap <@tag>
+🔹 ${usedPrefix}kiss <@tag>
+🔹 ${usedPrefix}dado
+🔹 ${usedPrefix}wm <packname> <autor>
+🔹 ${usedPrefix}stickermarker <efecto> <img>
+🔹 ${usedPrefix}stickerfilter <efecto> <img>
 ◣───── ✦ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -503,70 +504,70 @@ ${readMore}
   
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}dsowner*
-> *${usedPrefix}setprefix *<prefijo>**_
-> *${usedPrefix}resetprefix*
-> *${usedPrefix}autoadmin*
-> *${usedPrefix}grouplist*
-> *${usedPrefix}chetar*
-> *${usedPrefix}leavegc*
-> *${usedPrefix}cajafuerte*
-> *${usedPrefix}blocklist*
-> *${usedPrefix}addowner *<@tag / num>**_
-> *${usedPrefix}delowner *<@tag / num>**_
-> *${usedPrefix}block *<@tag / num>**_
-> *${usedPrefix}unblock *<@tag / num>**_
-> *${usedPrefix}enable *restrict**
-> *${usedPrefix}disable *restrict**
-> *${usedPrefix}enable *autoread**
-> *${usedPrefix}disable *autoread**
-> *${usedPrefix}enable *public**
-> *${usedPrefix}disable *public**
-> *${usedPrefix}enable *pconly**
-> *${usedPrefix}disable *pconly**
-> *${usedPrefix}enable *gconly**
-> *${usedPrefix}disable *gconly**
-> *${usedPrefix}enable *anticall**
-> *${usedPrefix}disable *anticall**
-> *${usedPrefix}enable *antiprivado**
-> *${usedPrefix}disable *antiprivado**
-> *${usedPrefix}enable *modejadibot**
-> *${usedPrefix}disable *modejadibot**
-> *${usedPrefix}enable *audios_bot**
-> *${usedPrefix}disable *audios_bot**
-> *${usedPrefix}enable *antispam**
-> *${usedPrefix}disable *antispam**
-> *${usedPrefix}msg *<txt>**_
-> *${usedPrefix}banchat*
-> *${usedPrefix}unbanchat*
-> *${usedPrefix}resetuser *<@tag>**_
-> *${usedPrefix}banuser *<@tag>**_
-> *${usedPrefix}unbanuser *<@tag>**_
-> *${usedPrefix}dardiamantes *<@tag> <cant>**_
-> *${usedPrefix}añadirxp *<@tag> <cant>**_
-> *${usedPrefix}banuser *<@tag>**_
-> *${usedPrefix}bc *<txt>**_
-> *${usedPrefix}bcchats *<txt>**_
-> *${usedPrefix}bcgc *<txt>**_
-> *${usedPrefix}bcgc2 *<aud>**_
-> *${usedPrefix}bcgc2 *<vid>**_
-> *${usedPrefix}bcgc2 *<img>**_
-> *${usedPrefix}bcbot *<txt>**_
-> *${usedPrefix}cleartpm*
-> *${usedPrefix}restart*
-> *${usedPrefix}update*
-> *${usedPrefix}banlist*
-> *${usedPrefix}addprem *<@tag> <tiempo>**_
-> *${usedPrefix}addprem2 *<@tag> <tiempo>**_
-> *${usedPrefix}addprem3 *<@tag> <tiempo>**_
-> *${usedPrefix}addprem4 *<@tag> <tiempo>**_
-> *${usedPrefix}delprem *<@tag>**_
-> *${usedPrefix}listcmd*
-> *${usedPrefix}setppbot *<responder a img>**_
-> *${usedPrefix}addcmd *<txt>**_
-> *${usedPrefix}delcmd*
-> *${usedPrefix}saveimage*
-> *${usedPrefix}viewimage*
+🔹 ${usedPrefix}dsowner
+🔹 ${usedPrefix}setprefix <prefijo>
+🔹 ${usedPrefix}resetprefix
+🔹 ${usedPrefix}autoadmin
+🔹 ${usedPrefix}grouplist
+🔹 ${usedPrefix}chetar
+🔹 ${usedPrefix}leavegc
+🔹 ${usedPrefix}cajafuerte
+🔹 ${usedPrefix}blocklist
+🔹 ${usedPrefix}addowner <@tag / num>
+🔹 ${usedPrefix}delowner <@tag / num>
+🔹 ${usedPrefix}block <@tag / num>
+🔹 ${usedPrefix}unblock <@tag / num>
+🔹 ${usedPrefix}enable restrict
+🔹 ${usedPrefix}disable restrict
+🔹 ${usedPrefix}enable autoread
+🔹 ${usedPrefix}disable autoread
+🔹 ${usedPrefix}enable public
+🔹 ${usedPrefix}disable public
+🔹 ${usedPrefix}enable pconly
+🔹 ${usedPrefix}disable pconly
+🔹 ${usedPrefix}enable gconly
+🔹 ${usedPrefix}disable gconly
+🔹 ${usedPrefix}enable anticall
+🔹 ${usedPrefix}disable anticall
+🔹 ${usedPrefix}enable antiprivado
+🔹 ${usedPrefix}disable antiprivado
+🔹 ${usedPrefix}enable modejadibot
+🔹 ${usedPrefix}disable modejadibot
+🔹 ${usedPrefix}enable audios_bot
+🔹 ${usedPrefix}disable audios_bot
+🔹 ${usedPrefix}enable antispam
+🔹 ${usedPrefix}disable antispam
+🔹 ${usedPrefix}msg <txt>
+🔹 ${usedPrefix}banchat
+🔹 ${usedPrefix}unbanchat
+🔹 ${usedPrefix}resetuser <@tag>
+🔹 ${usedPrefix}banuser <@tag>
+🔹 ${usedPrefix}unbanuser <@tag>
+🔹 ${usedPrefix}dardiamantes <@tag> <cant>
+🔹 ${usedPrefix}añadirxp <@tag> <cant>
+🔹 ${usedPrefix}banuser <@tag>
+🔹 ${usedPrefix}bc <txt>
+🔹 ${usedPrefix}bcchats <txt>
+🔹 ${usedPrefix}bcgc <txt>
+🔹 ${usedPrefix}bcgc2 <aud>
+🔹 ${usedPrefix}bcgc2 <vid>
+🔹 ${usedPrefix}bcgc2 <img>
+🔹 ${usedPrefix}bcbot <txt>
+🔹 ${usedPrefix}cleartpm
+🔹 ${usedPrefix}restart
+🔹 ${usedPrefix}update
+🔹 ${usedPrefix}banlist
+🔹 ${usedPrefix}addprem <@tag> <tiempo>
+🔹 ${usedPrefix}addprem2 <@tag> <tiempo>
+🔹 ${usedPrefix}addprem3 <@tag> <tiempo>
+🔹 ${usedPrefix}addprem4 <@tag> <tiempo>
+🔹 ${usedPrefix}delprem <@tag>
+🔹 ${usedPrefix}listcmd
+🔹 ${usedPrefix}setppbot <responder a img>
+🔹 ${usedPrefix}addcmd <txt>
+🔹 ${usedPrefix}delcmd
+🔹 ${usedPrefix}saveimage
+🔹 ${usedPrefix}viewimage
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*`
 
