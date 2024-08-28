@@ -16,6 +16,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 📍 **Estado**: ${estado}
 
 > 𝌡 *RECLAMAR*
+
 \`Usa #claimch para reclamar\`
     `.trim();
 
