@@ -12,7 +12,16 @@ const handlerPuja = async (m, { conn }) => {
 
     // Si ya hay una puja en curso
     if (global.pujaData.finPuja && ahora < global.pujaData.finPuja) {
-        await conn.sendMessage(m.chat, { text: `⏳ Ya hay una puja en curso. Finaliza en ${Math.ceil((global.pujaData.finPuja - ahora) / 60000)} minutos.` }, { quoted: m });
+        // Mostrar la puja actual
+        let mensaje = `⏳ Ya hay una puja en curso. Finaliza en ${Math.ceil((global.pujaData.finPuja - ahora) / 60000)} minutos.\n\n`;
+
+        global.pujaData.personajes.forEach((p, index) => {
+            mensaje += `🔸 *${p.nombre}*\n💎 Valor actual: ${p.valor} diamantes\n\n`;
+        });
+
+        mensaje += `🕒 La puja finalizará en ${Math.ceil((global.pujaData.finPuja - ahora) / 60000)} minutos. Usa .pujar <nombre del personaje> para pujar.`;
+
+        await conn.sendMessage(m.chat, { text: mensaje }, { quoted: m });
         return;
     }
 
