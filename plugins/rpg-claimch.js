@@ -47,7 +47,7 @@ const handlerClaimch = async (m, { conn }) => {
     // Limpia el personaje reclamado
     global.currentPersonaje = null;
 };
-
-handlerClaimch.command = /^claimch|c$/i;
+handler.help = ["claimch", "c"]
+handlerClaimch.command = /^(claimch|c)$/i;
 handlerClaimch.owner = false; // Puede ser usado por cualquier usuario
 export default handlerClaimch;
