@@ -1,8 +1,8 @@
-/* const handlerPujar = async (m, { conn, text }) => {
+const handlerPujar = async (m, { conn, text }) => {
     const ahora = Date.now();
 
     // Verifica si hay una puja en curso
-    if (!pujaData.finPuja || ahora > pujaData.finPuja) {
+    if (!global.pujaData || !global.pujaData.finPuja || ahora > global.pujaData.finPuja) {
         await conn.sendMessage(m.chat, { text: `❌ No hay una puja activa en este momento.` }, { quoted: m });
         return;
     }
@@ -15,7 +15,7 @@
     }
 
     // Busca el personaje en los personajes en puja
-    const personaje = pujaData.personajes.find(p => p.nombre.toLowerCase() === personajeNombre);
+    const personaje = global.pujaData.personajes.find(p => p.nombre.toLowerCase() === personajeNombre);
 
     if (!personaje) {
         await conn.sendMessage(m.chat, { text: `❌ El personaje ${personajeNombre} no está en la puja actual.` }, { quoted: m });
@@ -39,5 +39,5 @@
 // Configuración del comando
 handlerPujar.command = /^pujar$/i;
 handlerPujar.owner = false; // Puede ser usado por cualquier usuario
+
 export default handlerPujar;
-*/
