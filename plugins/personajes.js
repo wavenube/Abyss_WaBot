@@ -59,7 +59,7 @@ export const personajes = [
     },
     {
         "nombre": "Mikasa Ackerman",
-        "imagen": ".src/fotos/wp1975719.webp",
+        "imagen": "https://wallpapers.com/images/hd/mikasa-ackerman-expressionless-29pk063dedbdi8ub.jpg",
         "titulo": "La Guerrera Imparable",
         "descripcion": "La soldado más fuerte del Cuerpo de Exploración, conocida por su habilidad en combate y lealtad.",
         "valor": "15",  // Valor en diamantes
@@ -75,7 +75,7 @@ export const personajes = [
     },
     {
         "nombre": "Asuka Langley Soryu",
-        "imagen": "./src/fotos/1977407.webp",
+        "imagen": "https://wallpaperaccess.com/full/1977407.png",
         "titulo": "La Piloto de EVA",
         "descripcion": "Una joven piloto de EVA con una personalidad fuerte y habilidades excepcionales en combate.",
         "valor": "5",  // Valor en diamantes
