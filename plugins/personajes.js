@@ -75,7 +75,7 @@ export const personajes = [
     },
     {
         "nombre": "Asuka Langley Soryu",
-        "imagen": "https://wallpaperaccess.com/full/1977407.png",
+        "imagen": "./src/fotos/1977407.webp",
         "titulo": "La Piloto de EVA",
         "descripcion": "Una joven piloto de EVA con una personalidad fuerte y habilidades excepcionales en combate.",
         "valor": "5",  // Valor en diamantes
@@ -83,7 +83,7 @@ export const personajes = [
     },
     {
         "nombre": "Inuyasha",
-        "imagen": "https://th.bing.com/th/id/R.af80b26c6bd5a71eba219eb1e10b579b?rik=sPxSusXKl81zDg&pid=ImgRaw&r=0",
+        "imagen": "./src/fotos/R (1).jpg",
         "titulo": "El Híbrido de Demonio y Humano",
         "descripcion": "Un medio-demonio con una personalidad feroz en busca de la perla de Shikon.",
         "valor": "5",  // Valor en diamantes
@@ -91,7 +91,7 @@ export const personajes = [
     },
     {
         "nombre": "Natsu Dragneel",
-        "imagen": "https://th.bing.com/th/id/R.dcd8ee87895b6a350efcc357a5cf1758?rik=xxowEpoYfol%2bDQ&pid=ImgRaw&r=0",
+        "imagen": "./src/fotos/R (2).jpg",
         "titulo": "El Dragón de Fuego",
         "descripcion": "Un mago de fuego con una personalidad ardiente y un fuerte sentido de la justicia.",
         "valor": "5",  // Valor en diamantes
@@ -99,7 +99,7 @@ export const personajes = [
     },
     {
         "nombre": "Light Yagami",
-        "imagen": "https://getwallpapers.com/wallpaper/full/2/e/0/1386406-light-yagami-wallpaper-1920x1080-for-iphone-5s.jpg",
+        "imagen": "./src/fotos/1386406-light-yagami-wallpaper-1920x1080-for-iphone-5s.jpg",
         "titulo": "El Rey del Mundo",
         "descripcion": "Un estudiante brillante que encuentra una libreta con el poder de decidir la vida o muerte de cualquier persona.",
         "valor": "5",  // Valor en diamantes
