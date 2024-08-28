@@ -196,16 +196,16 @@ export const personajes = [
      {
         "nombre": "Astolfo",
         "imagen": "./src/fotos/astolfo.jpg",
-        "titulo": "El Jinete de la Locura",
-        "descripcion": "Un caballero de apariencia andrógina conocido por su valentía y personalidad alegre.",
+        "titulo": "Caballero de la Cordura Evaporada, Paladín de la Luna",
+        "descripcion": "Uno de los Doce Paladines de Carlomagno. En la Leyenda de Carlomagno, él es el hijo de un rey inglés, y uno de los fieles Paladines de Carlomagno.",
         "valor": "43",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Artoria Pendragon",
         "imagen": "./src/fotos/artoria.jpg",
-        "titulo": "La Reina de los Caballeros",
-        "descripcion": "La encarnación del Rey Arturo, portadora de la espada sagrada Excalibur.",
+        "titulo": "El Rey de los Caballeros",
+        "descripcion": "Mejor conocida como Arthur Pendragon y el Rey Arturo, quien es recordado como un hombre en su historia, ella es el «Único y Futuro Rey» y la legendaria heroína de Bretaña conocida como el Rey de los Caballeros",
         "valor": "54",  // Valor en diamantes
         "estado": "libre"
     },
@@ -261,7 +261,7 @@ export const personajes = [
         "nombre": "Quetzalcoatl (Fate)",
         "imagen": "https://wallpapercave.com/wp/wp6741052.jpg",
         "titulo": "La Diosa del Sol",
-        "descripcion": "Una deidad azteca reencarnada, famosa por su inmenso poder y bondad.",
+        "descripcion": "Una Deidad azteca reencarnada, famosa por su inmenso poder y bondad.",
         "valor": "32",  // Valor en diamantes
         "estado": "libre"
     },
@@ -290,7 +290,7 @@ export const personajes = [
         "estado": "libre"
     },
     {
-        "nombre": "Emiya Shirou",
+        "nombre": "Emiya Shirou ",
         "imagen": "https://th.bing.com/th/id/OIP.VFJEplR9MQ7da2v43vKCGwHaEK?rs=1&pid=ImgDetMain",
         "titulo": "El Justiciero de la Espada",
         "descripcion": "Un joven con la habilidad de replicar armas mágicas y un fuerte sentido de la justicia.",
@@ -314,10 +314,10 @@ export const personajes = [
         "estado": "libre"
     },
     {
-        "nombre": "Saber",
-        "imagen": "./src/fotos/saber.jpg",
-        "titulo": "El Caballero Sagrado",
-        "descripcion": "Una reencarnación del Rey Arturo, conocida por su nobleza y destreza en combate.",
+        "nombre": "Nero Claudius",
+        "imagen": "./src/fotos/nero2.jpg",
+        "titulo": "Emperador de las Rosas",
+        "descripcion": "Nero Claudius, conocida como Saber Roja, es el quinto emperador de Roma.",
         "valor": "43",  // Valor en diamantes
         "estado": "libre"
     },
