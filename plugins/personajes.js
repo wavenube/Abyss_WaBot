@@ -104,34 +104,34 @@ export const personajes = [
         "descripcion": "Un estudiante brillante que encuentra una libreta con el poder de decidir la vida o muerte de cualquier persona.",
         "valor": "25",  // Valor en diamantes
         "estado": "libre"
-    }
+    },
     {
         "nombre": "Kaneki Ken",
-        "imagen": "",
+        "imagen": "./src/fotos/kaneky.jpg",
         "titulo": "El Ghoul Más Temido",
         "descripcion": "Un joven que lucha por encontrar su identidad tras convertirse en un ghoul.",
-        "valor": "2500",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Homura Akemi",
-        "imagen": "",
+        "imagen": "./src/fotos/homura.jpg",
         "titulo": "La Guardiana del Tiempo",
         "descripcion": "Una chica con habilidades para manipular el tiempo y un destino trágico.",
-        "valor": "3000",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Gintoki Sakata",
-        "imagen": "",
+        "imagen": "./src/fotos/gintoki.jpg",
         "titulo": "El Samurai Perdido",
         "descripcion": "Un samurai con una actitud despreocupada pero con habilidades de combate excepcionales.",
-        "valor": "2000",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Lelouch Lamperouge",
-        "imagen": "",
+        "imagen": "./src/fotos/lelouch.png",
         "titulo": "El Caballero Negro",
         "descripcion": "Un joven con un poder para controlar la mente, que busca cambiar el mundo.",
         "valor": "5",  // Valor en diamantes
@@ -139,58 +139,58 @@ export const personajes = [
     },
     {
         "nombre": "Nana Osaki",
-        "imagen": "",
+        "imagen": "./src/fotos/nana.jpg",
         "titulo": "La Diva del Punk",
         "descripcion": "Una cantante de punk con una personalidad fuerte y un pasado complicado.",
-        "valor": "2200",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Erza Scarlet",
-        "imagen": "",
+        "imagen": "./src/fotos/erza.jpg",
         "titulo": "La Reina de las Armaduras",
         "descripcion": "Una poderosa maga con la habilidad de cambiar y equipar diferentes armaduras y armas.",
-        "valor": "2800",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Kenshin Himura",
-        "imagen": "",
+        "imagen": "./src/fotos/kenshin.jpg",
         "titulo": "El Samurai Errante",
         "descripcion": "Un samurai vagabundo que busca redimir su pasado de asesino.",
-        "valor": "2700",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Misato Katsuragi",
-        "imagen": "",
+        "imagen": "./src/fotos/misato.jpg",
         "titulo": "La Estratega de NERV",
         "descripcion": "Una oficial de alto rango en la organización que combate los Ángeles.",
-        "valor": "2400",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Saitama",
-        "imagen": "",
-        "titulo": "El Héroe sin Nombre",
+        "imagen": "./src/fotos/saitama.jpg",
+        "titulo": "El Héroe sin pelo",
         "descripcion": "Un héroe que derrota a sus enemigos con un solo golpe y busca una verdadera pelea.",
-        "valor": "3000",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Kagome Higurashi",
-        "imagen": "",
+        "imagen": "./src/fotos/kagome.jpg",
         "titulo": "La Viajeras del Tiempo",
         "descripcion": "Una joven que viaja al pasado y se convierte en la compañera de Inuyasha.",
-        "valor": "2100",  // Valor en diamantes
+        "valor": "5",  // Valor en diamantes
         "estado": "libre"
     },
     {
         "nombre": "Yoko Littner",
-        "imagen": "",
+        "imagen": "./src/fotos/yoko.jpg",
         "titulo": "La Tiradora Legendaria",
         "descripcion": "Una experta francotiradora con una personalidad audaz y un gran coraje.",
-        "valor": "2600",  // Valor en diamantes
+        "valor": "15",  // Valor en diamantes
         "estado": "libre"
     }
     // Agrega más personajes aquí
