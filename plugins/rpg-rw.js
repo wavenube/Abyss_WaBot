@@ -1,9 +1,7 @@
 import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
-// Variable global para almacenar los personajes y sus tiempos de restricción
-global.restriccionesPersonajes = {};
-
 // Variables globales para controlar los personajes y tiempos de espera
+global.restriccionesPersonajes = {};
 global.personajesSeleccionados = [];
 global.personajesUltimoReinicio = Date.now();
 
