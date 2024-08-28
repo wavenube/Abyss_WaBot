@@ -36,50 +36,48 @@ const handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, i
 
 ${tradutor.texto1[1]} ${taguser}
 
-> ★ Unete al grupo de WhatsApp ★
+🌟 ¡Únete al grupo de WhatsApp! 🌟
 
 ${tradutor.texto1[2]}
 
-${tradutor.texto1[3]} ${level}
-${tradutor.texto1[4]} ${exp}
-${tradutor.texto1[5]} ${role}
-${tradutor.texto1[6]} ${limit}
-${tradutor.texto1[7]} ${money}
-${tradutor.texto1[8]} ${joincount}
-${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
- ${readMore}
-
+🔹 Nivel: ${level}
+🔹 Experiencia: ${exp}
+🔹 Rol: ${role}
+🔹 Límites: ${limit}
+🔹 Dinero: ${money}
+🔹 Uniones: ${joincount}
+🔹 Premium: ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
+${readMore}
  
  ${tradutor.texto1[10]}
  
-> *━━━━━━━━━━━━━*
-◤───── ★ • ─────◥
-> *${usedPrefix}menuaudios*
-> *${usedPrefix}menuanimes*
-> *${usedPrefix}labiblia*
-> *${usedPrefix}lang*
-> *${usedPrefix}langgroup*
-> *${usedPrefix}glx*
+ > *━━━━━━━━━━━━━*
+ ◤───── ★ • ─────◥
+🔸 ${usedPrefix}menuaudios
+🔸 ${usedPrefix}menuanimes
+🔸 ${usedPrefix}labiblia
+🔸 ${usedPrefix}lang
+🔸 ${usedPrefix}langgroup
+🔸 ${usedPrefix}glx
 ◣───── ★ • ─────◢
-> *━━━━━━━━━━━━━*
-
+ > *━━━━━━━━━━━━━*
  
   ${tradutor.texto1[11]}
- 
-> *━━━━━━━━━━━━━*
-◤───── ★ • ─────◥
-> *${usedPrefix}terminosycondiciones*
-> *${usedPrefix}grupos*
-> *${usedPrefix}estado*
-> *${usedPrefix}infobot*
-> *${usedPrefix}speedtest*
-> *${usedPrefix}donar*
-> *${usedPrefix}owner*
-> *${usedPrefix}script*
-> *${usedPrefix}reporte <txt>*
-> *${usedPrefix}join <wagp_url>*
-> *${usedPrefix}fixmsgespera*
-> *_bot_* _(sin prefijo)_
+  
+ > *━━━━━━━━━━━━━*
+ ◤───── ★ • ─────◥
+🔸 ${usedPrefix}terminosycondiciones
+🔸 ${usedPrefix}grupos
+🔸 ${usedPrefix}estado
+🔸 ${usedPrefix}infobot
+🔸 ${usedPrefix}speedtest
+🔸 ${usedPrefix}donar
+🔸 ${usedPrefix}owner
+🔸 ${usedPrefix}script
+🔸 ${usedPrefix}reporte <txt>
+🔸 ${usedPrefix}join <wagp_url>
+🔸 ${usedPrefix}fixmsgespera
+🔸 bot (sin prefijo)
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -87,26 +85,26 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}serbot --code*
-> *${usedPrefix}serbot*
-> *${usedPrefix}deletebot*
-> *${usedPrefix}token*
-> *${usedPrefix}stop*
-> *${usedPrefix}bots*
-> *${usedPrefix}enable restrict*
-> *${usedPrefix}disable restrict*
-> *${usedPrefix}enable autoread*
-> *${usedPrefix}disable autoread*
-> *${usedPrefix}enable antispam*
-> *${usedPrefix}disable antispam*
-> *${usedPrefix}enable anticall*
-> *${usedPrefix}disable anticall*
-> *${usedPrefix}enable modoia*
-> *${usedPrefix}disable modoia*
-> *${usedPrefix}enable audios_bot*
-> *${usedPrefix}disable audios_bot*
-> *${usedPrefix}enable antiprivado*
-> *${usedPrefix}disable antiprivado*
+🔸 ${usedPrefix}serbot --code
+🔸 ${usedPrefix}serbot
+🔸 ${usedPrefix}deletebot
+🔸 ${usedPrefix}token
+🔸 ${usedPrefix}stop
+🔸 ${usedPrefix}bots
+🔸 ${usedPrefix}enable restrict
+🔸 ${usedPrefix}disable restrict
+🔸 ${usedPrefix}enable autoread
+🔸 ${usedPrefix}disable autoread
+🔸 ${usedPrefix}enable antispam
+🔸 ${usedPrefix}disable antispam
+🔸 ${usedPrefix}enable anticall
+🔸 ${usedPrefix}disable anticall
+🔸 ${usedPrefix}enable modoia
+🔸 ${usedPrefix}disable modoia
+🔸 ${usedPrefix}enable audios_bot
+🔸 ${usedPrefix}disable audios_bot
+🔸 ${usedPrefix}enable antiprivado
+🔸 ${usedPrefix}disable antiprivado
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -115,40 +113,40 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}mates <noob / easy / medium / hard / extreme / impossible / impossible2>*
-> *${usedPrefix}fake <txt1> <@tag> <txt2>*
-> *${usedPrefix}ppt <papel / tijera / piedra>*
-> *${usedPrefix}prostituto <nombre / @tag>*
-> *${usedPrefix}prostituta <nombre / @tag>*
-> *${usedPrefix}gay2 <nombre / @tag>*
-> *${usedPrefix}lesbiana <nombre / @tag>*
-> *${usedPrefix}pajero <nombre / @tag>*
-> *${usedPrefix}pajera <nombre / @tag>*
-> *${usedPrefix}puto <nombre / @tag>*
-> *${usedPrefix}puta <nombre / @tag>*
-> *${usedPrefix}manco <nombre / @tag>*
-> *${usedPrefix}manca <nombre / @tag>*
-> *${usedPrefix}rata <nombre / @tag>*
-> *${usedPrefix}love <nombre / @tag>*
-> *${usedPrefix}doxear <nombre / @tag>*
-> *${usedPrefix}pregunta <txt>*
-> *${usedPrefix}suitpvp <@tag>*
-> *${usedPrefix}slot <apuesta>*
-> *${usedPrefix}ttt ${tradutor.texto1[32]}*
-> *${usedPrefix}delttt*
-> *${usedPrefix}acertijo*
-> *${usedPrefix}simi <txt>*
-> *${usedPrefix}top <txt>*
-> *${usedPrefix}topgays*
-> *${usedPrefix}topotakus*
-> *${usedPrefix}formarpareja*
-> *${usedPrefix}verdad*
-> *${usedPrefix}reto*
-> *${usedPrefix}cancion*
-> *${usedPrefix}pista*
-> *${usedPrefix}akinator*
-> *${usedPrefix}wordfind*
-> *${usedPrefix}glx (RPG Mundo)*
+🔸 ${usedPrefix}mates <noob / easy / medium / hard / extreme / impossible / impossible2>
+🔸 ${usedPrefix}fake <txt1> <@tag> <txt2>
+🔸 ${usedPrefix}ppt <papel / tijera / piedra>
+🔸 ${usedPrefix}prostituto <nombre / @tag>
+🔸 ${usedPrefix}prostituta <nombre / @tag>
+🔸 ${usedPrefix}gay2 <nombre / @tag>
+🔸 ${usedPrefix}lesbiana <nombre / @tag>
+🔸 ${usedPrefix}pajero <nombre / @tag>
+🔸 ${usedPrefix}pajera <nombre / @tag>
+🔸 ${usedPrefix}puto <nombre / @tag>
+🔸 ${usedPrefix}puta <nombre / @tag>
+🔸 ${usedPrefix}manco <nombre / @tag>
+🔸 ${usedPrefix}manca <nombre / @tag>
+🔸 ${usedPrefix}rata <nombre / @tag>
+🔸 ${usedPrefix}love <nombre / @tag>
+🔸 ${usedPrefix}doxear <nombre / @tag>
+🔸 ${usedPrefix}pregunta <txt>
+🔸 ${usedPrefix}suitpvp <@tag>
+🔸 ${usedPrefix}slot <apuesta>
+🔸 ${usedPrefix}ttt ${tradutor.texto1[32]}
+🔸 ${usedPrefix}delttt
+🔸 ${usedPrefix}acertijo
+🔸 ${usedPrefix}simi <txt>
+🔸 ${usedPrefix}top <txt>
+🔸 ${usedPrefix}topgays
+🔸 ${usedPrefix}topotakus
+🔸 ${usedPrefix}formarpareja
+🔸 ${usedPrefix}verdad
+🔸 ${usedPrefix}reto
+🔸 ${usedPrefix}cancion
+🔸 ${usedPrefix}pista
+🔸 ${usedPrefix}akinator
+🔸 ${usedPrefix}wordfind
+🔸 ${usedPrefix}glx (RPG Mundo)
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -157,33 +155,35 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}enable welcome*
-> *${usedPrefix}disable welcome*
-> *${usedPrefix}enable modohorny*
-> *${usedPrefix}disable modohorny*
-> *${usedPrefix}enable antilink*
-> *${usedPrefix}disable antilink*
-> *${usedPrefix}enable antilink2*
-> *${usedPrefix}disable antilink2*
-> *${usedPrefix}enable detect*
-> *${usedPrefix}disable detect*
-> *${usedPrefix}enable audios*
-> *${usedPrefix}disable audios*
-> *${usedPrefix}enable autosticker*
-> *${usedPrefix}disable autosticker*
-> *${usedPrefix}enable antiviewonce*
-> *${usedPrefix}disable antiviewonce*
-> *${usedPrefix}enable antitoxic*
-> *${usedPrefix}disable antitoxic*
-> *${usedPrefix}enable antitraba*
-> *${usedPrefix}disable antitraba*
-> *${usedPrefix}enable antiarabes*
-> *${usedPrefix}disable antiarabes*
-> *${usedPrefix}enable modoadmin*
-> *${usedPrefix}disable modoadmin*
-> *${usedPrefix}enable antidelete*
-> *${usedPrefix}disable antidelete*
+🔹 ${usedPrefix}enable welcome
+🔹 ${usedPrefix}disable welcome
+🔹 ${usedPrefix}enable modohorny
+🔹 ${usedPrefix}disable modohorny
+🔹 ${usedPrefix}enable antilink
+🔹 ${usedPrefix}disable antilink
+🔹 ${usedPrefix}enable antilink2
+🔹 ${usedPrefix}disable antilink2
+🔹 ${usedPrefix}enable detect
+🔹 ${usedPrefix}disable detect
+🔹 ${usedPrefix}enable audios
+🔹 ${usedPrefix}disable audios
+🔹 ${usedPrefix}enable autosticker
+🔹 ${usedPrefix}disable autosticker
+🔹 ${usedPrefix}enable antiviewonce
+🔹 ${usedPrefix}disable antiviewonce
+🔹 ${usedPrefix}enable antitoxic
+🔹 ${usedPrefix}disable antitoxic
+🔹 ${usedPrefix}enable antitraba
+🔹 ${usedPrefix}disable antitraba
+🔹 ${usedPrefix}enable antiarabes
+🔹 ${usedPrefix}disable antiarabes
+🔹 ${usedPrefix}enable modoadmin
+🔹 ${usedPrefix}disable modoadmin
+🔹 ${usedPrefix}enable antidelete
+🔹 ${usedPrefix}disable antidelete
 ◣───── ★ • ─────◢
+
+
 > *━━━━━━━━━━━━━*
 
 
@@ -191,38 +191,38 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}play <txt>*
-> *${usedPrefix}play2 <txt>*
-> *${usedPrefix}play.1 <txt>*
-> *${usedPrefix}play.2 <txt>*
-> *${usedPrefix}playdoc <txt>*
-> *${usedPrefix}playdoc2 <txt>*
-> *${usedPrefix}playlist <txt>*
-> *${usedPrefix}ytshort <url>*
-> *${usedPrefix}ytmp3 <url>*
-> *${usedPrefix}ytmp3doc <url>*
-> *${usedPrefix}ytmp4 <url>*
-> *${usedPrefix}ytmp4doc <url>*
-> *${usedPrefix}videodoc <url>*
-> *${usedPrefix}spotify <txt>*
-> *${usedPrefix}facebook <url>*
-> *${usedPrefix}instagram <url>*
-> *${usedPrefix}igstory <usr>*
-> *${usedPrefix}tiktok <url>*
-> *${usedPrefix}tiktokimg <url>*
-> *${usedPrefix}pptiktok <usr>*
-> *${usedPrefix}mediafire <url>* 
-> *${usedPrefix}pinterest <txt>*
-> *${usedPrefix}gitclone <url>*
-> *${usedPrefix}gdrive <url>*
-> *${usedPrefix}twitter <url>*
-> *${usedPrefix}ringtone <txt>*
-> *${usedPrefix}soundcloud <txt>*
-> *${usedPrefix}stickerpack <url>*
-> *${usedPrefix}wallpaper <txt>* 
-> *${usedPrefix}dapk2 <url>*
-> *${usedPrefix}xnxxdl <url>* (🔞)
-> *${usedPrefix}xvideosdl <url>* (🔞)
+🔹 ${usedPrefix}play <txt>
+🔹 ${usedPrefix}play2 <txt>
+🔹 ${usedPrefix}play.1 <txt>
+🔹 ${usedPrefix}play.2 <txt>
+🔹 ${usedPrefix}playdoc <txt>
+🔹 ${usedPrefix}playdoc2 <txt>
+🔹 ${usedPrefix}playlist <txt>
+🔹 ${usedPrefix}ytshort <url>
+🔹 ${usedPrefix}ytmp3 <url>
+🔹 ${usedPrefix}ytmp3doc <url>
+🔹 ${usedPrefix}ytmp4 <url>
+🔹 ${usedPrefix}ytmp4doc <url>
+🔹 ${usedPrefix}videodoc <url>
+🔹 ${usedPrefix}spotify <txt>
+🔹 ${usedPrefix}facebook <url>
+🔹 ${usedPrefix}instagram <url>
+🔹 ${usedPrefix}igstory <usr>
+🔹 ${usedPrefix}tiktok <url>
+🔹 ${usedPrefix}tiktokimg <url>
+🔹 ${usedPrefix}pptiktok <usr>
+🔹 ${usedPrefix}mediafire <url>
+🔹 ${usedPrefix}pinterest <txt>
+🔹 ${usedPrefix}gitclone <url>
+🔹 ${usedPrefix}gdrive <url>
+🔹 ${usedPrefix}twitter <url>
+🔹 ${usedPrefix}ringtone <txt>
+🔹 ${usedPrefix}soundcloud <txt>
+🔹 ${usedPrefix}stickerpack <url>
+🔹 ${usedPrefix}wallpaper <txt>
+🔹 ${usedPrefix}dapk2 <url>
+🔹 ${usedPrefix}xnxxdl <url> (🔞)
+🔹 ${usedPrefix}xvideosdl <url> (🔞)
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -231,18 +231,18 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
   
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}githubsearch <txt>*
-> *${usedPrefix}pelisplus <txt>*
-> *${usedPrefix}modapk <txt>*
-> *${usedPrefix}stickersearch <txt>*
-> *${usedPrefix}stickersearch2 <txt>*
-> *${usedPrefix}xnxxsearch <txt>*
-> *${usedPrefix}animeinfo <txt>*
-> *${usedPrefix}google <txt>*
-> *${usedPrefix}letra <txt>*
-> *${usedPrefix}wikipedia <txt>*
-> *${usedPrefix}ytsearch <txt>*
-> *${usedPrefix}playstore <txt>*
+🔹 ${usedPrefix}githubsearch <txt>
+🔹 ${usedPrefix}pelisplus <txt>
+🔹 ${usedPrefix}modapk <txt>
+🔹 ${usedPrefix}stickersearch <txt>
+🔹 ${usedPrefix}stickersearch2 <txt>
+🔹 ${usedPrefix}xnxxsearch <txt>
+🔹 ${usedPrefix}animeinfo <txt>
+🔹 ${usedPrefix}google <txt>
+🔹 ${usedPrefix}letra <txt>
+🔹 ${usedPrefix}wikipedia <txt>
+🔹 ${usedPrefix}ytsearch <txt>
+🔹 ${usedPrefix}playstore <txt>
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -251,34 +251,34 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}add <num>*
-> *${usedPrefix}kick <@tag>*
-> *${usedPrefix}kick2 <@tag>*
-> *${usedPrefix}listanum <txt>*
-> *${usedPrefix}kicknum <txt>*
-> *${usedPrefix}grupo <abrir/cerrar>*
-> *${usedPrefix}grouptime ${tradutor.texto1[30]}*
-> *${usedPrefix}promote <@tag>*
-> *${usedPrefix}demote <@tag>*
-> *${usedPrefix}infogroup*
-> *${usedPrefix}resetlink*
-> *${usedPrefix}link*
-> *${usedPrefix}setname <txt>*
-> *${usedPrefix}setdesc <txt>*
-> *${usedPrefix}invocar <txt>*
-> *${usedPrefix}setwelcome <txt>*
-> *${usedPrefix}setbye <txt>*
-> *${usedPrefix}hidetag <txt>*
-> *${usedPrefix}hidetag <audio>*
-> *${usedPrefix}hidetag <video>*
-> *${usedPrefix}hidetag <img>*
-> *${usedPrefix}warn <@tag>*
-> *${usedPrefix}unwarn <@tag>*
-> *${usedPrefix}listwarn*
-> *${usedPrefix}fantasmas*
-> *${usedPrefix}destraba*
-> *${usedPrefix}setpp <img>*
-> *admins <txt>* ${tradutor.texto1[31]}
+🔹 ${usedPrefix}add <num>
+🔹 ${usedPrefix}kick <@tag>
+🔹 ${usedPrefix}kick2 <@tag>
+🔹 ${usedPrefix}listanum <txt>
+🔹 ${usedPrefix}kicknum <txt>
+🔹 ${usedPrefix}grupo <abrir/cerrar>
+🔹 ${usedPrefix}grouptime ${tradutor.texto1[30]}
+🔹 ${usedPrefix}promote <@tag>
+🔹 ${usedPrefix}demote <@tag>
+🔹 ${usedPrefix}infogroup
+🔹 ${usedPrefix}resetlink
+🔹 ${usedPrefix}link
+🔹 ${usedPrefix}setname <txt>
+🔹 ${usedPrefix}setdesc <txt>
+🔹 ${usedPrefix}invocar <txt>
+🔹 ${usedPrefix}setwelcome <txt>
+🔹 ${usedPrefix}setbye <txt>
+🔹 ${usedPrefix}hidetag <txt>
+🔹 ${usedPrefix}hidetag <audio>
+🔹 ${usedPrefix}hidetag <video>
+🔹 ${usedPrefix}hidetag <img>
+🔹 ${usedPrefix}warn <@tag>
+🔹 ${usedPrefix}unwarn <@tag>
+🔹 ${usedPrefix}listwarn
+🔹 ${usedPrefix}fantasmas
+🔹 ${usedPrefix}destraba
+🔹 ${usedPrefix}setpp <img>
+🔹 admins <txt> ${tradutor.texto1[31]}
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -287,16 +287,16 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}toanime <img>*
-> *${usedPrefix}togifaud <video>*
-> *${usedPrefix}toimg <sticker>*
-> *${usedPrefix}tomp3 <video>*
-> *${usedPrefix}tomp3 <nota de voz>*
-> *${usedPrefix}toptt <video / audio>*
-> *${usedPrefix}tovideo <sticker>*
-> *${usedPrefix}tourl <video / img / audio>*
-> *${usedPrefix}tts <idioma> <txt>*
-> *${usedPrefix}tts <efecto> <txt>*
+🔹 ${usedPrefix}toanime <img>
+🔹 ${usedPrefix}togifaud <video>
+🔹 ${usedPrefix}toimg <sticker>
+🔹 ${usedPrefix}tomp3 <video>
+🔹 ${usedPrefix}tomp3 <nota de voz>
+🔹 ${usedPrefix}toptt <video / audio>
+🔹 ${usedPrefix}tovideo <sticker>
+🔹 ${usedPrefix}tourl <video / img / audio>
+🔹 ${usedPrefix}tts <idioma> <txt>
+🔹 ${usedPrefix}tts <efecto> <txt>
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -305,16 +305,16 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}logos <efecto> <txt>*
-> *${usedPrefix}logochristmas <txt>*
-> *${usedPrefix}logocorazon <txt>*
-> *${usedPrefix}ytcomment <txt>*
-> *${usedPrefix}hornycard <@tag>*
-> *${usedPrefix}simpcard <@tag>*
-> *${usedPrefix}lolice <@tag>*
-> *${usedPrefix}itssostupid*
-> *${usedPrefix}pixelar*
-> *${usedPrefix}blur*
+🔹 ${usedPrefix}logos <efecto> <txt>
+🔹 ${usedPrefix}logochristmas <txt>
+🔹 ${usedPrefix}logocorazon <txt>
+🔹 ${usedPrefix}ytcomment <txt>
+🔹 ${usedPrefix}hornycard <@tag>
+🔹 ${usedPrefix}simpcard <@tag>
+🔹 ${usedPrefix}lolice <@tag>
+🔹 ${usedPrefix}itssostupid
+🔹 ${usedPrefix}pixelar
+🔹 ${usedPrefix}blur
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -323,11 +323,11 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}piropo*
-> *${usedPrefix}consejo*
-> *${usedPrefix}fraseromantica*
-> *${usedPrefix}historiaromantica*
-◣───── ★ • ─────◢
+🔹 ${usedPrefix}piropo
+🔹 ${usedPrefix}consejo
+🔹 ${usedPrefix}fraseromantica
+🔹 ${usedPrefix}historiaromantica
+◣───── ★ • ─────◥
 > *━━━━━━━━━━━━━*
 
 
@@ -335,33 +335,33 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}kpop <blackpink/exo/bts>*
-> *${usedPrefix}cristianoronaldo*
-> *${usedPrefix}messi*
-> *${usedPrefix}cat*
-> *${usedPrefix}dog*
-> *${usedPrefix}meme*
-> *${usedPrefix}itzy*
-> *${usedPrefix}blackpink*
-> *${usedPrefix}navidad*
-> *${usedPrefix}wpmontaña*
-> *${usedPrefix}pubg*
-> *${usedPrefix}wpgaming*
-> *${usedPrefix}wpaesthetic*
-> *${usedPrefix}wpaesthetic2*
-> *${usedPrefix}wprandom*
-> *${usedPrefix}wallhp*
-> *${usedPrefix}wpvehiculo*
-> *${usedPrefix}wpmoto*
-> *${usedPrefix}coffee*
-> *${usedPrefix}pentol*
-> *${usedPrefix}caricatura*
-> *${usedPrefix}ciberespacio*
-> *${usedPrefix}technology*
-> *${usedPrefix}doraemon*
-> *${usedPrefix}hacker*
-> *${usedPrefix}planeta*
-> *${usedPrefix}randomprofile*
+🔹 ${usedPrefix}kpop <blackpink/exo/bts>
+🔹 ${usedPrefix}cristianoronaldo
+🔹 ${usedPrefix}messi
+🔹 ${usedPrefix}cat
+🔹 ${usedPrefix}dog
+🔹 ${usedPrefix}meme
+🔹 ${usedPrefix}itzy
+🔹 ${usedPrefix}blackpink
+🔹 ${usedPrefix}navidad
+🔹 ${usedPrefix}wpmontaña
+🔹 ${usedPrefix}pubg
+🔹 ${usedPrefix}wpgaming
+🔹 ${usedPrefix}wpaesthetic
+🔹 ${usedPrefix}wpaesthetic2
+🔹 ${usedPrefix}wprandom
+🔹 ${usedPrefix}wallhp
+🔹 ${usedPrefix}wpvehiculo
+🔹 ${usedPrefix}wpmoto
+🔹 ${usedPrefix}coffee
+🔹 ${usedPrefix}pentol
+🔹 ${usedPrefix}caricatura
+🔹 ${usedPrefix}ciberespacio
+🔹 ${usedPrefix}technology
+🔹 ${usedPrefix}doraemon
+🔹 ${usedPrefix}hacker
+🔹 ${usedPrefix}planeta
+🔹 ${usedPrefix}randomprofile
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -372,18 +372,18 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
  
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}bass*
-> *${usedPrefix}blown*
-> *${usedPrefix}deep*
-> *${usedPrefix}earrape*
-> *${usedPrefix}fast*
-> *${usedPrefix}fat*
-> *${usedPrefix}nightcore*
-> *${usedPrefix}reverse*
-> *${usedPrefix}robot*
-> *${usedPrefix}slow*
-> *${usedPrefix}smooth*
-> *${usedPrefix}tupai*
+🔹 ${usedPrefix}bass
+🔹 ${usedPrefix}blown
+🔹 ${usedPrefix}deep
+🔹 ${usedPrefix}earrape
+🔹 ${usedPrefix}fast
+🔹 ${usedPrefix}fat
+🔹 ${usedPrefix}nightcore
+🔹 ${usedPrefix}reverse
+🔹 ${usedPrefix}robot
+🔹 ${usedPrefix}slow
+🔹 ${usedPrefix}smooth
+🔹 ${usedPrefix}tupai
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -392,9 +392,9 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
   
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}start*
-> *${usedPrefix}next*
-> *${usedPrefix}leave*
+🔹 ${usedPrefix}start
+🔹 ${usedPrefix}next
+🔹 ${usedPrefix}leave
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -403,38 +403,38 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
   
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}inspect <wagc_url>*
-> *${usedPrefix}chatgpt <txt>*
-> *${usedPrefix}delchatgpt*
-> *${usedPrefix}gptvoz <txt>*
-> *${usedPrefix}dall-e <txt>*
-> *${usedPrefix}spamwa <num|txt|cant>*
-> *${usedPrefix}tamaño <cant> <img / video>*
-> *${usedPrefix}readviewonce <img / video>*
-> *${usedPrefix}clima <país> <ciudad>*
-> *${usedPrefix}encuesta <txt1|txt2>*
-> *${usedPrefix}afk <motivo>*
-> *${usedPrefix}ocr <responde a img>*
-> *${usedPrefix}hd <responde a img>*
-> *${usedPrefix}acortar <url>*
-> *${usedPrefix}calc <operacion>*
-> *${usedPrefix}del <msj>*
-> *${usedPrefix}whatmusic <audio>*
-> *${usedPrefix}readqr <img>*
-> *${usedPrefix}qrcode <txt>*
-> *${usedPrefix}readmore <txt1|txt2>*
-> *${usedPrefix}styletext <txt>*
-> *${usedPrefix}traducir <txt>*
-> *${usedPrefix}nowa <num>*
-> *${usedPrefix}covid <pais>*
-> *${usedPrefix}horario*
-> *${usedPrefix}dropmail*
-> *${usedPrefix}igstalk <usr>*
-> *${usedPrefix}tiktokstalk <usr>*
-> *${usedPrefix}img <txt>*
-> *${usedPrefix}raid (se raaidea el grupo)*
-> *${usedPrefix}decorar (decoras txt)*
-> *${usedPrefix}infodecorar (adm y owner)*
+🔹 ${usedPrefix}inspect <wagc_url>
+🔹 ${usedPrefix}chatgpt <txt>
+🔹 ${usedPrefix}delchatgpt
+🔹 ${usedPrefix}gptvoz <txt>
+🔹 ${usedPrefix}dall-e <txt>
+🔹 ${usedPrefix}spamwa <num|txt|cant>
+🔹 ${usedPrefix}tamaño <cant> <img / video>
+🔹 ${usedPrefix}readviewonce <img / video>
+🔹 ${usedPrefix}clima <país> <ciudad>
+🔹 ${usedPrefix}encuesta <txt1|txt2>
+🔹 ${usedPrefix}afk <motivo>
+🔹 ${usedPrefix}ocr <responde a img>
+🔹 ${usedPrefix}hd <responde a img>
+🔹 ${usedPrefix}acortar <url>
+🔹 ${usedPrefix}calc <operacion>
+🔹 ${usedPrefix}del <msj>
+🔹 ${usedPrefix}whatmusic <audio>
+🔹 ${usedPrefix}readqr <img>
+🔹 ${usedPrefix}qrcode <txt>
+🔹 ${usedPrefix}readmore <txt1|txt2>
+🔹 ${usedPrefix}styletext <txt>
+🔹 ${usedPrefix}traducir <txt>
+🔹 ${usedPrefix}nowa <num>
+🔹 ${usedPrefix}covid <pais>
+🔹 ${usedPrefix}horario
+🔹 ${usedPrefix}dropmail
+🔹 ${usedPrefix}igstalk <usr>
+🔹 ${usedPrefix}tiktokstalk <usr>
+🔹 ${usedPrefix}img <txt>
+🔹 ${usedPrefix}raid (se raaidea el grupo)
+🔹 ${usedPrefix}decorar (decoras txt)
+🔹 ${usedPrefix}infodecorar (adm y owner)
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
@@ -443,26 +443,26 @@ ${tradutor.texto1[9]} ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌')
 
 > *━━━━━━━━━━━━━*
 ◤───── ★ • ─────◥
-> *${usedPrefix}adventure*
-> *${usedPrefix}cazar*
-> *${usedPrefix}cofre*
-> *${usedPrefix}balance*
-> *${usedPrefix}claim*
-> *${usedPrefix}heal*
-> *${usedPrefix}lb*
-> *${usedPrefix}levelup*
-> *${usedPrefix}myns*
-> *${usedPrefix}perfil*
-> *${usedPrefix}work*
-> *${usedPrefix}minar*
-> *${usedPrefix}minar2*
-> *${usedPrefix}buy*
-> *${usedPrefix}buyall*
-> *${usedPrefix}verificar*
-> *${usedPrefix}robar <cant> <@tag>*
-> *${usedPrefix}crime*
-> *${usedPrefix}transfer <tipo> <cant> <@tag>*
-> *${usedPrefix}unreg <sn>*
+🔹 ${usedPrefix}adventure
+🔹 ${usedPrefix}cazar
+🔹 ${usedPrefix}cofre
+🔹 ${usedPrefix}balance
+🔹 ${usedPrefix}claim
+🔹 ${usedPrefix}heal
+🔹 ${usedPrefix}lb
+🔹 ${usedPrefix}levelup
+🔹 ${usedPrefix}myns
+🔹 ${usedPrefix}perfil
+🔹 ${usedPrefix}work
+🔹 ${usedPrefix}minar
+🔹 ${usedPrefix}minar2
+🔹 ${usedPrefix}buy
+🔹 ${usedPrefix}buyall
+🔹 ${usedPrefix}verificar
+🔹 ${usedPrefix}robar <cant> <@tag>
+🔹 ${usedPrefix}crime
+🔹 ${usedPrefix}transfer <tipo> <cant> <@tag>
+🔹 ${usedPrefix}unreg <sn>
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*
 
