@@ -16,28 +16,24 @@ const handlerResetAll = async (m, { conn, isOwner }) => {
         userData.asegurados = {}; // Vaciar los personajes asegurados del usuario
     }
 
-    // Vaciar la tienda
-    global.tiendaData = {
-        personajes: [], // Vaciar la lista de personajes en la tienda
-    };
-
     // Vaciar la tienda de personajes en venta (shopData)
     global.shopData = {};
 
-    // Restablecer la puja
+    // Vaciar la tienda de pujas
     global.pujaData = {
         personajes: [],
         finPuja: null,
         pujadores: {},
     };
 
-    // Restaurar los precios originales de los personajes
+    // Restablecer todos los personajes a su estado "libre" y su valor original
     personajes.forEach(p => {
-        p.valor = p.valorOriginal || p.valor; // Asegurarse de que los precios originales estén en los datos de personajes
+        p.estado = "libre";  // Poner el estado en "libre"
+        p.valor = p.valorOriginal || p.valor;  // Restaurar el valor original si está disponible
     });
 
     // Enviar mensaje de éxito
-    await conn.sendMessage(m.chat, { text: `🔄 *¡Restablecimiento Completo!*\n\nTodas las Pokédex, la tienda y la tienda de personajes han sido vaciadas. Todos los personajes están disponibles nuevamente con sus precios originales.` }, { quoted: m });
+    await conn.sendMessage(m.chat, { text: `🔄 *¡Restablecimiento Completo!*\n\nTodas las Pokédex, la tienda, y la tienda de personajes han sido vaciadas. Todos los personajes están disponibles nuevamente con su estado original.` }, { quoted: m });
 };
 
 // Configuración del comando
