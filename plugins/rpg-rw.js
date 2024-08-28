@@ -14,6 +14,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📍 **Estado**: ${estado}
+\`Usa #claimch para reclamar\`
     `.trim();
 
     // Guarda el personaje actual en la variable global
