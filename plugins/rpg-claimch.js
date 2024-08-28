@@ -49,7 +49,7 @@ const handlerClaimch = async (m, { conn }) => {
 };
 
 // Configuración del comando
-handlerClaimch.command = /^(claimch|c)$/i;
+handlerClaimch.command = /^(claimch|prueba3)$/i;
 handlerClaimch.owner = false; // Puede ser usado por cualquier usuario
 
 export default handlerClaimch;
