@@ -2,9 +2,9 @@
 import { personajes } from './personajes.js';
 
 // Definir el comando de restablecimiento
-const handlerResetAll = async (m, { conn }) => {
+const handlerResetAll = async (m, { conn, isOwner }) => {
     // Verifica si el usuario es el propietario del bot
-    if (m.sender !== 'owner@s.whatsapp.net') {
+    if (!isOwner) {
         await conn.sendMessage(m.chat, { text: `❌ Solo el propietario del bot puede usar este comando.` }, { quoted: m });
         return;
     }
@@ -39,6 +39,6 @@ const handlerResetAll = async (m, { conn }) => {
 
 // Configuración del comando
 handlerResetAll.command = /^resetall$/i;
-handlerResetAll.owner = false; // Solo puede ser usado por el propietario del bot
+handlerResetAll.owner = true; // Solo puede ser usado por el propietario del bot
 
 export default handlerResetAll;
