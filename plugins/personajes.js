@@ -22,7 +22,7 @@ export const personajes = [
         imagen: "./src/fotos/R.png",
         titulo: "La blanquita tetona",
         descripcion: "nose que decirte, solo vi su rule",
-        valor: 5,  // Valor en diamantes
+        valor: 15,  // Valor en diamantes
         estado: "libre"  // Estado inicial
     },
     {
@@ -30,7 +30,7 @@ export const personajes = [
         imagen: "./src/fotos/Goku-4K-HD-Wallpaper-Free-download.jpg",
         titulo: "El Saiyajin Legendario",
         descripcion: "Un guerrero de corazón puro y la fuerza de un dios.",
-        valor: 5,  // Valor en diamantes
+        valor: 25,  // Valor en diamantes
         estado: "libre"
     },
     {
@@ -38,7 +38,7 @@ export const personajes = [
         "imagen": "./src/fotos/1375182-luffy-gear-5-vs-kaido-dragon-one-piece-4k-pc.jpg",
         "titulo": "El Capitán de los Sombrero de Paja",
         "descripcion": "Un aventurero que busca el One Piece y el título de Rey de los Piratas.",
-        "valor": "5",  // Valor en diamantes
+        "valor": "15",  // Valor en diamantes
         "estado": "libre"
     },
     {
@@ -54,7 +54,7 @@ export const personajes = [
         "imagen": "./src/fotos/OIP.jpg",
         "titulo": "La Ninja Médica",
         "descripcion": "Una kunoichi que combina habilidades médicas con un gran poder de combate.",
-        "valor": "5",  // Valor en diamantes
+        "valor": "1",  // Valor en diamantes
         "estado": "libre"
     },
     {
@@ -62,7 +62,7 @@ export const personajes = [
         "imagen": ".src/fotos/wp1975719.webp",
         "titulo": "La Guerrera Imparable",
         "descripcion": "La soldado más fuerte del Cuerpo de Exploración, conocida por su habilidad en combate y lealtad.",
-        "valor": "5",  // Valor en diamantes
+        "valor": "15",  // Valor en diamantes
         "estado": "libre"
     },
     {
@@ -70,7 +70,7 @@ export const personajes = [
         "imagen": "./src/fotos/R.jpg",
         "titulo": "El Alquimista de Acero",
         "descripcion": "Un joven alquimista con un gran talento y un fuerte deseo de restaurar su cuerpo perdido.",
-        "valor": "5",  // Valor en diamantes
+        "valor": "15",  // Valor en diamantes
         "estado": "libre"
     },
     {
@@ -102,7 +102,7 @@ export const personajes = [
         "imagen": "./src/fotos/1386406-light-yagami-wallpaper-1920x1080-for-iphone-5s.jpg",
         "titulo": "El Rey del Mundo",
         "descripcion": "Un estudiante brillante que encuentra una libreta con el poder de decidir la vida o muerte de cualquier persona.",
-        "valor": "5",  // Valor en diamantes
+        "valor": "25",  // Valor en diamantes
         "estado": "libre"
     }
     // Agrega más personajes aquí
