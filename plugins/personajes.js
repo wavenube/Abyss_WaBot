@@ -105,5 +105,93 @@ export const personajes = [
         "valor": "25",  // Valor en diamantes
         "estado": "libre"
     }
+    {
+        "nombre": "Kaneki Ken",
+        "imagen": "",
+        "titulo": "El Ghoul Más Temido",
+        "descripcion": "Un joven que lucha por encontrar su identidad tras convertirse en un ghoul.",
+        "valor": "2500",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Homura Akemi",
+        "imagen": "",
+        "titulo": "La Guardiana del Tiempo",
+        "descripcion": "Una chica con habilidades para manipular el tiempo y un destino trágico.",
+        "valor": "3000",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Gintoki Sakata",
+        "imagen": "",
+        "titulo": "El Samurai Perdido",
+        "descripcion": "Un samurai con una actitud despreocupada pero con habilidades de combate excepcionales.",
+        "valor": "2000",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Lelouch Lamperouge",
+        "imagen": "",
+        "titulo": "El Caballero Negro",
+        "descripcion": "Un joven con un poder para controlar la mente, que busca cambiar el mundo.",
+        "valor": "5",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Nana Osaki",
+        "imagen": "",
+        "titulo": "La Diva del Punk",
+        "descripcion": "Una cantante de punk con una personalidad fuerte y un pasado complicado.",
+        "valor": "2200",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Erza Scarlet",
+        "imagen": "",
+        "titulo": "La Reina de las Armaduras",
+        "descripcion": "Una poderosa maga con la habilidad de cambiar y equipar diferentes armaduras y armas.",
+        "valor": "2800",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Kenshin Himura",
+        "imagen": "",
+        "titulo": "El Samurai Errante",
+        "descripcion": "Un samurai vagabundo que busca redimir su pasado de asesino.",
+        "valor": "2700",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Misato Katsuragi",
+        "imagen": "",
+        "titulo": "La Estratega de NERV",
+        "descripcion": "Una oficial de alto rango en la organización que combate los Ángeles.",
+        "valor": "2400",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Saitama",
+        "imagen": "",
+        "titulo": "El Héroe sin Nombre",
+        "descripcion": "Un héroe que derrota a sus enemigos con un solo golpe y busca una verdadera pelea.",
+        "valor": "3000",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Kagome Higurashi",
+        "imagen": "",
+        "titulo": "La Viajeras del Tiempo",
+        "descripcion": "Una joven que viaja al pasado y se convierte en la compañera de Inuyasha.",
+        "valor": "2100",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Yoko Littner",
+        "imagen": "",
+        "titulo": "La Tiradora Legendaria",
+        "descripcion": "Una experta francotiradora con una personalidad audaz y un gran coraje.",
+        "valor": "2600",  // Valor en diamantes
+        "estado": "libre"
+    }
     // Agrega más personajes aquí
 ];
