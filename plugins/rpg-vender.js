@@ -18,13 +18,15 @@ const handlerVender = async (m, { conn, text }) => {
     }
 
     // Une el resto del texto para formar el nombre del personaje
-    const nombrePersonaje = partes.join(' ');
+    const nombrePersonaje = partes.join(' ').toLowerCase(); // Normaliza a minúsculas
 
     const userData = global.db.data.users[m.sender];
     
     // Verifica si el personaje está en la Pokédex del usuario
-    if (!userData.personajes || !userData.personajes.includes(nombrePersonaje)) {
-        await conn.sendMessage(m.chat, { text: `❌ No tienes el personaje *${nombrePersonaje}* en tu Pokédex.` }, { quoted: m });
+    const personajeIndex = userData.personajes.findIndex(p => p.toLowerCase() === nombrePersonaje); // Busca ignorando mayúsculas
+
+    if (personajeIndex === -1) {
+        await conn.sendMessage(m.chat, { text: `❌ No tienes el personaje *${partes.join(' ')}* en tu Pokédex.` }, { quoted: m });
         return;
     }
 
@@ -32,15 +34,15 @@ const handlerVender = async (m, { conn, text }) => {
     if (!global.shopData) {
         global.shopData = {};
     }
-    global.shopData[nombrePersonaje] = {
+    global.shopData[userData.personajes[personajeIndex]] = {
         precio: parseInt(precio),
         vendedor: m.sender
     };
 
     // Remueve el personaje de la Pokédex del usuario
-    userData.personajes = userData.personajes.filter(p => p !== nombrePersonaje);
+    userData.personajes.splice(personajeIndex, 1);
 
-    await conn.sendMessage(m.chat, { text: `💰 *${nombrePersonaje}* ha sido puesto en venta por ${precio} diamantes.` }, { quoted: m });
+    await conn.sendMessage(m.chat, { text: `💰 *${partes.join(' ')}* ha sido puesto en venta por ${precio} diamantes.` }, { quoted: m });
 };
 
 // Configuración del comando
