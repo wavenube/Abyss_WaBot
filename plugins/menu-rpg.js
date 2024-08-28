@@ -40,29 +40,29 @@ ${tradutor.texto1[1]} ${taguser}
 
 **Comandos Disponibles:**
 
-- **`rw`**: Genera un personaje aleatorio.
+- \`rw\`: Genera un personaje aleatorio.
 
-- **`claimch`**: Reclama el personaje aleatorio, guardandolo en tu pokedex.
+- \`claimch\`: Reclama el personaje aleatorio, guardandolo en tu pokedex.
 
-- **`pokedex`**: Muestra el menú de tu Pokédex, donde puedes ver todos los personajes que tienes.
+- \`pokedex\`: Muestra el menú de tu Pokédex, donde puedes ver todos los personajes que tienes.
 
-- **`steal @user`**: Roba un personaje de la Pokédex de otro usuario mencionado. Asegúrate de mencionar al usuario correctamente.
+- \`steal @user\`: Roba un personaje de la Pokédex de otro usuario mencionado. Asegúrate de mencionar al usuario correctamente.
 
-- **`venderch`**: Pone un personaje de tu Pokédex a la venta en la tienda general.
+- \`venderch\`: Pone un personaje de tu Pokédex a la venta en la tienda general.
 
-- **`pujarch`**: Inicia una nueva puja en la que puedes elevar el precio de tus personajes.
+- \`pujarch\`: Inicia una nueva puja en la que puedes elevar el precio de tus personajes.
 
-- **`puja +nombre`**: Realiza una puja por el personaje que te interese durante una puja activa. Usa el nombre exacto del personaje que deseas pujar.
+- \`puja +nombre\`: Realiza una puja por el personaje que te interese durante una puja activa. Usa el nombre exacto del personaje que deseas pujar.
 
-- **`asegurarch`**: Asegura un personaje en tu Pokédex, lo que impide que pueda ser robado o puesto en venta.
+- \`asegurarch\`: Asegura un personaje en tu Pokédex, lo que impide que pueda ser robado o puesto en venta.
 
-- **`infoch`**: Muestra la información detallada de un personaje específico en tu Pokédex. Usa el nombre del personaje para obtener la información.
+- \`infoch\`: Muestra la información detallada de un personaje específico en tu Pokédex. Usa el nombre del personaje para obtener la información.
 
-- **`vender`**: Vende un personaje de tu Pokédex por un precio que determines. Usa el nombre completo del personaje y el precio en diamantes.
+- \`vender\`: Vende un personaje de tu Pokédex por un precio que determines. Usa el nombre completo del personaje y el precio en diamantes.
 
-- **`tienda`**: Muestra la tienda general con los personajes que están a la venta. Puedes ver los personajes y sus precios aquí.
+- \`tienda\`: Muestra la tienda general con los personajes que están a la venta. Puedes ver los personajes y sus precios aquí.
 
-- **`comprar`**: Compra un personaje de la tienda de usuarios usando tus diamantes. Usa el nombre del personaje que deseas adquirir.
+- \`comprar\`: Compra un personaje de la tienda de usuarios usando tus diamantes. Usa el nombre del personaje que deseas adquirir.
 
 ◣───── ★ • ─────◢
 > *━━━━━━━━━━━━━*`
