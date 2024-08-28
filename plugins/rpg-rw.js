@@ -10,7 +10,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
     const str = `
-🖼️ **Imagen**: ${personaje.imagen}
+🖼️ **Nombre**: ${personaje.nombre}
 🎯 **Título**: ${personaje.titulo}
 📝 **Descripción**: ${personaje.descripcion}
 📍 **Estado**: ${estado}
