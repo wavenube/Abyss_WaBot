@@ -15,9 +15,26 @@ const handlerSteal = async (m, { conn, text }) => {
         return;
     }
 
+    // Verifica si el usuario objetivo tiene personajes asegurados
+    const asegurados = targetUserData.asegurados || {};
+
     // Selecciona un personaje aleatorio de la Pokédex del usuario objetivo
-    const stolenPersonajeIndex = Math.floor(Math.random() * targetUserData.personajes.length);
-    const stolenPersonaje = targetUserData.personajes[stolenPersonajeIndex];
+    let stolenPersonajeIndex = Math.floor(Math.random() * targetUserData.personajes.length);
+    let stolenPersonaje = targetUserData.personajes[stolenPersonajeIndex];
+
+    // Si el personaje está asegurado, intenta robar otro
+    let intentos = 0;
+    while (asegurados[stolenPersonaje] && intentos < targetUserData.personajes.length) {
+        stolenPersonajeIndex = Math.floor(Math.random() * targetUserData.personajes.length);
+        stolenPersonaje = targetUserData.personajes[stolenPersonajeIndex];
+        intentos++;
+    }
+
+    // Si todos los personajes están asegurados, no se puede robar
+    if (asegurados[stolenPersonaje]) {
+        await conn.sendMessage(m.chat, { text: `🔒 Todos los personajes de este usuario están asegurados y no pueden ser robados.` }, { quoted: m });
+        return;
+    }
 
     // Remueve el personaje robado de la Pokédex del usuario objetivo
     targetUserData.personajes.splice(stolenPersonajeIndex, 1);
