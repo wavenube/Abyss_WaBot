@@ -192,6 +192,206 @@ export const personajes = [
         "descripcion": "Una experta francotiradora con una personalidad audaz y un gran coraje.",
         "valor": "15",  // Valor en diamantes
         "estado": "libre"
+    },
+     {
+        "nombre": "Astolfo",
+        "imagen": "./src/fotos/astolfo.jpg",
+        "titulo": "El Jinete de la Locura",
+        "descripcion": "Un caballero de apariencia andrógina conocido por su valentía y personalidad alegre.",
+        "valor": "43",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Artoria Pendragon",
+        "imagen": "./src/fotos/artoria.jpg",
+        "titulo": "La Reina de los Caballeros",
+        "descripcion": "La encarnación del Rey Arturo, portadora de la espada sagrada Excalibur.",
+        "valor": "54",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Rin Tohsaka",
+        "imagen": "https://wallpapercave.com/wp/wp4627390.jpg",
+        "titulo": "La Maga de la Familia Tohsaka",
+        "descripcion": "Una maga talentosa y estratega, descendiente de una antigua familia de magos.",
+        "valor": "45",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Gilgamesh",
+        "imagen": "./src/fotos/gilgamesh.png",
+        "titulo": "El Rey de los Héroes",
+        "descripcion": "El rey antiguo más poderoso, dueño del tesoro más grande del mundo.",
+        "valor": "23",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Abigail Williams",
+        "imagen": "./src/fotos/abigail.jpg",
+        "titulo": "La Doncella de la Oscuridad",
+        "descripcion": "Una joven con un oscuro poder proveniente de los mitos de Cthulhu.",
+        "valor": "32",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Melusine",
+        "imagen": "./src/fotos/melusine.jpg",
+        "titulo": "La Dragona Encantada",
+        "descripcion": "Una guerrera legendaria que es mitad dragón, conocida por su devoción y poder.",
+        "valor": "23",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "David",
+        "imagen": "./src/fotos/david.jpg",
+        "titulo": "El Rey Pastor",
+        "descripcion": "El rey bíblico de Israel, famoso por su habilidad con la honda y su sabiduría.",
+        "valor": "45",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Baobhan Sith",
+        "imagen": "./src/fotos/baoban.jpg",
+        "titulo": "La Vampiresa Escocesa",
+        "descripcion": "Un espíritu maligno de la mitología escocesa, conocida por su belleza y crueldad.",
+        "valor": "23",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Quetzalcoatl (Fate)",
+        "imagen": "https://wallpapercave.com/wp/wp6741052.jpg",
+        "titulo": "La Diosa del Sol",
+        "descripcion": "Una deidad azteca reencarnada, famosa por su inmenso poder y bondad.",
+        "valor": "32",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Artoria Pendragon Alter",
+        "imagen": "./src/fotos/artoria2.jpg",
+        "titulo": "El Rey Oscuro",
+        "descripcion": "Una versión corrompida del Rey Arturo, llena de odio y poder oscuro.",
+        "valor": "54",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Oda Nobunaga",
+        "imagen": "./src/fotos/oda.jpg",
+        "titulo": "El Demonio de la Guerra",
+        "descripcion": "El infame señor de la guerra japonés, reencarnado con habilidades sobrenaturales.",
+        "valor": "34",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Morgan le Fay",
+        "imagen": "./src/fotos/morgan.jpg",
+        "titulo": "La Reina de las Hadas",
+        "descripcion": "La hechicera traidora de la leyenda artúrica, hermana del Rey Arturo.",
+        "valor": "12",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Emiya Shirou",
+        "imagen": "https://th.bing.com/th/id/OIP.VFJEplR9MQ7da2v43vKCGwHaEK?rs=1&pid=ImgDetMain",
+        "titulo": "El Justiciero de la Espada",
+        "descripcion": "Un joven con la habilidad de replicar armas mágicas y un fuerte sentido de la justicia.",
+        "valor": "21",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Dobrynya Nikitich",
+        "imagen": "./src/fotos/neko.jpg",
+        "titulo": "El Héroe Eslavo",
+        "descripcion": "Un legendario guerrero eslavo conocido por sus hazañas heroicas.",
+        "valor": "23",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Okita Souji",
+        "imagen": "./src/fotos/okita.jpg",
+        "titulo": "El Espadachín Shinsengumi",
+        "descripcion": "Un espadachín letal del Shinsengumi, conocido por su velocidad y destreza.",
+        "valor": "21",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Saber",
+        "imagen": "./src/fotos/saber.jpg",
+        "titulo": "El Caballero Sagrado",
+        "descripcion": "Una reencarnación del Rey Arturo, conocida por su nobleza y destreza en combate.",
+        "valor": "43",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Atalanta",
+        "imagen": "./src/fotos/atalanta.jpg",
+        "titulo": "La Cazadora Divina",
+        "descripcion": "Una heroína griega con habilidades de arquera extraordinarias, devota a la diosa Artemisa.",
+        "valor": "45",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Tamamo-no-Mae",
+        "imagen": "./src/fotos/tamamo.jpg",
+        "titulo": "La Zorro de Nueve Colas",
+        "descripcion": "Un espíritu zorro mitológico con habilidades mágicas y un carisma encantador.",
+        "valor": "34",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Tiamat",
+        "imagen": "./src/fotos/tiamat.jpg",
+        "titulo": "La Diosa Primordial",
+        "descripcion": "Una deidad antigua de la mitología mesopotámica, madre de monstruos y dioses.",
+        "valor": "23",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Minamoto no Raikou",
+        "imagen": "./src/fotos/minamoto.jpg",
+        "titulo": "La General del Trueno",
+        "descripcion": "Una legendaria guerrera japonesa, famosa por su liderazgo y habilidades en combate.",
+        "valor": "12",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Artoria Pendragon (Caster)",
+        "imagen": "./src/fotos/artoria3.png",
+        "titulo": "La Hechicera Sagrada",
+        "descripcion": "Una versión mágica del Rey Arturo, capaz de utilizar poderosos hechizos.",
+        "valor": "32",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Jeanne d'Arc Alter",
+        "imagen": "./src/fotos/jeanne.jpg",
+        "titulo": "La Santa Oscura",
+        "descripcion": "Una versión oscura de la santa heroína francesa, llena de ira y poder.",
+        "valor": "13",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Archer",
+        "imagen": "./src/fotos/archer.jpg",
+        "titulo": "El Héroe Desconocido",
+        "descripcion": "Un misterioso arquero con habilidades tácticas y una oscura historia personal.",
+        "valor": "22",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Artoria Pendragon (Lancer)",
+        "imagen": "./src/fotos/artoria4.jpg",
+        "titulo": "El Caballero de la Lanza Sagrada",
+        "descripcion": "Una versión del Rey Arturo empuñando la lanza sagrada Rhongomyniad.",
+        "valor": "35",  // Valor en diamantes
+        "estado": "libre"
+    },
+    {
+        "nombre": "Sherlock Holmes",
+        "imagen": "./src/fotos/homes.jpg",
+        "titulo": "El Gran Detective",
+        "descripcion": "El detective más famoso del mundo, conocido por su inteligencia y habilidades deductivas.",
+        "valor": "50",  // Valor en diamantes
+        "estado": "libre"
     }
     // Agrega más personajes aquí
 ];
