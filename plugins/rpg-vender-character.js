@@ -36,8 +36,8 @@ const handlerVenderCh = async (m, { conn, text }) => {
     }
 
     // Agrega los diamantes al balance del usuario
-    if (!global.db.data.users[m.sender].diamantes) {
-        global.db.data.users[m.sender].diamantes = 0; // Inicializa si no existe
+    if (!global.db.data.users[m.sender].valor) {
+        global.db.data.users[m.sender].valor = 0; // Inicializa si no existe
     }
 
     global.db.data.users[m.sender].diamantes += valorDiamantes;
