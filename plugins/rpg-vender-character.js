@@ -27,20 +27,20 @@ const handlerVenderCh = async (m, { conn, text }) => {
         return;
     }
 
-    // Obtiene el valor en diamantes del personaje
+    // Obtiene el valor en diamantes (limit) del personaje
     const valorDiamantes = parseInt(personaje.valor, 10);
 
     if (isNaN(valorDiamantes) || valorDiamantes <= 0) {
-        await conn.sendMessage(m.chat, { text: `❌ Este personaje no tiene un valor válido en diamantes y no puede ser vendido.` }, { quoted: m });
+        await conn.sendMessage(m.chat, { text: `❌ Este personaje no tiene un valor válido en diamantes (limit) y no puede ser vendido.` }, { quoted: m });
         return;
     }
 
-    // Agrega los diamantes al balance del usuario
-    if (!global.db.data.users[m.sender].valor) {
-        global.db.data.users[m.sender].valor = 0; // Inicializa si no existe
+    // Agrega los "diamantes" (limit) al balance del usuario
+    if (!global.db.data.users[m.sender].limit) {
+        global.db.data.users[m.sender].limit = 0; // Inicializa si no existe
     }
 
-    global.db.data.users[m.sender].diamantes += valorDiamantes;
+    global.db.data.users[m.sender].limit += valorDiamantes;
 
     // Elimina el personaje de la Pokédex del usuario
     userPersonajes.splice(personajeIndex, 1);
@@ -51,7 +51,7 @@ const handlerVenderCh = async (m, { conn, text }) => {
     // Envía un mensaje de confirmación
     const mensaje = `
 💎 *¡Venta Exitosa!*
-🔹 Has vendido a *${personaje.nombre}* por *${valorDiamantes}* diamantes.
+🔹 Has vendido a *${personaje.nombre}* por *${valorDiamantes}* diamantes (limit).
 🔸 El personaje ahora está disponible para ser reclamado por otros usuarios.
     `.trim();
 
