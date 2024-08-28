@@ -19,7 +19,7 @@ export const personajes = [
     },
     {
         nombre: "Hinata",
-        imagen: "https://th.bing.com/th/id/R.522e40edeac3d06ef3c7449ad93166c4?rik=C1FW%2bJ1O%2fb4v1g&riu=http%3a%2f%2fnarutorealm.files.wordpress.com%2f2011%2f11%2fhinata_hyuuga__chapter_437_by_explosivechemicals.png&ehk=Fa3sS0nJkz%2bVrUgVOYX80WlaGmr%2bE6Hm1ddQOhKqYCY%3d&risl=&pid=ImgRaw&r=0",
+        imagen: "./src/fotos/R.png",
         titulo: "La blanquita tetona",
         descripcion: "nose que decirte, solo vi su rule",
         valor: 5,  // Valor en diamantes
@@ -35,7 +35,7 @@ export const personajes = [
     },
     {
         "nombre": "Luffy",
-        "imagen": "https://rare-gallery.com/mocahbig/1375182-luffy-gear-5-vs-kaido-dragon-one-piece-4k-pc.jpg",
+        "imagen": "./src/fotos/1375182-luffy-gear-5-vs-kaido-dragon-one-piece-4k-pc.jpg",
         "titulo": "El Capitán de los Sombrero de Paja",
         "descripcion": "Un aventurero que busca el One Piece y el título de Rey de los Piratas.",
         "valor": "5",  // Valor en diamantes
@@ -43,7 +43,7 @@ export const personajes = [
     },
     {
         "nombre": "Spike Spiegel",
-        "imagen": "https://images.wallpapersden.com/image/download/spike-spiegel-cowboy-bebop-4k-art_a25mZ2WUmZqaraWkpJRnamtlrWZpaWU.jpg",
+        "imagen": "./src/fotos/wallpapersden.com_spike-spiegel-cowboy-bebop-4k-art_2560x1440.jpg",
         "titulo": "El Cazador de Recompensas",
         "descripcion": "Un cazarrecompensas con un pasado oscuro y un estilo de vida relajado.",
         "valor": "5",  // Valor en diamantes
@@ -51,7 +51,7 @@ export const personajes = [
     },
     {
         "nombre": "Sakura Haruno",
-        "imagen": "https://th.bing.com/th/id/OIP.79eFKkeycKJQM0x6rlwm3AHaEo?rs=1&pid=ImgDetMain",
+        "imagen": "./src/fotos/OIP.jpg",
         "titulo": "La Ninja Médica",
         "descripcion": "Una kunoichi que combina habilidades médicas con un gran poder de combate.",
         "valor": "5",  // Valor en diamantes
@@ -59,7 +59,7 @@ export const personajes = [
     },
     {
         "nombre": "Mikasa Ackerman",
-        "imagen": "https://wallpapercave.com/wp/wp1975719.png",
+        "imagen": ".src/fotos/wp1975719.webp",
         "titulo": "La Guerrera Imparable",
         "descripcion": "La soldado más fuerte del Cuerpo de Exploración, conocida por su habilidad en combate y lealtad.",
         "valor": "5",  // Valor en diamantes
@@ -67,7 +67,7 @@ export const personajes = [
     },
     {
         "nombre": "Edward Elric",
-        "imagen": "https://th.bing.com/th/id/R.3fe0270b01778ca48adc11ff6c28ff86?rik=Y2viXirUXqrx4w&pid=ImgRaw&r=0",
+        "imagen": "./src/fotos/R.jpg",
         "titulo": "El Alquimista de Acero",
         "descripcion": "Un joven alquimista con un gran talento y un fuerte deseo de restaurar su cuerpo perdido.",
         "valor": "5",  // Valor en diamantes
