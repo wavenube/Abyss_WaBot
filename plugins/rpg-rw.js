@@ -1,19 +1,19 @@
 import { personajes } from './personajes.js'; // Ajusta la ruta si es necesario
 
-// Variable global para almacenar el personaje actual y el tiempo de restricción
-global.personajesEnUso = {
-    lastPersonaje: null,
-    lastPersonajeTimestamp: 0
-};
+// Variable global para almacenar los personajes y sus tiempos de restricción
+global.restriccionesPersonajes = {};
 
 const handlerRW = async (m, { conn, usedPrefix }) => {
     const ahora = Date.now();
     const tiempoEsperar = 15000; // 15 segundos en milisegundos
 
     // Filtra los personajes que no están en uso
-    let personajesDisponibles = personajes.filter(p => p !== global.personajesEnUso.lastPersonaje);
+    let personajesDisponibles = personajes.filter(p => {
+        const restriccion = global.restriccionesPersonajes[p.nombre];
+        return !restriccion || (ahora - restriccion >= tiempoEsperar);
+    });
 
-    // Si el personaje actual es el mismo que el último personaje mostrado, vuelve a filtrar
+    // Si todos los personajes están en uso, permitir la selección de cualquiera
     if (personajesDisponibles.length === 0) {
         personajesDisponibles = personajes;
     }
@@ -21,9 +21,8 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
     // Selecciona un personaje aleatorio de los disponibles
     const personaje = personajesDisponibles[Math.floor(Math.random() * personajesDisponibles.length)];
 
-    // Actualiza el personaje actual y el tiempo de restricción
-    global.personajesEnUso.lastPersonaje = personaje;
-    global.personajesEnUso.lastPersonajeTimestamp = ahora;
+    // Actualiza la restricción del personaje seleccionado
+    global.restriccionesPersonajes[personaje.nombre] = ahora;
 
     // Muestra la información del personaje
     const estado = personaje.estado === 'libre' ? 'Libre' : `Ocupado por ${Object.keys(global.db.data.users).find(userId => global.db.data.users[userId].personajes && global.db.data.users[userId].personajes.includes(personaje.nombre))}`;
@@ -50,8 +49,7 @@ const handlerRW = async (m, { conn, usedPrefix }) => {
 
     // Añade el temporizador para la disponibilidad del personaje
     setTimeout(() => {
-        global.personajesEnUso.lastPersonaje = null;
-        global.personajesEnUso.lastPersonajeTimestamp = 0;
+        delete global.restriccionesPersonajes[personaje.nombre];
     }, tiempoEsperar); // 15 segundos en milisegundos
 };
 
