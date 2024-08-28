@@ -1,4 +1,5 @@
 import { personajes } from './personajes.js';
+import fs from 'fs';
 
 const handlerVenderCh = async (m, { conn, text }) => {
     // Obtiene el nombre del personaje que se quiere vender
@@ -35,7 +36,11 @@ const handlerVenderCh = async (m, { conn, text }) => {
     }
 
     // Agrega los diamantes al balance del usuario
-    global.db.data.users[m.sender].diamantes = (global.db.data.users[m.sender].diamantes || 0) + valorDiamantes;
+    if (!global.db.data.users[m.sender].diamantes) {
+        global.db.data.users[m.sender].diamantes = 0; // Inicializa si no existe
+    }
+
+    global.db.data.users[m.sender].diamantes += valorDiamantes;
 
     // Elimina el personaje de la Pokédex del usuario
     userPersonajes.splice(personajeIndex, 1);
