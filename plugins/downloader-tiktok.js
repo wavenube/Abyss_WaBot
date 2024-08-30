@@ -1,7 +1,7 @@
 import fg from 'api-dylux';
 import axios from 'axios';
 import cheerio from 'cheerio';
-import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
+import {generateWAMessageFromContent} from "baileys";
 import {tiktokdl} from '@bochilteam/scraper';
 
 let tiktok;
@@ -16,7 +16,7 @@ import('@xct007/frieren-scraper')
 const handler = async (m, {conn, text, args, usedPrefix, command}) => {
   const datas = global
   const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.plugins.descargas_tiktok
 
 
