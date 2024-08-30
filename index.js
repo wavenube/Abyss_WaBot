@@ -15,7 +15,7 @@ say('Abyss\nBot', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']});
-say(`beta`, {
+say(`Bot creado por Bruno Sobrino`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']});
