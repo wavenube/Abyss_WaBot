@@ -8,10 +8,10 @@ import fetch from 'node-fetch';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
   const datas = global
   const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.plugins.buscador_githubsearch
 
-  if (!text) throw `*[❗] Ingresa un texto para buscar, ejemplo: ${usedPrefix + command} TheMystic-Bot-MD*`;
+  if (!text) throw `*[❗] Ingresa un texto para buscar, ejemplo: ${usedPrefix + command} Abyss-Bot-MD*`;
   const res = await fetch(global.API('https://api.github.com', '/search/repositories', {
     q: text,
   }));
