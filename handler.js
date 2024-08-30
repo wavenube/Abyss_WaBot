@@ -1,5 +1,5 @@
-import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
-import { smsg } from './lib/simple.js';
+import { generateWAMessageFromContent } from "baileys";
+import { smsg } from './src/libraries/simple.js';
 import { format } from 'util';
 import { fileURLToPath } from 'url';
 import path, { join } from 'path';
@@ -11,9 +11,9 @@ import ws from 'ws';
 let mconn;
 
 /**
- * @type {import('@whiskeysockets/baileys')}
+ * @type {import("baileys")}
  */
-const { proto } = (await import('@whiskeysockets/baileys')).default;
+const { proto } = (await import("baileys")).default;
 const isNumber = (x) => typeof x === 'number' && !isNaN(x);
 const delay = (ms) => isNumber(ms) && new Promise((resolve) => setTimeout(function () {
   clearTimeout(this);
@@ -22,7 +22,7 @@ const delay = (ms) => isNumber(ms) && new Promise((resolve) => setTimeout(functi
 
 /**
  * Handle messages upsert
- * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate
+ * @param {import("baileys").BaileysEventMap<unknown>['messages.upsert']} groupsUpdate
  */
 export async function handler(chatUpdate) {
   this.msgqueque = this.msgqueque || [];
@@ -1214,7 +1214,7 @@ export async function handler(chatUpdate) {
     }
 
     const idioma = global.db.data.users[m.sender]?.language || 'es';
-    const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+    const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
     const tradutor = _translate.handler.handler
 
     if (opts['nyimak']) {
@@ -1598,7 +1598,7 @@ ${tradutor.texto1[1]} ${messageNumber}/3
     }
 
     try {
-      if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this);
+      if (!opts['noprint']) await (await import(`./src/libraries/print.js`)).default(m, this);
     } catch (e) {
       console.log(m, m.quoted, e);
     }
@@ -1610,15 +1610,15 @@ ${tradutor.texto1[1]} ${messageNumber}/3
 
 /**
  * Handle groups participants update
- * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate
+ * @param {import("baileys").BaileysEventMap<unknown>['group-participants.update']} groupsUpdate
  */
 export async function participantsUpdate({ id, participants, action }) {
   /************************
    * Opção de tradução de idioma
    * 
    ***********************/
-  const idioma = global.db.data.chats[id]?.language || 'es';
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const idioma = global?.db?.data?.chats[id]?.language || 'es';
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.handler.participantsUpdate
 
   const m = mconn
@@ -1634,7 +1634,7 @@ export async function participantsUpdate({ id, participants, action }) {
       if (chat.welcome && !chat?.isBanned) {
         const groupMetadata = await m?.conn?.groupMetadata(id) || (conn?.chats[id] || {}).metadata;
         for (const user of participants) {
-          let pp = './src/abyss5.png';
+          let pp = 'https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/avatar_contact.png';
           try {
             pp = await m.conn.profilePictureUrl(user, 'image');
           } catch (e) {
@@ -1678,12 +1678,12 @@ export async function participantsUpdate({ id, participants, action }) {
 
 /**
  * Handle groups update
- * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate
+ * @param {import("baileys").BaileysEventMap<unknown>['groups.update']} groupsUpdate
  */
 export async function groupsUpdate(groupsUpdate) {
   //console.log(groupsUpdate)
   const idioma = global.db.data.chats[groupsUpdate[0].id]?.language || 'es';
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.handler.participantsUpdate
 
   if (opts['self']) {
@@ -1726,7 +1726,7 @@ export async function deleteUpdate(message) {
   const datas = global
   const id = message.participant // Obtenga la identificación del usuario, solo dentro de esta función "deleteUpdate"
   const idioma = datas.db.data.users[id]?.language || 'es';
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.handler.deleteUpdate
 
 
@@ -1757,7 +1757,7 @@ ${tradutor.texto1[5]}`.trim();
 global.dfail = (type, m, conn) => {
   const datas = global
   const idioma = datas.db.data.users[m.sender].language || 'es';
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
   const tradutor = _translate.handler.dfail
 
   const msg = {
@@ -1791,3 +1791,4 @@ watchFile(file, async () => {
   }
 
 });
+
