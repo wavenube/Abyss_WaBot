@@ -10,7 +10,7 @@ const handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, i
   try {
     const datas = global
     const idioma = datas.db.data.users[m.sender].language
-    const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+    const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
     const tradutor = _translate.plugins.menu_menu
     // const pp = imagen7;
 
@@ -130,7 +130,7 @@ const fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@b
     console.log(e)
     const datas = global
     const idioma = datas.db.data.users[m.sender].language
-    const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+    const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
     const tradutor = _translate.plugins.menu_menu
 
     conn.reply(m.chat, tradutor.texto1[29], m);
